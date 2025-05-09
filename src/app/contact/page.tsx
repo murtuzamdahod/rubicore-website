@@ -1,5 +1,6 @@
 import ContactFormSection from "@/components/sections/company/contact/contact-form-section";
 import ContactDetailsSection from "@/components/sections/company/contact/contact-details-section";
+import { Suspense } from 'react';
 
 export const metadata = {
   title: "Contact RubiCore | Get in Touch with Our Team",
@@ -24,7 +25,9 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
-      <ContactFormSection />
+      <Suspense fallback={<div className="text-center py-10"><p>Loading form...</p></div>}>
+        <ContactFormSection />
+      </Suspense>
       <ContactDetailsSection />
     </main>
   );

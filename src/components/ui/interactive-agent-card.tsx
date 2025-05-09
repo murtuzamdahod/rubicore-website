@@ -37,9 +37,14 @@ export function InteractiveAgentCard({
     >
       <CardHeader className="items-center text-center pt-8 pb-4">
         <div className="p-3 rounded-full bg-primary/10 mb-4 transition-colors duration-300 group-hover:bg-primary/20">
-          {React.cloneElement(displayIcon as React.ReactElement, { 
-            className: cn("w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110", (displayIcon as React.ReactElement).props.className)
-          })}
+          {React.isValidElement(displayIcon)
+            ? React.cloneElement(displayIcon as React.ReactElement<{ className?: string }>, {
+                className: cn(
+                  "w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110",
+                  (displayIcon as React.ReactElement<{ className?: string }>).props.className || ""
+                ),
+              })
+            : displayIcon}
         </div>
         <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">
           {title}
