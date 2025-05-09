@@ -1,45 +1,45 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react"; // Icon for steps
 
 interface Step {
   id: number;
   title: string;
-  description: string;
+  description: React.ReactNode; // Changed to React.ReactNode
 }
 
 const steps: Step[] = [
   {
     id: 1,
-    title: "Build & Customize",
-    description:
-      "Define agent roles and tasks in the Low-Code Agent Studio using intuitive tools or templates. Securely connect knowledge sources (documents, databases).",
+    title: "Design & Build",
+    description: "Define agent roles, goals, reasoning processes, and tasks in the Low-Code Agent Studio or using our Python SDK. Securely connect knowledge sources, configure specialized skills, and define ethical boundaries.",
   },
   {
     id: 2,
     title: "Integrate & Equip",
-    description:
-      "Connect RubiCore to your systems (OneDrive, databases, CRM, ITSM, Slack, etc.), and equip agents with the necessary tools and permissions via RBAC.",
+    description: "Connect RubiCore to your systems (OneDrive, databases, CRM, ITSM, Slack, ERP, etc.), and equip agents with necessary tools, APIs, and permissions via RBAC. Enable MCP and dynamic tool discovery for adaptive capabilities.",
   },
   {
     id: 3,
-    title: "Orchestrate & Govern",
-    description:
-      "Design workflows, set triggers, configure HITL approval steps, apply compliance rules, and deploy agents securely (On-Premise or Cloud).",
+    title: "Orchestrate & Collaborate",
+    description: "Design multi-agent and human-AI collaborative workflows. Set triggers, configure HITL approval steps, apply compliance rules, and define communication protocols between agents.",
   },
   {
     id: 4,
-    title: "Monitor & Optimize",
-    description:
-      "Track performance and ROI via dashboards, review audit logs, analyze results, and refine agents for continuous improvement.",
+    title: "Deploy & Govern",
+    description: "Deploy agents securely (On-Premise, Cloud, Hybrid, or Edge). Enforce security policies, monitor for compliance, and leverage XAI features for transparency and auditability.",
+  },
+  {
+    id: 5,
+    title: "Monitor, Learn & Optimize",
+    description: "Track performance, ROI, and ethical alignment via dashboards. Review audit logs, analyze results, and utilize automated learning loops (RLHF, outcome-based learning) and human feedback to continuously refine and improve agent capabilities and efficiency.",
   },
 ];
 
-// Placeholder for the 4-step infographic
+// Placeholder for the 5-step infographic
 const InfographicPlaceholder = () => (
   <div className="w-full h-48 bg-primary/10 rounded-lg flex items-center justify-center p-4 my-8 md:my-12">
-    <p className="text-primary/50 text-center">[4-Step Infographic Placeholder]</p>
+    <p className="text-primary/50 text-center">[5-Step Infographic Placeholder]</p>
   </div>
 );
 
@@ -48,7 +48,7 @@ interface HowItWorksSectionProps {
 }
 
 export function HowItWorksSection({ className }: HowItWorksSectionProps) {
-  const headline = "Deploy & Scale Your Governed AI Workforce with Confidence";
+  const headline = "Design, Deploy, Govern & Continuously Evolve Your AI Workforce with Confidence";
   const cta = {
     text: "See it in Action (Request a Demo)",
     href: "/request-demo", // Placeholder link

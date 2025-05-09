@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge"; // Will add this component if not present
-import { Code2, Database, Layers, Server, Wind, Zap, Brain, Container, GitBranch } from "lucide-react"; // Example icons
+import { Badge } from "@/components/ui/badge"; 
+import { Code2, Database, Layers, Brain, Container, GitBranch, Search } from "lucide-react"; 
 
 const techStackItems = [
   {
@@ -24,13 +24,13 @@ const techStackItems = [
   {
     name: "Weaviate (Vector DB)",
     description: "Lightning-fast semantic searches for Knowledge Agent capabilities.",
-    icon: Search, // Placeholder, Search icon from lucide-react
+    icon: Search, 
     category: "Data"
   },
   {
     name: "Next.js & TypeScript",
     description: "Smooth, responsive user experience for the Agent Studio and Admin UI.",
-    icon: Layers, // Using Layers as a metaphor for frontend stack
+    icon: Layers, 
     category: "Frontend"
   },
   {
@@ -42,13 +42,10 @@ const techStackItems = [
   {
     name: "REST APIs & Python SDK",
     description: "Comprehensive APIs and SDKs for easy extension and integration.",
-    icon: GitBranch, // Using GitBranch as a metaphor for extensibility
+    icon: GitBranch, 
     category: "Extensibility"
   }
 ];
-// Placeholder for Search icon if not imported above
-import { Search } from 'lucide-react';
-
 
 export function CoreTechStackSection() {
   return (

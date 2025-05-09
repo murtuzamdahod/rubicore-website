@@ -5,75 +5,127 @@ import { CheckCircle } from "lucide-react";
 const capabilities = [
   {
     value: "studio",
-    title: "Low-Code Agent Studio",
-    description: "Empower your team to create and customize AI agents without extensive coding.",
+    title: "Agent Design & Development Studio (Low-Code & Pro-Code)",
+    description: "Empower all skill levels to create, customize, and test sophisticated AI agents.",
     features: [
       "Visual workflow editor for agent logic",
-      "Prompt and tool configuration UI",
-      "Template library for common agent types",
-      "Versioning and testing tools",
+      "Prompt engineering suite (basic capabilities available, advanced suite)",
+      "advanced reasoning designer (chain-of-thought, tree-of-thought, ReAct, self-critique)",
+      "agentic skill builder for reusable capabilities",
+      "template library for common agent types",
+      "versioning",
+      "integrated debugging tools, and a sandboxed simulation environment for pre-deployment testing.",
+      "Full Python SDK and APIs for pro-code development and extensibility.",
     ],
-    icon: "LayoutPanelLeft", // Placeholder, replace with actual icon component if available
+    icon: "LayoutPanelLeft",
   },
   {
     value: "orchestration",
-    title: "Intelligent Orchestration",
-    description: "Coordinate multiple agents and processes seamlessly.",
+    title: "Intelligent & Adaptive Orchestration",
+    description: "Coordinate multiple agents, processes, and human collaborators seamlessly and dynamically.",
     features: [
-      "Orchestration canvas to map multi-agent workflows",
-      "Event triggers and schedulers",
-      "Parallel task management",
-      "Human-in-the-loop injection points",
+      "Visual orchestration canvas to map multi-agent and human-AI workflows",
+      "event triggers and schedulers",
+      "parallel and sequential task management",
+      "dynamic task allocation engine",
+      "goal-driven coordination, conflict resolution mechanisms,",
+      "and human-in-the-loop injection points with clear escalation paths.",
+      "Context Sharing Protocol ensures agents build upon each other's work.",
+      "Support for hierarchical and swarm-based agent team structures.",
     ],
-    icon: "Network", // Placeholder
+    icon: "Network",
   },
   {
     value: "integration",
-    title: "Integration & Extensibility",
-    description: "Connect RubiCore everywhere it needs to be.",
+    title: "Dynamic Integration & Extensibility Hub",
+    description: "Connect RubiCore securely and adaptively across your entire enterprise ecosystem.",
     features: [
       "50+ pre-built connectors (databases, SaaS, internal APIs)",
-      "Webhooks and event listeners",
-      "Zapier integration for quick wins",
-      "Comprehensive REST API & Python SDK",
+      "Webhooks, event listeners, Zapier integration",
+      "Comprehensive REST API, Python SDK, and support for gRPC.",
+      "New Model Context Protocol (MCP) Support and automated tool discovery mechanisms enable dynamic tool binding and real-time context sharing.",
+      "Capability for agents to intelligently compose and chain API calls.",
     ],
-    icon: "PlugZap", // Placeholder
+    icon: "PlugZap",
   },
   {
     value: "security",
-    title: "Security & Compliance",
-    description: "Enterprise-grade governance baked in.",
+    title: "Enterprise Security, Governance & Explainable AI (XAI)",
+    description: "Operate with trust, transparency, and control baked in.",
     features: [
-      "Role-Based Access Control (RBAC)",
-      "SSO (Okta, Azure AD)",
-      "End-to-end encryption (in transit and at rest)",
-      "Audit trails for every agent action",
-      "Content filtering & data masking",
-      "On-prem deployment option",
+      "Role-Based Access Control (RBAC), SAML/SSO (Okta, Azure AD)",
+      "end-to-end encryption",
+      "immutable audit trails (data lineage, decision logs)",
+      "content filtering, data masking, PII redaction, on-prem/hybrid deployment.",
+      "New Policy-Based Governance Engine for dynamic rule enforcement.",
+      "Integrated XAI tools and dashboards (e.g., LIME/SHAP for supported models) to understand agent decisions,",
+      "bias detection and mitigation features, and an Ethical AI framework with support for constitutional AI principles.",
+      "Secure Multi-Party Computation principles for sensitive cross-agent operations where applicable.",
     ],
-    icon: "ShieldCheck", // Placeholder
+    icon: "ShieldCheck",
   },
   {
     value: "analytics",
-    title: "Monitoring & Analytics",
-    description: "Insights for continuous improvement.",
+    title: "Monitoring, Analytics & Continuous Learning",
+    description: "Drive continuous improvement with actionable insights and adaptive agents.",
     features: [
-      "Real-time dashboards of agent activity and success rates",
-      "ROI calculators (time saved, tickets resolved, etc.)",
-      "Error alerting and debugging logs",
-      "Usage heatmaps by department",
+      "Real-time dashboards for agent activity, performance metrics, and ROI calculation.",
+      "Error alerting, debugging logs, usage heatmaps.",
+      "Automated feedback loops via Reinforcement Learning from Human Feedback (RLHF) and outcome-based learning.",
+      "Predictive analytics for workflow optimization and agent performance.",
+      "Cost management and resource optimization analytics.",
     ],
-    icon: "BarChartBig", // Placeholder
+    icon: "BarChartBig",
+  },
+  {
+    value: "advanced-agents",
+    title: "Advanced Agent Types & Specializations",
+    description: "Deploy a diverse workforce of specialized intelligent agents.",
+    features: [
+      "Access to a growing library of next-generation agent types including Strategic Decision Agents, Multi-Modal Creative Agents, Code & Software Intelligence Agents, Simulation & Foresight Agents,",
+      "and Vertical Industry Agents (Finance, Healthcare, Legal, etc.).",
+      "Each features domain-optimized reasoning, specialized tools, continuous learning capabilities, and governance safeguards appropriate to their function.",
+      "Support for creating custom agent specializations.",
+    ],
+    icon: "Sparkles", // Placeholder icon
+  },
+  {
+    value: "human-ai-collaboration",
+    title: "Human-AI Collaboration Framework",
+    description: "Amplify human potential with seamless agent-human teaming.",
+    features: [
+      "Intuitive interfaces for human oversight and intervention (HITL).",
+      "Shared task management dashboards, collaborative workspaces, and co-pilot integrations within existing enterprise tools.",
+      "Tools for humans to provide direct feedback to agents for refinement.",
+      "Explainable AI outputs tailored for human understanding and decision support.",
+      "Configurable roles and responsibilities for human and AI team members.",
+    ],
+    icon: "Users", // Placeholder icon
+  },
+  {
+    value: "alc",
+    title: "Agent Lifecycle Management",
+    description: "Comprehensive control from agent inception to retirement.",
+    features: [
+      "Tools for prompt engineering and versioning, agent skill and model versioning,",
+      "sandboxed testing and validation environments, automated deployment pipelines (CI/CD for agents), rollback capabilities,",
+      "and secure agent decommissioning.",
+      "Performance benchmarking and A/B testing frameworks for agent updates.",
+    ],
+    icon: "Recycle", // Placeholder icon
   },
 ];
 
 // A simple mapping for placeholder icons to Lucide icons
 const IconMap: { [key: string]: React.ElementType } = {
-  LayoutPanelLeft: CheckCircle, // Replace with actual icons later
+  LayoutPanelLeft: CheckCircle,
   Network: CheckCircle,
   PlugZap: CheckCircle,
   ShieldCheck: CheckCircle,
   BarChartBig: CheckCircle,
+  Sparkles: CheckCircle,
+  Users: CheckCircle,
+  Recycle: CheckCircle,
 };
 
 
@@ -91,10 +143,9 @@ export function CorePlatformCapabilitiesSection() {
         </div>
 
         <Tabs defaultValue={capabilities[0].value} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mb-8">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-8">
             {capabilities.map((cap) => (
-              <TabsTrigger key={cap.value} value={cap.value} className="text-xs sm:text-sm">
-                {/* Icon can be added here if small icons are desired in tabs */}
+              <TabsTrigger key={cap.value} value={cap.value} className="text-xs sm:text-sm h-auto py-2">
                 {cap.title}
               </TabsTrigger>
             ))}

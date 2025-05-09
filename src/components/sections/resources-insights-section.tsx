@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
+  // CardDescription, // Removed unused import
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, BookOpen, FileText, Users } from "lucide-react"; // Icons for content types
+import { ArrowRight, BookOpen, FileText, Users, Presentation } from "lucide-react"; // Added Presentation
 
 interface ResourceItem {
   icon: React.ElementType;
@@ -21,21 +21,33 @@ interface ResourceItem {
 const featuredContent: ResourceItem[] = [
   {
     icon: BookOpen,
-    type: "Blog Post",
-    title: "Orchestrating Success: Moving Beyond Task Automation with Governed Agentic AI",
-    link: "/resources/blog/orchestrating-success", // Placeholder
+    type: "Blog",
+    title: "Orchestrating Success: Moving Beyond Task Automation with Governed, Collaborative Agentic AI",
+    link: "/resources/blog/orchestrating-success-collaborative", 
   },
   {
     icon: FileText,
     type: "Whitepaper",
-    title: "Achieving ROI with Secure, On-Premise AI Agents",
-    link: "/resources/whitepapers/roi-on-premise-ai", // Placeholder
+    title: "The ROI of Trust: Achieving Value with Secure, Explainable, On-Premise AI Agents",
+    link: "/resources/whitepapers/roi-of-trust-xai", 
   },
   {
     icon: Users,
     type: "Case Study",
-    title: "How a Global Bank Automated Compliance Workflows with RubiCore",
-    link: "/resources/case-studies/global-bank-compliance", // Placeholder
+    title: "How a Global Financial Institution Enhanced Fraud Detection and Compliance with RubiCore's Multi-Agent System",
+    link: "/resources/case-studies/financial-institution-fraud-detection", 
+  },
+  {
+    icon: Presentation,
+    type: "Webinar",
+    title: "Human-Agent Teaming: Best Practices for Collaborative Intelligence in the Enterprise",
+    link: "/resources/webinars/human-agent-teaming",
+  },
+  {
+    icon: BookOpen, // Using BookOpen again for another blog post
+    type: "Blog",
+    title: "Multi-Agent Collaboration & Swarm Intelligence: The Future of Enterprise AI in 2025",
+    link: "/resources/blog/multi-agent-collaboration-swarm",
   },
 ];
 
@@ -46,10 +58,10 @@ interface ResourcesInsightsSectionProps {
 export function ResourcesInsightsSection({
   className,
 }: ResourcesInsightsSectionProps) {
-  const headline = "Insights on Secure & Effective Enterprise Agentic AI";
+  const headline = "Insights on Secure, Ethical & Effective Enterprise Agentic AI";
   const cta = {
     text: "Explore All Resources",
-    href: "/resources", // Placeholder
+    href: "/resources", 
   };
 
   return (

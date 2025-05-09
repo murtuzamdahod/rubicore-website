@@ -1,7 +1,6 @@
-import { Zap, Puzzle, Users, ShoppingBag } from "lucide-react"; // Example icons
+import { } from "lucide-react"; // Example icons
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FeatureStatusBadge } from "@/components/ui/feature-status-badge"; // Import the badge
 
 // Placeholder logos - replace with actual SVGs or image components
 const PlaceholderLogo = ({ name }: { name: string }) => (
@@ -89,7 +88,6 @@ export default function GrowingIntegrationEcosystemSection() {
             <strong className="text-ruby-600 dark:text-ruby-500">
               Integration & Agent Marketplace
             </strong>
-            <FeatureStatusBadge status="Coming Soon" className="ml-2 align-middle"/>
             {" "}
             where third-party vendors and the community can publish connectors
             and agent templates.

@@ -4,7 +4,7 @@ import { ShieldCheck, Server, Cloud, Combine } from "lucide-react"; // Icons for
 // Placeholder for compliance badges visual
 const ComplianceBadgesPlaceholder = () => (
   <div className="flex flex-wrap justify-center gap-4 mt-6">
-    {["SOC 2", "GDPR", "ISO", "HIPAA"].map((badge) => (
+    {["SOC 2", "GDPR", "ISO", "HIPAA", "FedRAMP (aspiring)"].map((badge) => (
       <div key={badge} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
         {badge}
       </div>
@@ -20,9 +20,9 @@ interface OnPremiseImperativeSectionProps {
 export function OnPremiseImperativeSection({
   className,
 }: OnPremiseImperativeSectionProps) {
-  const headline = "Your AI, On Your Terms – In Your Cloud or Ours.";
+  const headline = "Your AI, On Your Terms – Maximum Control, Anywhere You Operate.";
   const bodyText =
-    "Unlike many AI platforms, RubiCore can be deployed fully on-premise or in a private cloud, ensuring complete data sovereignty for regulated industries like finance, government, or healthcare. Keep sensitive data and model interactions within your firewalls to meet strict compliance (SOC2, GDPR, HIPAA) and performance requirements. For those who prefer cloud convenience, our secure cloud and hybrid options provide flexibility without compromising governance.";
+    "Unlike many AI platforms, RubiCore can be deployed fully on-premise or in a private cloud, ensuring complete data sovereignty and model control for regulated industries like finance, government, or healthcare. Keep sensitive data, model interactions, and intellectual property within your firewalls to meet strict compliance (SOC2, GDPR, HIPAA, and support for industry-specific standards) and performance requirements. For those who prefer cloud convenience, our secure public cloud and flexible hybrid options provide agility without compromising governance or security. Our containerized, microservices architecture and model agnosticism (including support for local/private LLMs) give you unprecedented control over where your AI runs, which models it uses, and how data is processed.";
 
   return (
     <section

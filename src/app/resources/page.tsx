@@ -16,15 +16,13 @@ export default function ResourcesPage() {
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-            <span className="block">Your Hub for Enterprise</span>
+            <span className="block">Explore Our Resources</span>
             <span className="block text-ruby-600 dark:text-ruby-500">
-              Agentic AI Knowledge
+              Knowledge Hub for Agentic AI
             </span>
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 sm:text-xl md:text-2xl">
-            Dive into insights, best practices, technical documentation, and
-            real-world applications of RubiCore's secure and governable AI
-            platform.
+            Dive into our curated collection of articles, case studies, whitepapers, and guides. Stay informed on the latest in agentic AI, best practices, and how RubiCore&apos;s platform can transform your business.
           </p>
         </div>
       </div>

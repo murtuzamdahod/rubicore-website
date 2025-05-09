@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 interface FeatureStatusBadgeProps {
-  status: "Coming Soon" | "Roadmap" | "Beta" | "New"; // Added Beta & New for potential future use
+  status: "Coming Soon" | "Roadmap" | "Beta" | "New" | "Planned for 2025"; // Added Beta & New for potential future use
   className?: string;
 }
 
@@ -30,6 +30,11 @@ export function FeatureStatusBadge({ status, className }: FeatureStatusBadgeProp
       bgColor = "bg-green-100 dark:bg-green-700/50";
       textColor = "text-green-800 dark:text-green-300";
       borderColor = "border-green-400 dark:border-green-600";
+      break;
+    case "Planned for 2025":
+      bgColor = "bg-teal-100 dark:bg-teal-700/50";
+      textColor = "text-teal-800 dark:text-teal-300";
+      borderColor = "border-teal-400 dark:border-teal-600";
       break;
   }
 

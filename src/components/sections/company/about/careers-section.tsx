@@ -14,16 +14,19 @@ export default function CareersSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-              Join Us in Shaping the Future of Enterprise AI
-            </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-              We're looking for passionate individuals to help build the next
-              generation of secure and intelligent automation. Explore
-              opportunities to make an impact in a dynamic and innovative
-              environment where your work directly contributes to solving
-              real-world enterprise challenges.
-            </p>
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
+                Join Our Team
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                We&apos;re looking for passionate individuals to help us shape the future of AI. Explore our open positions and discover how you can make an impact at RubiCore.
+              </p>
+              <div className="mt-10 flex items-center justify-center gap-x-6">
+                <Button size="xl" asChild>
+                  <Link href="/company/careers">View Open Positions</Link>
+                </Button>
+              </div>
+            </div>
             <div className="mt-8">
                 <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-3">Our Values:</h4>
                 <div className="flex flex-wrap gap-4">
@@ -34,11 +37,6 @@ export default function CareersSection() {
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="mt-10">
-              <Button size="xl" asChild>
-                <Link href="/company/careers">View Open Positions</Link>
-              </Button>
             </div>
           </div>
           <div className="hidden lg:block">

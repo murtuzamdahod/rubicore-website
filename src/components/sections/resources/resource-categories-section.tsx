@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, FileText, Video, ExternalLink, Rss, Newspaper, FileSpreadsheet, Presentation } from "lucide-react";
+import { BookOpen, FileText, ExternalLink, Rss, Newspaper, FileSpreadsheet, Presentation } from "lucide-react";
 
 // Dummy data - replace with actual data or fetch from API
 const categories = [

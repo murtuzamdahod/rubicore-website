@@ -33,11 +33,17 @@ export default function StorySection() {
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             RubiCore was created to solve the complex challenges enterprises face
             when trying to leverage AI for meaningful automation. We understood
-            that generic AI and simple chatbots weren't enough. Businesses
+            that generic AI and simple chatbots weren&apos;t enough. Businesses
             needed a platform that offered robust security, deep control, and
             the ability to orchestrate sophisticated AI agents tailored to their
             unique workflows. Our journey has been driven by a consistent focus
             on these enterprise-critical pillars from day one.
+          </p>
+          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            Founded in 2023 by a team of AI visionaries and enterprise software veterans, RubiCore was born from a shared belief: that the true potential of artificial intelligence could only be unlocked through a secure, governable, and collaborative framework. We saw the limitations of existing AI solutions – often siloed, difficult to integrate, and lacking the robust security and control necessary for mission-critical enterprise applications. 
+          </p>
+          <p className="text-lg text-gray-700 dark:text-gray-300">
+            Our journey began with a commitment to building an agentic AI platform from the ground up, focusing on the core tenets of security, scalability, and seamless human-AI teaming. We envisioned a future where intelligent agents could automate complex workflows, provide deep insights, and become trusted collaborators within organizations, all while adhering to the strictest enterprise governance standards. Today, RubiCore is the culmination of that vision, empowering businesses to harness the transformative power of AI with confidence and control. We&apos;re just getting started.
           </p>
         </div>
 

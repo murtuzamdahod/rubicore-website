@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useSearchParams } from 'next/navigation'; // To read query params
+import Link from 'next/link'; // Added import for Link
 
 export default function ContactFormSection() {
   const searchParams = useSearchParams();
@@ -85,23 +86,24 @@ export default function ContactFormSection() {
     <section className="py-16 bg-gray-50 dark:bg-gray-800 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-semibold text-center text-gray-900 dark:text-white mb-8 sm:text-3xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Send Us a Message
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  First Name <span className="text-ruby-600">*</span>
-                </label>
-                <Input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleChange} required className="mt-1 dark:bg-gray-700 dark:border-gray-600"/>
-              </div>
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Last Name <span className="text-ruby-600">*</span>
-                </label>
-                <Input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleChange} required className="mt-1 dark:bg-gray-700 dark:border-gray-600"/>
-              </div>
+          <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-400">
+            Have a question, a project proposal, or just want to learn more? Fill out the form below, and one of our team members will get back to you shortly. We&apos;re eager to hear how RubiCore can help you achieve your AI goals.
+          </p>
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <div>
+              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                First Name <span className="text-ruby-600">*</span>
+              </label>
+              <Input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleChange} required className="mt-1 dark:bg-gray-700 dark:border-gray-600"/>
+            </div>
+            <div>
+              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                Last Name <span className="text-ruby-600">*</span>
+              </label>
+              <Input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleChange} required className="mt-1 dark:bg-gray-700 dark:border-gray-600"/>
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -147,6 +149,19 @@ export default function ContactFormSection() {
                 Message <span className="text-ruby-600">*</span>
               </label>
               <Textarea name="message" id="message" rows={4} value={formData.message} onChange={handleChange} required className="mt-1 dark:bg-gray-700 dark:border-gray-600"/>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                By selecting this, you agree to our{' '}
+                <Link href="/terms-of-service" className="font-medium text-ruby-600 hover:text-ruby-700 dark:text-ruby-500 dark:hover:text-ruby-400">
+                  Terms of Service
+                </Link>{' '}
+                and{' '}
+                <Link href="/privacy-policy" className="font-medium text-ruby-600 hover:text-ruby-700 dark:text-ruby-500 dark:hover:text-ruby-400">
+                  Privacy Policy
+                </Link>
+                . We&apos;ll use your information to respond to your inquiry.
+              </p>
             </div>
             <div>
               <Button type="submit" size="lg" className="w-full">

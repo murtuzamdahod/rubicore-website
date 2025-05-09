@@ -90,9 +90,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     };
 
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        updatePath();
-      }
+      entries.forEach(() => updatePath()); // Changed loop to forEach
     });
 
     if (containerRef.current) {

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Zap, Users, FileText, Search, GitFork, CheckCircle } from "lucide-react"; // Example icons
+import { Users, CheckCircle, FileText, Search, GitFork } from "lucide-react"; // Removed Brain, Share2
 
 // Placeholder for a more dynamic visual
 const OrchestrationVisual = () => (
@@ -52,7 +52,7 @@ export default function OrchestratedIntelligenceSection() {
             potential leads. Qualified leads are then passed to a Process Agent
             which, guided by a Knowledge Agent, generates personalized proposals
             and outreach emails, perhaps requiring Human-in-the-Loop approval.
-            RubiCore's Intelligent Orchestration Engine makes these
+            RubiCore&apos;s Intelligent Orchestration Engine makes these
             sophisticated, governed, end-to-end automated workflows a reality.
           </p>
         </div>

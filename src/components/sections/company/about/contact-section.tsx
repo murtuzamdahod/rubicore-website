@@ -40,7 +40,7 @@ export default function ContactSection() {
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             Have questions about RubiCore, partnerships, or press inquiries?
-            Reach out to our team. We're here to help.
+            Reach out to our team. We&apos;re here to help.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -68,6 +68,17 @@ export default function ContactSection() {
             <Button size="xl" asChild>
                 <Link href="/contact">Send Us a Message</Link>
             </Button>
+        </div>
+        <div className="mt-12 text-center">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">General Inquiries</h3>
+          <p className="text-gray-600 dark:text-gray-400">
+            For all general questions, partnership opportunities, or media requests, please reach out to our primary contact point. We&apos;re always happy to hear from you.
+          </p>
+          <Button variant="outline" asChild className="mt-2">
+            <a href="mailto:info@rubicore.ai">
+              info@rubicore.ai
+            </a>
+          </Button>
         </div>
       </div>
     </section>

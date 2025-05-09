@@ -1,4 +1,4 @@
-import { Server, Cloud, Combine, CheckSquare, ShieldCheck, DatabaseZap } from "lucide-react"; // Example icons
+import { Server, Combine, CheckSquare, ShieldCheck, DatabaseZap } from "lucide-react"; // Example icons
 
 const benefits = [
   {

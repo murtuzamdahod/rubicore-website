@@ -10,7 +10,7 @@ export default function FinalCtaSection() {
         </h2>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-ruby-100 sm:text-xl">
           Discuss your specific business challenges and use cases with our
-          enterprise AI experts. Discover how RubiCore's specialized agents
+          enterprise AI experts. Discover how RubiCore&apos;s specialized agents
           and secure, governable platform can deliver measurable ROI and a
           significant competitive advantage.
         </p>

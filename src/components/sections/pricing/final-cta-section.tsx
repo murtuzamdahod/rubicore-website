@@ -9,7 +9,7 @@ export default function FinalCtaSection() {
           Ready to Empower Your Enterprise with Agentic AI?
         </h2>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-ruby-100 sm:text-xl">
-          Let's discuss your specific requirements and find the optimal
+          Let&apos;s discuss your specific requirements and find the optimal
           RubiCore plan to achieve your automation goals securely and
           efficiently.
         </p>

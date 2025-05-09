@@ -87,7 +87,7 @@ export default function ResumeSubmissionSection() {
             Submit Your Resume
           </h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-            Interested in joining RubiCore but don't see a specific role listed? 
+            Interested in joining RubiCore but don&apos;t see a specific role listed? 
             Or prefer to send a general application? Use the form below.
           </p>
           <form onSubmit={handleSubmit} className="space-y-6 bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
@@ -135,7 +135,7 @@ export default function ResumeSubmissionSection() {
           </form>
           {isSubmitted && (
             <p className="mt-6 text-center text-green-600 dark:text-green-400">
-              Thank you for your application! We will review it and get back to you if there's a suitable match.
+              Thank you for your application! We will review it and get back to you if there&apos;s a suitable match.
             </p>
           )}
           {error && (

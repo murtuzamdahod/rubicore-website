@@ -8,10 +8,10 @@ export function AgentTypesIntroductionSection() {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6">
-              Purpose-Built Expertise for Reliable Automation
+              Purpose-Built Expertise & Collaborative Intelligence for Reliable, Adaptive Automation
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Generic AI models struggle with the nuances and complexities of enterprise tasks. RubiCore provides <strong>specialized agents</strong>, each optimized with <strong>advanced reasoning engines</strong>, the right tools, and secure data access for specific domains (research, coding, analytics, etc.). This specialization ensures higher accuracy, better performance, and more reliable <strong>governed automation</strong> compared to one-size-fits-all bots. Build your AI workforce with <strong>experts by design</strong> to tackle your enterprise’s toughest challenges.
+              Generic AI models struggle with the nuances, complexities, and governance demands of enterprise tasks. RubiCore provides <strong>specialized agents</strong>, each optimized with <strong>advanced multi-modal reasoning engines, sophisticated memory systems, the right tools, adaptive learning capabilities, and secure data access</strong> for specific domains (research, coding, analytics, decision support, etc.). This specialization, combined with <strong>explainable AI (XAI) principles</strong>, ensures higher accuracy, better performance, enhanced trust, and more reliable <strong>governed automation</strong> compared to one-size-fits-all solutions. We&apos;ve expanded our agent ecosystem with <strong>next-generation specialized capabilities, robust multi-agent collaboration frameworks, and built-in continuous learning mechanisms</strong> that enable agent teams to work together on complex challenges—just like human experts—and improve over time. Build your AI workforce with <strong>experts by design that learn and adapt</strong> to tackle your enterprise&apos;s toughest challenges with transparency and control.
             </p>
           </div>
           <div className="flex justify-center items-center">
@@ -22,7 +22,7 @@ export function AgentTypesIntroductionSection() {
               </CardHeader>
               <CardContent className="flex flex-col items-center justify-center h-64">
                 <BrainCircuit className="w-24 h-24 text-primary mb-4" />
-                <p className="text-muted-foreground text-center">Diverse agent icons interacting within a governed environment</p>
+                <p className="text-muted-foreground text-center">Diverse agent icons, unique toolsets, data streams, collaborating on complex tasks, with learning loops and XAI elements, within a governed environment.</p>
               </CardContent>
             </Card>
           </div>

@@ -7,16 +7,16 @@ interface FinalCtaSectionProps {
 }
 
 export function FinalCtaSection({ className }: FinalCtaSectionProps) {
-  const headline = "Ready to Build, Orchestrate, and Govern Your AI Workforce?";
+  const headline = "Ready to Build, Orchestrate, Govern, and Collaborate with Your Future-Ready AI Workforce?";
   const subText =
-    "Get started on your enterprise AI journey today. Our experts will help you identify high-impact use cases and outline a solution tailored to your business.";
+    "Transform your enterprise with intelligent automation that is secure, explainable, and continuously learning. Our experts will help you identify high-impact use cases, navigate ethical considerations, and design a solution tailored to your business for sustainable ROI.";
   const primaryCta = {
     text: "Request a Demo",
     href: "/request-demo", // Placeholder
   };
   const secondaryCta = {
-    text: "Contact Sales",
-    href: "/contact-sales", // Placeholder
+    text: "Talk to an AI Strategist", // New Title
+    href: "/contact-sales", // Placeholder - Assuming link might be similar or updated later
   };
 
   return (

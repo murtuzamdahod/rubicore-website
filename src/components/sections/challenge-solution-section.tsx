@@ -17,11 +17,11 @@ export function ChallengeSolutionSection({
   className,
 }: ChallengeSolutionSectionProps) {
   const headline =
-    "Stop Patching Processes. Start Orchestrating Governed Intelligence.";
-  const challengeText =
-    "Today's enterprises demand more than basic chatbots or siloed automation. You need secure, controllable AI that understands your complex end-to-end workflows, integrates deeply with your entire tech stack, and operates with built-in governance. Generic solutions lack the depth, security, orchestration capabilities, and customization required for mission-critical tasks – often creating new silos and compliance risks.";
+    "Stop Patching Processes. Start Orchestrating Governed, Collaborative Intelligence.";
+  const challengeText = 
+      "Today's enterprises demand more than basic chatbots or siloed automation. You need secure, controllable, and explainable AI that understands your complex end-to-end workflows, integrates deeply with your entire tech stack, and operates with built-in governance and ethical guardrails. Generic solutions lack the depth, security, orchestration capabilities, human-AI collaboration frameworks, and customization required for mission-critical tasks – often creating new silos, compliance risks, and trust deficits. As AI capabilities evolve, you need a platform that can orchestrate heterogeneous multi-agent teams that collaborate on complex problems, learn from outcomes, and maintain policy-based governance with full transparency.";
   const solutionText =
-    "RubiCore provides the complete platform to build, deploy, orchestrate, and manage specialized AI agents tailored to your unique enterprise needs. Move beyond simple task automation to intelligent, multi-step process execution with advanced reasoning, deep research, and secure data interaction – all deployable on-premise for maximum control or with hybrid flexibility. Every agent operates within robust security and compliance guardrails, with performance monitoring and human oversight as needed, delivering automation that is powerful and trustworthy.";
+      "RubiCore provides the complete, enterprise-ready platform to build, deploy, orchestrate, manage, and govern specialized AI agents tailored to your unique enterprise needs. Move beyond simple task automation to intelligent, multi-step process execution with advanced reasoning, robust memory systems, deep research, multi-modal data understanding, and secure data interaction – all deployable on-premise for maximum control or with hybrid/cloud flexibility. Our unique Context-Aware Orchestration Engine enables dynamic agent-to-agent and human-agent collaboration, allowing specialized AI agents to work together—sharing context, distributing tasks, and coordinating actions—just like high-performing human teams. Every agent operates within robust security, ethical AI frameworks, and compliance guardrails (supporting XAI principles), with continuous performance monitoring, automated learning loops, and human oversight as needed, delivering automation that is powerful, trustworthy, and continuously improving.";
 
   return (
     <section

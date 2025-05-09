@@ -12,7 +12,7 @@ interface TrustedBySectionProps {
 }
 
 export function TrustedBySection({ className }: TrustedBySectionProps) {
-  const headline = "Powering Intelligent Automation for Leading Enterprises";
+  const headline = "Powering Intelligent Automation and Augmented Decision-Making for Leading Enterprises";
   const clientLogos = [
     "Client A",
     "Client B",

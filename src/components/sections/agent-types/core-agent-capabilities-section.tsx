@@ -1,89 +1,159 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { CheckCircle, Search, FileText, Code, DatabaseZap, Workflow } from "lucide-react"; // Example icons
+import { CheckCircle, Search, FileText, Code, DatabaseZap, Workflow, Scaling, Palette, BrainCog, Orbit, Building } from "lucide-react"; // Example icons
 
 const agentProfiles = [
   {
-    title: "Deep Research Agent",
-    headline: "Autonomous Research & Insight Generation",
-    description: "Executes multi-step research strategies autonomously. Plans an approach, gathers information from web and scholarly sources, evaluates and synthesizes data, and produces a structured report or recommendation.",
+    title: "Deep Research & Analysis Agent",
+    headline: "Autonomous Research, Insight Generation, and Foresight",
+    description: "Executes multi-step, multi-modal research strategies autonomously. Plans approach, gathers information from diverse web, academic, and proprietary sources (text, images, data tables), evaluates and synthesizes data critically, and produces structured, evidence-backed reports, insights, or recommendations with explainable conclusions and confidence scores.",
     features: [
-      "Autonomous planning & tool use",
-      "Multi-source web/academic search",
-      "Critical reasoning for synthesis",
-      "Report generation with citations",
-      "Configurable search scope",
-      "Governed data access",
+      "Autonomous planning & dynamic tool use (browsing, API calls to databases like ArXiv, PubMed, financial data)",
+      "multi-source/multi-modal data ingestion",
+      "critical reasoning for synthesis",
+      "configurable research scope",
+      "governed data access",
+      "advanced comparative analysis frameworks, conflicting evidence resolution, hypothesis generation & testing, anomaly detection, and basic trend forecasting.",
+      "Advanced: Self-correction of research strategy, proactive knowledge gap ID, Simulation Agent integration.",
     ],
-    useCases: "Market & competitive intelligence, product research, scientific literature reviews, due diligence reporting.",
-    differentiator: "Unlike a generic AI Q&A, this agent proactively gathers information like an analyst – a capability similar to (and inspired by) top research agent tools on the market, but with enterprise control.",
+    useCases: "Market & competitive intelligence, product research, scientific literature reviews, due diligence reporting, geopolitical risk assessment, R&D trend analysis.",
+    differentiator: "Goes beyond information retrieval to perform analytical reasoning, synthesis, and even predictive exploration, acting like a team of analysts with enterprise control and explainability.",
     icon: Search,
-    link: "/platform/agent-types#deep-research" // Placeholder link
+    link: "/platform/agent-types#deep-research-analysis-agent"
   },
   {
-    title: "Knowledge Q&A Agent (RAG)",
-    headline: "Trusted Answers from Your Enterprise Knowledge",
-    description: "Uses Retrieval-Augmented Generation to answer questions using your internal knowledge bases (wikis, SharePoint, PDFs, database records). It retrieves relevant documents (via vector search in Weaviate) and formulates an answer with references.",
+    title: "Enterprise Knowledge Q&A Agent (Advanced RAG+ & Knowledge Synthesis)",
+    headline: "Trusted, Explainable Answers & Insights from Your Enterprise Knowledge Ecosystem",
+    description: "Uses advanced Retrieval-Augmented Generation (RAG), knowledge graph traversal, and data analysis techniques to answer complex questions using your internal knowledge bases (wikis, SharePoint, Confluence, PDFs, databases, code repositories, chat logs). Retrieves relevant information, synthesizes it across disparate sources, and formulates context-aware answers with verifiable source citations, traceable reasoning paths, and confidence levels.",
     features: [
-      "Vector search across documents",
-      "Natural language query understanding",
-      "Source attribution",
-      "Real-time indexing of new data",
-      "Strict adherence to providing answers only from allowed content",
+      "Vector search, knowledge graph querying, natural language query understanding, source attribution, real-time indexing, strict adherence to allowed content",
+      "multi-document/multi-source reasoning, hierarchical knowledge navigation, conflicting information resolution with justification, proactive knowledge discovery, and continuous learning from user feedback and new data.",
+      "Advanced: Auto-update knowledge graphs, flag outdated/contradictory info, personalized responses.",
     ],
-    useCases: "Employee help desk (IT or HR knowledge), customer self-service FAQ, policy compliance queries, sales enablement.",
-    differentiator: "Delivers auditable answers – each answer can be traced back to a source document, addressing the accuracy and trust issues many enterprise buyers have with AI.",
+    useCases: "Employee help desk (IT, HR), customer self-service, compliance & SOP lookup, expert system assistance, sales enablement, research support, onboarding.",
+    differentiator: "Delivers auditable, explainable, and continuously improving answers, transforming enterprise information into actionable, trustworthy knowledge.",
     icon: FileText,
-    link: "/platform/agent-types#knowledge-qa"
+    link: "/platform/agent-types#enterprise-knowledge-agent"
   },
   {
-    title: "Code Intelligence Agent",
-    headline: "Semantic Codebase Assistant for Developers",
-    description: "Helps developers query and understand a codebase in natural language. It indexes your repositories and uses code parsing plus AI understanding to answer questions or locate code.",
+    title: "Code & Software Intelligence Agent",
+    headline: "Semantic Codebase Understanding, Generation, and Lifecycle Automation",
+    description: "Assists developers throughout the software development lifecycle. Indexes repositories, understands code semantics (multiple languages), answers questions, generates code (functions, classes, tests), identifies bugs, suggests optimizations, and analyzes software architecture.",
     features: [
-      "Semantic code search",
-      "Language-aware (Python, Java, etc.)",
-      "Cross-repo search",
-      "Version control integration (Git)",
-      "Summarized explanations of code sections",
+      "Semantic code search, multi-language support (Python, Java, C#, JS, etc.), cross-repo analysis, Git integration, code summarization",
+      "automated code generation and documentation, refactoring suggestions, security vulnerability detection (SAST principles) with remediation advice, dependency impact analysis, architecture visualization, and CI/CD pipeline integration for automated checks and quality gates.",
+      "Advanced: Predictive bug detection, boilerplate generation, legacy code migration aid, performance profiling.",
     ],
-    useCases: "Onboarding new developers, accelerating code reviews, impact analysis for changes, troubleshooting by finding relevant code faster.",
-    differentiator: "Boosts engineering productivity by acting like a knowledgeable team mentor who’s read the entire codebase. This is a cutting-edge capability.",
+    useCases: "Developer onboarding & support, code review automation, security vulnerability scanning, debugging assistance, legacy code modernization, architectural analysis, test case generation.",
+    differentiator: "Acts as an AI pair programmer and architect, boosting engineering velocity, quality, and security across the entire SDLC.",
     icon: Code,
-    link: "/platform/agent-types#code-intelligence"
+    link: "/platform/agent-types#code-intelligence-agent"
   },
   {
-    title: "SQL Data Agent",
-    headline: "Democratize Access to Data Insights",
-    description: "Enables business users to query databases using natural language and get results or visualizations without writing SQL. It translates a question into optimized SQL, runs it on connected databases, and returns the answer with context.",
+    title: "SQL & Multi-Source Data Analytics Agent (NL to BI)",
+    headline: "Democratize Data Insights with Natural Language Querying & Automated Analytics",
+    description: "Enables users to query databases (SQL, NoSQL), data warehouses, data lakes, and even spreadsheets (CSV, Excel) using natural language. Translates questions into optimized queries, retrieves data, performs analysis, generates visualizations, and provides narrative summaries of findings.",
     features: [
-      "Supports popular databases (PostgreSQL, SQL Server, etc.)",
-      "Understands database schemas",
-      "Permission-aware query execution",
-      "Can generate charts for certain query types",
-      "Handles follow-up questions contextually",
+      "Supports diverse data sources, understands schemas and data relationships, permission-aware execution, chart generation, contextual follow-up questions",
+      "multi-database/multi-table joins via NL, basic statistical analysis, anomaly detection in results, trend identification, and predictive analytics capabilities (e.g., forecasting based on historical data).",
+      "Advanced: Auto-generate BI dashboards, proactive data change alerts, learn user presentation preferences.",
     ],
-    useCases: "Ad-hoc reporting, ops metrics tracking, inventory queries, financial analysis by non-technical staff.",
-    differentiator: "Pairs the power of data science with a friendly interface – similar to emerging NL-to-SQL tools but integrated into your AI workforce.",
+    useCases: "Ad-hoc reporting, operational metrics tracking, financial analysis, sales forecasting, inventory optimization, customer behavior analysis, business intelligence for non-technical users.",
+    differentiator: "Transforms natural language questions into rich business intelligence, empowering data-driven decisions across the organization without requiring deep technical expertise.",
     icon: DatabaseZap,
-    link: "/platform/agent-types#sql-data"
+    link: "/platform/agent-types#sql-data-analytics-agent"
   },
   {
-    title: "Process Automation Agent",
-    headline: "Orchestrate Repetitive Processes End-to-End",
-    description: "Automates multi-step business workflows by interacting with various systems through APIs or RPA. For example, a Purchase Order Processing Agent might read incoming emails, extract order data, enter it into an ERP, and update a spreadsheet, all autonomously.",
+    title: "Intelligent Process Automation & Orchestration Agent",
+    headline: "Orchestrate and Optimize Complex End-to-End Business Processes with Adaptive AI",
+    description: "Automates and orchestrates multi-step, cross-functional business workflows by intelligently interacting with various enterprise systems (ERP, CRM, ITSM, custom apps) through APIs, RPA (via integration), or direct interaction. Manages task execution, exception handling, and resource allocation.",
     features: [
-      "Workflow designer to define task sequence",
-      "Connectors to enterprise apps (ERP, CRM, ITSM)",
-      "Conditional logic and branching",
-      "Error handling and notifications",
-      "Optional human approval steps for critical points",
+      "Visual workflow designer, extensive connector library, conditional logic, error handling and intelligent retries, human-in-the-loop for approvals",
+      "self-healing workflows that adapt to system changes or failures, adaptive process optimization based on performance metrics and learned patterns, dynamic task prioritization, and MCP integration for dynamic tool/service discovery.",
+      "Advanced: Predictive bottleneck/failure ID, auto-discovery of automation opportunities, process change simulation.",
     ],
-    useCases: "Employee onboarding, invoice processing, support ticket triage and resolution.",
-    differentiator: "Combines AI reasoning with traditional automation. If a step requires understanding unstructured data, the agent uses AI; for structured tasks, it uses deterministic actions.",
+    useCases: "Employee onboarding/offboarding, procure-to-pay, order-to-cash, IT service fulfillment, incident management, supply chain management, regulatory compliance reporting.",
+    differentiator: "Combines AI reasoning, learning, and dynamic adaptation with robust automation, moving beyond rigid RPA to create truly intelligent and resilient process automation.",
     icon: Workflow,
-    link: "/platform/agent-types#process-automation"
+    link: "/platform/agent-types#process-automation-agent"
+  },
+  {
+    title: "Strategic Decision Agent",
+    headline: "Advanced Reasoning for Complex Evaluations, Strategic Planning & Ethical Decisions",
+    description: "Applies sophisticated reasoning frameworks (e.g., causal inference, game theory, multi-criteria decision analysis, Bayesian reasoning) to evaluate complex options against dynamic criteria, weigh trade-offs, model scenarios, and recommend data-informed decisions with clear, auditable justifications, risk assessments, ethical impact analysis, and alternative scenario comparisons.",
+    features: [
+      "Multi-criteria decision analysis",
+      "uncertainty quantification",
+      "scenario modeling & forecasting",
+      "ethical framework alignment (configurable by organization), belief updating based on new evidence, counterfactual reasoning (\"what if\"),",
+      "decision explanation generation, and governance controls.",
+      "Can incorporate real-time human feedback and preferences.",
+      "Advanced: Learn/refine decision models from outcomes, support collaborative decision-making, Simulation Agent integration.",
+    ],
+    useCases: "Resource allocation, risk management strategy, investment prioritization, vendor/solution evaluation, complex claims processing, policy development and impact analysis, strategic business planning, crisis response strategy.",
+    differentiator: "Provides transparent, justifiable, and ethically-aware decision support for high-stakes situations, moving beyond simple recommendations to offer deep strategic insights.",
+    icon: Scaling,
+    link: "/platform/agent-types#strategic-decision-agent"
+  },
+  {
+    title: "Multi-Modal Creative & Content Agent",
+    headline: "Enhance Human Innovation and Content Velocity with AI-Powered Collaborative Creativity",
+    description: "Partners with humans to generate novel ideas, multi-modal content (text, images, audio snippets, presentation drafts, video storyboards), and designs that align with strategic objectives, brand guidelines, and target audiences.",
+    features: [
+      "Integrated brainstorming tools, brand/style guide adherence",
+      "multi-modal content generation and editing capabilities",
+      "collaborative workflows with versioning, variation generation from seed concepts, constraint-based creative problem-solving",
+      "audience persona adaptation, A/B testing suggestions for content, and IP compliance checks (e.g., image originality hints).",
+      "Advanced: Interactive content prototype generation, personalized content at scale, automated cross-channel repurposing.",
+    ],
+    useCases: "Marketing campaign development, personalized advertising, content creation (blogs, social media, scripts, emails), product concept generation, UX/UI design exploration, presentation building, brand messaging, innovation workshops.",
+    differentiator: "Functions as a versatile creative collaborator, amplifying human ingenuity and content production speed while ensuring brand consistency, personalization, and compliance.",
+    icon: Palette,
+    link: "/platform/agent-types#creative-content-agent"
+  },
+  {
+    title: "Adaptive Reasoning & Problem-Solving Agent",
+    headline: "Solve Novel & Complex Problems with Advanced Cognitive Frameworks and Learning",
+    description: "Applies multiple, adaptable reasoning patterns (deductive, inductive, abductive, analogical, causal) and machine learning techniques to analyze complex, often ill-defined problems, generate hypotheses, develop structured solutions, and learn from the process through a transparent, verifiable approach.",
+    features: [
+      "Utilizes advanced techniques like chain-of-thought, tree-of-thought, ReAct",
+      "graphical reasoning structures, reflection and self-correction capabilities, multi-step planning with contingency branches, belief updating with new evidence, structured knowledge representation, and the ability to learn new problem-solving strategies over time.",
+      "Advanced: Meta-learning, incorporate expert human knowledge, explain reasoning at varying detail levels.",
+    ],
+    useCases: "Root cause analysis for complex failures, strategic planning under uncertainty, scientific hypothesis development, complex systems troubleshooting, legal case analysis, medical diagnosis assistance (within regulatory constraints), developing novel algorithms or solutions.",
+    differentiator: "Makes its thought processes explicit, decomposes complex problems, and learns from experience, enabling human verification and collaboration on the most challenging cognitive tasks. Excels at combining information across domains and identifying non-obvious connections.",
+    icon: BrainCog,
+    link: "/platform/agent-types#adaptive-reasoning-agent"
+  },
+  {
+    title: "Simulation & Synthetic Environment Agent",
+    headline: "Model, Test, and Predict with AI-Powered Simulations",
+    description: "Creates and manages dynamic, interactive simulations of real-world or hypothetical environments, systems, or processes. Allows for testing agent behaviors, \"what-if\" scenario analysis, risk assessment, and synthetic data generation for training other AI models.",
+    features: [
+      "Configurable environment parameters, agent behavior modeling within the simulation, data logging and analysis from simulation runs, ability to inject stochastic events, visualization of simulation states",
+      "generation of labeled synthetic data for ML training, and integration with other agent types (e.g., Decision Agents testing strategies).",
+      "Advanced: Digital twin creation, RL training environments, automated scenario generation for stress-testing.",
+    ],
+    useCases: "Training and validating other AI agents, strategic business planning, operational process optimization, supply chain resilience testing, financial market modeling, urban planning, crisis response training.",
+    differentiator: "Provides a safe, controlled, and cost-effective way to experiment, learn, and prepare for a wide range of scenarios, accelerating innovation and reducing real-world risk.",
+    icon: Orbit,
+    link: "/platform/agent-types#simulation-agent"
+  },
+  {
+    title: "Industry-Specific Vertical Agents",
+    headline: "Domain-Optimized AI for Specialized Industries, Pre-Trained and Compliance-Aware",
+    description: "Provides targeted, industry-specific intelligence with pre-trained understanding of domain-specific terminology, regulations, processes, data formats, and best practices.",
+    features: [
+      "Industry-specific knowledge bases and ontologies, specialized reasoning frameworks",
+      "compliance-aware processing (e.g., HIPAA for Healthcare, AML/KYC for Finance), sector-specific integration capabilities (e.g., HL7/FHIR, FIX), and vertical-specific templates for common use cases.",
+      "Continuously updated with evolving industry standards.",
+      "Example Sub-Types: Financial Services Agent, Healthcare Agent, Legal & Compliance Agent, Manufacturing Agent.",
+    ],
+    useCases: "Regulatory reporting, risk analysis, fraud detection, administrative workflow automation, patient engagement, contract review, supply chain optimization, predictive maintenance.",
+    differentiator: "Accelerates time-to-value in specific industries by providing pre-built, domain-aware expertise and compliance features, reducing customization effort and risk.",
+    icon: Building,
+    link: "/platform/agent-types#industry-specific-agents"
   }
 ];
 
@@ -95,9 +165,6 @@ export function CoreAgentCapabilitiesSection() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Core Agent Capabilities
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Detailed profiles of our specialized AI agents.
-          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {agentProfiles.map((agent) => (

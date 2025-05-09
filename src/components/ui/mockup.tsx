@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-export interface MockupProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type MockupProps = React.HTMLAttributes<HTMLDivElement>;
 
 const Mockup = React.forwardRef<HTMLDivElement, MockupProps>(
   ({ className, children, ...props }, ref) => (

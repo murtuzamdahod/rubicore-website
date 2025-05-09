@@ -16,7 +16,7 @@ export default function TermsOfServicePage() {
 
           <h2>1. Agreement to Terms</h2>
           <p>
-            By accessing or using our website at rubicore.ai (the "Site") and the services, features, content, applications, or widgets offered by RubiCore (collectively with the Site, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, then you do not have permission to access the Service.
+            By accessing or using our website at rubicore.ai (the &quot;Site&quot;) and the services, features, content, applications, or widgets offered by RubiCore (collectively with the Site, the &quot;Services&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you disagree with any part of the terms, then you do not have permission to access the Service.
           </p>
 
           <h2>2. Use of Our Service</h2>
@@ -32,7 +32,7 @@ export default function TermsOfServicePage() {
             [Placeholder for terms regarding content provided by users - ownership, licenses granted to RubiCore, responsibility for user content, etc.]
           </p>
            <p>
-            You are responsible for any content, information, and other materials that you post, upload, or otherwise make available through the Service ("User Content"). You retain ownership of your User Content, but you grant RubiCore a worldwide, royalty-free license to use, reproduce, modify, and distribute your User Content in connection with operating and providing the Service.
+            You are responsible for any content, information, and other materials that you post, upload, or otherwise make available through the Service (&quot;User Content&quot;). You retain ownership of your User Content, but you grant RubiCore a worldwide, royalty-free license to use, reproduce, modify, and distribute your User Content in connection with operating and providing the Service.
           </p>
 
           <h2>4. Fees and Payment</h2>
@@ -56,10 +56,10 @@ export default function TermsOfServicePage() {
             [Placeholder for standard disclaimers and limitations of liability.]
           </p>
           <p>
-            The Service is provided on an "AS IS" and "AS AVAILABLE" basis. RubiCore makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+            The Service is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. RubiCore makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
           </p>
           <p>
-            In no event shall RubiCore or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on RubiCore's website.
+            In no event shall RubiCore or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on RubiCore&#39;s website.
           </p>
 
           <h2>7. Governing Law</h2>
@@ -72,7 +72,7 @@ export default function TermsOfServicePage() {
 
           <h2>8. Changes to Terms</h2>
           <p>
-            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+            We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days&#39; notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
           </p>
 
           <h2>9. Contact Us</h2>

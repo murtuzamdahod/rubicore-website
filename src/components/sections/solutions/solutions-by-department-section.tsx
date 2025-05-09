@@ -3,7 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Brain, Briefcase, Code, DollarSign, Users, BarChart3, FileText, Search, Settings } from "lucide-react"; // Example icons
+import { Brain, Code, DollarSign, Users, BarChart3, Search } from "lucide-react"; // Example icons
 
 const departments = [
   {

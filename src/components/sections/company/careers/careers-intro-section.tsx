@@ -5,16 +5,15 @@ export default function CareersIntroSection() {
     <section className="py-16 bg-gray-50 dark:bg-gray-800 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Join a Team of Innovators and Problem Solvers
-          </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            At RubiCore, we're not just building software; we're crafting the
-            future of enterprise AI. We believe in fostering a culture of
-            collaboration, continuous learning, and impactful work. If
-            you're driven by challenges and passionate about making a
-            difference with cutting-edge technology, you'll find your place
-            here.
+          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+            <span className="block">Shape the Future of AI With Us</span>
+            <span className="block text-ruby-600 dark:text-ruby-500">Join the RubiCore Team</span>
+          </h1>
+          <p className="mt-6 text-xl text-gray-600 dark:text-gray-400">
+            At RubiCore, we&apos;re not just building an AI platform; we&apos;re creating a new paradigm for how businesses will operate. We believe in the power of collaboration, innovation, and pushing the boundaries of what&apos;s possible.
+          </p>
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
+            If you&apos;re passionate about agentic AI, secure enterprise solutions, and want to be part of a team that&apos;s making a real impact, you&apos;ve come to the right place. Explore our current openings and find your next great adventure.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">

@@ -5,6 +5,7 @@ import LeadershipTeamSection from "@/components/sections/company/about/leadershi
 import CareersSection from "@/components/sections/company/about/careers-section";
 import PressNewsSection from "@/components/sections/company/about/press-news-section";
 import ContactSection from "@/components/sections/company/about/contact-section";
+import { HeroSection } from "@/components/sections/hero-section";
 
 export const metadata = {
   title: "About RubiCore | Secure Enterprise Agentic AI Platform",
@@ -24,12 +25,18 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 sm:text-xl md:text-2xl">
-            We're dedicated to helping organizations unlock the
+            We&apos;re dedicated to helping organizations unlock the
             transformative power of Agentic AI responsibly and securely,
             driving real business value.
           </p>
         </div>
       </div>
+      <HeroSection
+        title="Crafting the Future of AI, Together"
+        description="RubiCore is pioneering the next wave of agentic AI, building intelligent systems that learn, adapt, and collaborate. Our mission is to empower businesses and individuals with AI that augments human potential and solves complex challenges. We&apos;re a team of innovators, thinkers, and builders passionate about creating a future where technology and humanity work in concert."
+        imageSrc="/images/stock/team-collaboration.webp"
+        imageAlt="RubiCore Team Collaborating on AI Solutions"
+      />
       <MissionVisionSection />
       <StorySection />
       <WhyRubiCoreSection />

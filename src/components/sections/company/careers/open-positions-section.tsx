@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { MapPin, Briefcase, Brain, Search, Filter } from "lucide-react";
+import { MapPin, Briefcase, Search, Filter } from "lucide-react";
 import React from "react";
 import { Input } from "@/components/ui/input";
 import {
@@ -157,7 +157,7 @@ export default function OpenPositionsSection() {
         )}
          <div className="mt-16 text-center">
             <p className="text-lg text-gray-700 dark:text-gray-300">
-                Don't see a role that fits? We're always looking for talented individuals.
+                Don&apos;t see a role that fits? We&apos;re always looking for talented individuals.
             </p>
             <Button variant="link" asChild className="mt-2 text-xl">
                 <Link href="/contact?subject=General+Career+Inquiry">

@@ -1,25 +1,44 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Mockup } from "@/components/ui/mockup";
 import { Glow } from "@/components/ui/glow";
 import Link from "next/link";
-import { HeroInterconnectedVisual } from "./hero/hero-interconnected-visual"; // Import the new visual
+import Image from 'next/image';
+import { HeroInterconnectedVisual } from "./hero/hero-interconnected-visual";
 
 interface HeroSectionProps {
   className?: string;
+  title?: string;
+  description?: React.ReactNode;
+  imageSrc?: string;
+  imageAlt?: string;
+  primaryCtaText?: string;
+  primaryCtaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
 }
 
-export function HeroSection({ className }: HeroSectionProps) {
-  const title = "Build, Orchestrate & Govern Your Secure AI Workforce.";
+export function HeroSection({
+  className,
+  title: propTitle,
+  description: propDescription,
+  imageSrc: propImageSrc,
+  imageAlt: propImageAlt,
+  primaryCtaText: propPrimaryCtaText,
+  primaryCtaHref: propPrimaryCtaHref,
+  secondaryCtaText: propSecondaryCtaText,
+  secondaryCtaHref: propSecondaryCtaHref,
+}: HeroSectionProps) {
+  const title = propTitle || "Build, Orchestrate, Govern & Collaborate with Your Secure AI Workforce.";
   const description =
-    "Deploy RubiCore, the enterprise-grade Agentic AI platform, on-premise or cloud. Autonomously automate complex end-to-end workflows with advanced reasoning, unlock critical insights, and empower your teams with specialized, controllable AI agents built rapidly for faster ROI in our intuitive Low-Code Agent Studio.";
+    propDescription || 
+      "Deploy RubiCore, the enterprise-grade Agentic AI platform, on-premise, cloud, or hybrid. Autonomously automate complex end-to-end workflows with advanced multi-modal reasoning and planning, unlock critical insights, and empower your teams with specialized, explainable, and continuously learning AI agents. Build rapidly for faster ROI in our intuitive Low-Code Agent Studio or extend with our comprehensive Developer SDKs. Our adaptive multi-agent collaboration architecture, integrated Human-AI teaming workflows, and Model Context Protocol (MCP) capabilities enable seamless coordination across your enterprise systems while maintaining complete governance, security, and ethical AI standards.";
   const primaryCta = {
-    text: "Request a Demo",
-    href: "/request-demo", // Placeholder link
+    text: propPrimaryCtaText || "Request a Demo",
+    href: propPrimaryCtaHref || "/request-demo",
   };
   const secondaryCta = {
-    text: "Explore the Platform",
-    href: "/platform", // Placeholder link
+    text: propSecondaryCtaText || "Explore the Platform",
+    href: propSecondaryCtaHref || "/platform",
   };
 
   return (
@@ -67,11 +86,20 @@ export function HeroSection({ className }: HeroSectionProps) {
           </div>
         </div>
         
-        {/* Interconnected Agents Visual */}
+        {/* Visual Element */}
         <div className="relative w-full max-w-4xl pt-8 md:pt-12">
-          {/* <Mockup> */} {/* Mockup might not be needed if the visual is self-contained */}
+          {propImageSrc && propImageAlt ? (
+            <Image 
+              src={propImageSrc} 
+              alt={propImageAlt} 
+              width={1200} 
+              height={675} 
+              className="rounded-lg shadow-2xl object-cover"
+              priority
+            />
+          ) : (
             <HeroInterconnectedVisual />
-          {/* </Mockup> */}
+          )}
         </div>
       </div>
 

@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Puzzle } from "lucide-react"; // Example Icon
+import { Puzzle } from "lucide-react"; 
 import Link from "next/link";
-import { FeatureStatusBadge } from "@/components/ui/feature-status-badge"; // Import the badge
 
 export function AgentCustomizationSection() {
   return (
@@ -11,19 +9,39 @@ export function AgentCustomizationSection() {
         <div className="text-center mb-10 md:mb-12">
           <Puzzle className="h-12 w-12 text-primary mx-auto mb-4" />
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Build Your Own Agent – Tailored to Your Needs
+            Build, Extend, and Evolve Your AI Workforce – Tailored Precisely to Your Needs
           </h2>
         </div>
-        <div className="max-w-3xl mx-auto">
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6 text-center">
-            While RubiCore offers many ready-to-use agents, you can create custom agents from scratch or by combining capabilities. Our Low-Code Agent Studio and SDK allow you to define an agent’s <strong>role</strong>, its available <strong>tools/actions</strong>, and its workflow in responding to tasks. For instance, if you need an “Expense Report Auditor” agent: you could equip it with access to expense submissions (Excel or PDF), give it rules for policy compliance, and integrate it with your approval system. In RubiCore, this is done through a guided wizard – no heavy coding required (though developers can use Python for fine-tuning logic if desired).
+        <div className="max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed">
+          <p className="mb-6">
+            While RubiCore offers many ready-to-use and adaptable specialized agents, the platform is designed for ultimate flexibility. You can:
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
-            We’re also fostering a community-driven <strong>Agent Template Marketplace</strong> <FeatureStatusBadge status="Coming Soon" className="ml-2"/> where you can share and acquire agent blueprints created by other users and partners – accelerating development and promoting best practices.
+          <ul className="space-y-3 list-disc pl-5 mb-6">
+            <li>
+              <strong>Customize Existing Agents:</strong> Fine-tune behaviors, update knowledge, add new tools, or modify reasoning processes of pre-built agents using the Low-Code Agent Studio.
+            </li>
+            <li>
+              <strong>Build Custom Agents from Scratch:</strong> Define unique agent roles, objectives, specialized skills (using our Agentic Skill Builder), and cognitive architectures in the Studio or via our <strong>Python SDK</strong> for more complex logic.
+            </li>
+            <li>
+              <strong>Develop New Tools & Integrations:</strong> Extend agent capabilities by developing custom tools that connect to your proprietary systems or niche APIs using the SDK.
+            </li>
+            <li>
+              <strong>Configure Advanced Reasoning & Learning:</strong> Our Advanced Reasoning Designer allows visual configuration of complex cognitive processes (chain-of-thought, tree-of-thought, ReAct, self-critique, reflection) and learning parameters.
+            </li>
+            <li>
+              <strong>Leverage Dynamic Tooling:</strong> MCP Integration and automated tool discovery allow custom agents to dynamically find and use available enterprise resources.
+            </li>
+            <li>
+              <strong>Utilize Simulation Environments:</strong> Test and validate custom agents and their interactions in a sandboxed simulation environment before deploying them into production. This allows for safe experimentation with agent logic, tool use, and collaborative behaviors.
+            </li>
+          </ul>
+          <p className="mb-8">
+            <em>We are fostering a community-driven <strong>Agent & Skill Marketplace</strong> where users and partners can share, discover, and acquire agent templates, specialized skills, and tool connectors – accelerating development, promoting best practices, and enriching the RubiCore ecosystem.</em>
           </p>
           <div className="text-center">
             <Button asChild size="lg">
-              <Link href="/platform/agent-types#custom-agent-builder">Explore the Agent Library & Builder</Link>
+              <Link href="/platform/developer-hub">Explore the Agent Studio & SDK</Link>
             </Button>
           </div>
         </div>
