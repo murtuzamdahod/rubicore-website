@@ -2,76 +2,66 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, FileText, ExternalLink, Rss, Newspaper, FileSpreadsheet, Presentation } from "lucide-react";
+import { BookOpen, FileText, ExternalLink, Rss, Presentation, Users, Library, BookMarked } from "lucide-react"; // Added Users, Library, BookMarked
 
 // Dummy data - replace with actual data or fetch from API
 const categories = [
   {
-    name: "Blog",
-    description: "Stay updated on Agentic AI trends, RubiCore news, and expert insights.",
+    name: "Blog & Articles",
+    description: "Stay updated on the latest Agentic AI trends, RubiCore platform innovations, expert opinions, practical implementation tips, and discussions on ethical AI and governance.",
     icon: <Rss className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
-    link: "/blog",
+    link: "/blog", // Assuming main blog page lists articles
     cta: "View All Blog Posts",
-    items: [ // Example items - these would be fetched dynamically
-      { id: "shipping-industry-knowledge-agent", title: "Navigating the Tides of Information: How a RubiCore Knowledge Agent Revolutionizes the Shipping Industry", icon: <Newspaper className="w-12 h-12 text-gray-600 dark:text-gray-400" />, link: "/blog/shipping-industry-knowledge-agent" },
-      { id: "blog-2", title: "The Future of On-Premise AI", icon: <Newspaper className="w-12 h-12 text-gray-600 dark:text-gray-400" />, link: "/blog/future-on-prem-ai" },
-      { id: "blog-3", title: "Top 5 Use Cases for Agentic AI in Finance", icon: <Newspaper className="w-12 h-12 text-gray-600 dark:text-gray-400" />, link: "/blog/agentic-ai-finance" },
-    ]
+    isExternal: false,
   },
   {
-    name: "Case Studies",
-    description: "See how enterprises achieve measurable ROI with RubiCore.",
+    name: "Case Studies & Success Stories",
+    description: "See how leading enterprises are achieving measurable results, transformative ROI, and enhanced operational excellence by deploying RubiCore's secure, collaborative AI workforce. Filter by industry and solution.",
     icon: <FileText className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
-    link: "/resources/case-studies",
+    link: "/resources/case-studies", // Assuming a page listing case studies
     cta: "View All Case Studies",
-    items: [
-      { id: "cs-2", title: "Healthcare Provider Enhances Patient Intake", icon: <FileSpreadsheet className="w-12 h-12 text-gray-600 dark:text-gray-400" />, link: "/resources/case-studies/healthcare-intake" },
-    ]
+    isExternal: false,
   },
   {
-    name: "Whitepapers & Guides",
-    description: "In-depth analysis and practical guidance on enterprise AI.",
+    name: "Whitepapers, Guides & eBooks",
+    description: "In-depth analysis, strategic frameworks, and practical guidance on designing, implementing, governing, and maximizing the value of enterprise agentic AI. Topics include XAI, On-Premise AI, Multi-Agent Systems, Ethical AI, and more.",
     icon: <BookOpen className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
-    link: "/resources/whitepapers",
+    link: "/resources/whitepapers", // Assuming a page listing whitepapers
     cta: "View All Guides",
-    items: [
-        { id: "wp-2", title: "The CISO's Guide to Secure AI Deployment", icon: <FileText className="w-12 h-12 text-gray-600 dark:text-gray-400" />, link: "/resources/whitepapers/ciso-guide-ai" },
-    ]
+    isExternal: false,
   },
   {
-    name: "Webinars & Events",
-    description: "Watch on-demand expert sessions and product deep dives.",
+    name: "Webinars, Events & Workshops",
+    description: "Watch on-demand recordings of expert sessions, product deep dives, and interactive workshops. Find out about upcoming live events, webinars, and opportunities to engage with RubiCore experts and the community.",
     icon: <Presentation className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
-    link: "/resources/webinars",
-    cta: "View All Webinars",
-    items: [
-        { id: "webinar-1", title: "Deep Dive: RubiCore Orchestration Engine", icon: <Presentation className="w-12 h-12 text-gray-600 dark:text-gray-400" />, link: "/resources/webinars/orchestration-deep-dive" },
-    ]
+    link: "/resources/webinars", // Assuming a page listing webinars/events
+    cta: "View All Webinars & Events",
+    isExternal: false,
   },
   {
-    name: "Documentation",
-    description: "Comprehensive technical guides for platform setup and administration.",
-    icon: <ExternalLink className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
-    link: "/docs", // Assuming external link
-    cta: "Visit Documentation Portal",
-    isExternal: true,
+    name: "Developer Hub (Documentation, APIs, SDKs)",
+    description: "Comprehensive technical guides, API references, SDK documentation (Python and others), tutorials, code samples, and best practices for building, integrating, and extending the RubiCore platform. Includes information on agent development, tool creation, and simulation environments.",
+    icon: <Library className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
+    link: "/developer-hub", 
+    cta: "Visit Developer Hub",
+    isExternal: false, 
   },
   {
-    name: "API & SDK Reference",
-    description: "Detailed reference for developers integrating with RubiCore.",
-    icon: <ExternalLink className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
-    link: "/api-docs", // Assuming external link
-    cta: "Explore API & SDK Docs",
-    isExternal: true,
+    name: "Community Forum & Knowledge Base",
+    description: "Connect with other RubiCore users, developers, and partners. Ask questions, share best practices, find solutions to common challenges, contribute to discussions, and access a growing knowledge base of community-generated content.",
+    icon: <Users className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
+    link: "/community", 
+    cta: "Join the RubiCore Community",
+    isExternal: false, // Assuming internal page, draft says "Coming Soon"
   },
-  // {
-  //   name: "Community Forum",
-  //   description: "Connect with other RubiCore users and share best practices.",
-  //   icon: <Users className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
-  //   link: "/community", // Assuming external link
-  //   cta: "Join the Community",
-  //   isExternal: true,
-  // },
+  {
+    name: "Glossary of Agentic AI Terms",
+    description: "A comprehensive A-Z glossary defining key terms and concepts in the rapidly evolving field of Agentic AI, from \"Autonomous Agents\" to \"Zero-shot Learning.\"",
+    icon: <BookMarked className="w-8 h-8 mb-4 text-ruby-600 dark:text-ruby-500" />,
+    link: "/glossary",
+    cta: "Explore the AI Glossary",
+    isExternal: false, // Assuming internal page, draft says "Coming Soon"
+  },
 ];
 
 export default function ResourceCategoriesSection() {
@@ -98,30 +88,11 @@ export default function ResourceCategoriesSection() {
                 </div>
                 <Button variant="link" asChild className="text-ruby-600 dark:text-ruby-500 hover:underline">
                   <Link href={category.link} target={category.isExternal ? "_blank" : "_self"}>
-                    {category.cta} <ExternalLink className="w-4 h-4 ml-1" />
+                    {category.cta} {category.isExternal && <ExternalLink className="w-4 h-4 ml-1" />}
                   </Link>
                 </Button>
               </div>
-              {category.items && category.items.length > 0 && (
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {category.items.map((item) => (
-                    <Link key={item.id} href={item.link} className="block group">
-                      <div className="overflow-hidden rounded-lg shadow-md bg-white dark:bg-gray-700 hover:shadow-lg transition-shadow duration-200">
-                        <div className="relative h-40 w-full">
-                          <div className="relative h-40 w-full flex items-center justify-center bg-gray-100 dark:bg-gray-700">
-                            {item.icon}
-                          </div>
-                        </div>
-                        <div className="p-4">
-                          <h4 className="text-md font-semibold text-gray-900 dark:text-white group-hover:text-ruby-600 dark:group-hover:text-ruby-500">
-                            {item.title}
-                          </h4>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              )}
+              {/* Removed category.items rendering logic to align with draft's focus for this overview section */}
             </div>
           ))}
         </div>

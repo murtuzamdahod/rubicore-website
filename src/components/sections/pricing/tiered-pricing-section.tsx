@@ -6,58 +6,94 @@ import { Check } from "lucide-react";
 
 const tiers = [
   {
-    name: "Free / Developer",
+    name: "Developer / Free",
     id: "tier-developer",
     href: "/contact?plan=free",
-    price: { monthly: "$0", annually: "$0" },
-    description: "Ideal for individual developers, testing, and learning the platform.",
+    price: { monthly: "$0" }, // Annually not specified in draft for free
+    description: "Ideal For: Individual developers, students, learning the platform, small PoCs.",
     features: [
-      "Access to Core Platform & Agent Studio",
-      "Limited Agent Usage (e.g., 2 agents, 100 workflow runs/month)",
-      "Access to select Agent Types (Knowledge, Process)",
-      "Basic Integrations (e.g., OneDrive)",
+      "Access to Core Platform & Low-Code Agent Studio",
+      "Limited Agent Creation (e.g., 2-3 agents)",
+      "Limited Workflow Runs/Month (e.g., 1,000)",
+      "Limited API Calls/Month",
+      "Access to select Standard Agent Types (e.g., Basic Knowledge, Basic Process)",
+      "Basic Integrations (e.g., OneDrive, Webhooks)",
       "Community Support",
       "Cloud Deployment Only",
+      "Basic Audit Logs",
     ],
     mostPopular: false,
     cta: "Get Started Free",
   },
   {
-    name: "Pro / Team",
-    id: "tier-pro",
-    href: "/contact?plan=pro",
-    price: { monthly: "$499", annually: "$4990" }, // Placeholder
-    description: "Small teams, deploying agents for specific departmental use cases.",
+    name: "Team",
+    id: "tier-team",
+    href: "/contact?plan=team", // Assuming pro is now team
+    price: { monthly: "Starting at $X/month" }, // Placeholder from draft
+    description: "Ideal For: Small teams, deploying agents for specific departmental use cases, building more complex PoCs.",
     features: [
-      "Everything in Free, plus:",
-      "Increased Agent Usage Limits (e.g., 10 agents, 1000 workflow runs/month)",
-      "More Agent Types (SQL/CSV, Code Intelligence)",
-      "More Integration Options (API access)",
-      "Standard Support (Email/Chat)",
-      "Basic Analytics & Monitoring",
+      "Everything in Developer, plus:",
+      "Increased Agent Creation (e.g., 10-15 agents)",
+      "Increased Workflow Runs/Month (e.g., 10,000)",
+      "Increased API Calls/Month",
+      "Access to More Agent Types (e.g., SQL/CSV Data Agent, Code Intelligence Agent)",
+      "More Standard Integration Options (e.g., Salesforce, ServiceNow basic connectors)",
+      "Full API/SDK Access",
+      "Standard Support (Email/Chat, defined response times)",
+      "Basic Analytics & Monitoring Dashboards",
+      "Cloud Deployment Only",
+      "Standard RBAC",
     ],
-    mostPopular: true,
-    cta: "Start Pro Trial",
+    mostPopular: true, // Assuming this tier is most popular
+    cta: "Start Team Trial / Request a Quote",
+  },
+  {
+    name: "Business",
+    id: "tier-business",
+    href: "/contact?plan=business",
+    price: { monthly: "Starting at $Y/month" }, // Placeholder from draft
+    description: "Ideal For: Medium-sized businesses or larger departments, deploying multiple critical agent solutions, requiring more robust governance and collaboration.",
+    features: [
+      "Everything in Team, plus:",
+      "Substantial Agent Creation & Usage Limits",
+      "Access to Advanced Agent Types (e.g., Deep Research Agent, Decision Agent, Creative Agent)",
+      "Advanced Integration Options (e.g., SAP, Oracle connectors)",
+      "Model Context Protocol (MCP) Integration",
+      "Human-AI Collaboration Features",
+      "Advanced Security Features (SAML/SSO, Granular RBAC)",
+      "Enhanced Audit Logs & Basic XAI features",
+      "Advanced Analytics & Optimization Tools",
+      "Priority Support (Dedicated channels, faster SLAs)",
+      "Optional Hybrid Deployment Add-on",
+      "Agent Lifecycle Management Basics",
+    ],
+    mostPopular: false,
+    cta: "Request a Quote / Talk to Sales",
   },
   {
     name: "Enterprise",
     id: "tier-enterprise",
     href: "/contact?plan=enterprise",
-    price: { monthly: "Custom", annually: "Custom" },
-    description: "Large organizations, complex workflows, stringent security & compliance needs.",
+    price: { monthly: "Custom Quote" }, // Annually not specified, only "Custom Quote"
+    description: "Ideal For: Large organizations, complex cross-functional and multi-agent workflows, stringent security & compliance needs, maximum control, and dedicated partnership.",
     features: [
-      "Everything in Pro, plus:",
-      "High/Custom Usage Limits",
-      "Access to All Agent Types (Deep Research)",
-      "On-Premise & Hybrid Deployment Options",
-      "Advanced Security (SAML/SSO, RBAC)",
-      "Advanced Compliance (Audit Logs)",
-      "Premium Support (Dedicated AM, SLAs)",
-      "Advanced Analytics & Optimization",
-      "Custom Integration Support",
+      "Everything in Business, plus:",
+      "High/Custom Usage Limits (Agents, Workflows, API Calls, Data Processing)",
+      "Access to All Agent Types (including Simulation Agents, Industry-Specific Vertical Agents)",
+      "Full On-Premise & Hybrid Deployment Options (including Edge)",
+      "Premium Security Features (e.g., Customer-managed keys, PrivateLink options)",
+      "Advanced Compliance Features (e.g., support for specific industry certs like HIPAA, FedRAMP assistance)",
+      "Full XAI & Explainability Suite",
+      "Bias Detection & Mitigation Tools",
+      "Ethical AI Framework Configuration",
+      "Advanced Agent Lifecycle Management & Simulation Environments",
+      "Premium Plus Support (Dedicated Technical Account Manager, Proactive Monitoring, Custom SLAs, On-site options)",
+      "Custom Integration Development Support",
+      "Professional Services & Strategic AI Consulting",
+      "Access to Beta Programs & Roadmap Influence",
     ],
     mostPopular: false,
-    cta: "Contact Sales",
+    cta: "Contact Sales for Enterprise Partnership",
   },
 ];
 
@@ -66,18 +102,16 @@ export default function TieredPricingSection() {
     <section className="py-16 bg-gray-50 dark:bg-gray-800 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-lg text-ruby-600 dark:text-ruby-500 font-semibold">
-            Flexible Plans
-          </p>
+          {/* Removed the "Flexible Plans" paragraph as it's not in the draft's intro */}
           <h2 className="mt-2 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Choose the Right Plan for Your Needs
+            Transparent & Flexible Pricing for Your Intelligent, Governed AI Workforce
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            Start building today or scale with advanced features and dedicated support.
+            Find the right RubiCore plan to build, orchestrate, govern, and collaborate with your AI agents, from individual experimentation and PoCs to enterprise-wide deployment with maximum security, control, and advanced capabilities. All plans include access to the core platform features like the Low-Code Agent Studio and fundamental Orchestration Engine.
           </p>
         </div>
 
-        <div className="grid max-w-md grid-cols-1 gap-8 mx-auto lg:max-w-none lg:grid-cols-3">
+        <div className="grid max-w-md grid-cols-1 gap-8 mx-auto lg:max-w-none lg:grid-cols-4"> {/* Changed to lg:grid-cols-4 for 4 tiers */}
           {tiers.map((tier) => (
             <div
               key={tier.id}
@@ -96,7 +130,7 @@ export default function TieredPricingSection() {
                 </div>
                 <div className="flex items-baseline mt-4 text-5xl font-extrabold text-gray-900 dark:text-white">
                   {tier.price.monthly}
-                  {tier.price.monthly !== "Custom" && <span className="ml-1 text-xl font-medium text-gray-500 dark:text-gray-400">/mo</span>}
+                  {tier.price.monthly !== "Custom Quote" && !tier.price.monthly.startsWith("Starting at") && tier.price.monthly !== "$0" && <span className="ml-1 text-xl font-medium text-gray-500 dark:text-gray-400">/mo</span>}
                 </div>
                 <p className="mt-5 text-base text-gray-600 dark:text-gray-400">{tier.description}</p>
               </div>

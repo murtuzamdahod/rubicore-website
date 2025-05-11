@@ -41,26 +41,25 @@ export default function OrchestratedIntelligenceSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Beyond Silos: Achieve End-to-End Automation with Multi-Agent
-            Orchestration.
+            Beyond Silos: Achieve Transformative End-to-End Automation and Insight with Orchestrated Multi-Agent Systems.
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            The true power of RubiCore emerges when orchestrating multiple
-            specialized agents to tackle complex, cross-functional business
-            processes. Imagine: A Deep Research Agent identifies a new market
-            trend. This triggers a Custom Sales Agent to research and enrich
-            potential leads. Qualified leads are then passed to a Process Agent
-            which, guided by a Knowledge Agent, generates personalized proposals
-            and outreach emails, perhaps requiring Human-in-the-Loop approval.
-            RubiCore&apos;s Intelligent Orchestration Engine makes these
-            sophisticated, governed, end-to-end automated workflows a reality.
+            The true transformative potential of RubiCore is realized when specialized AI agents are orchestrated into collaborative multi-agent systems to tackle complex, cross-functional enterprise challenges. Imagine a scenario:
+            1. A Deep Research Agent identifies a nascent market trend and potential competitive threats.
+            2. A Simulation Agent models the potential impact of this trend on your business under various response scenarios.
+            3. This data is fed to a Strategic Decision Agent, which, collaborating with human strategists via the Human-AI Collaboration Interface, formulates a strategic response (e.g., develop a new product feature).
+            4. A Code & Software Intelligence Agent assists developers in rapidly prototyping and building the new feature.
+            5. Simultaneously, Creative Agents develop marketing materials, while a Knowledge Agent ensures all product information is accurate and consistent across channels.
+            6. Process Automation Agents then coordinate the updated product rollout, inventory adjustments, and sales enablement training, integrating with ERP, CRM, and learning management systems.
+            7. Throughout this process, Data Analytics Agents monitor progress, identify bottlenecks, and provide performance feedback, allowing the entire system (agents and humans) to learn and optimize.
+            RubiCore&apos;s Intelligent Orchestration Engine and Adaptive Multi-Agent Collaboration Framework make these sophisticated, governed, end-to-end intelligent automation workflows a reality, breaking down departmental silos, fostering emergent solutions, and driving unprecedented levels of efficiency, agility, and innovation.
           </p>
         </div>
         <OrchestrationVisual />
         <div className="mt-12 text-center">
           <Button size="lg" asChild>
-            <Link href="/platform/overview#orchestration"> {/* Ensure this anchor exists on the target page */}
-              Learn About Intelligent Orchestration
+            <Link href="/platform/overview#orchestration">
+              Learn About Intelligent Orchestration & Multi-Agent Systems
             </Link>
           </Button>
         </div>

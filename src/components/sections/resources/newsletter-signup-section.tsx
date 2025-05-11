@@ -47,11 +47,10 @@ export default function NewsletterSignupSection() {
         <div className="max-w-xl mx-auto text-center">
           <Mail className="w-12 h-12 text-white mx-auto mb-4" />
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            Get the Latest Insights Delivered
+            Get the Latest Agentic AI Insights & Platform News Delivered
           </h2>
           <p className="mt-4 text-lg text-ruby-100">
-            Subscribe to receive updates on new resources, platform features,
-            and upcoming events directly to your inbox.
+            Subscribe to receive updates on new resources, platform features, upcoming events, security advisories, and thought leadership. Personalize your subscription to your interests (e.g., Developer Updates, Business Solutions, Security Bulletins).
           </p>
           <form onSubmit={handleSubmit} className="mt-8 sm:flex">
             <label htmlFor="email-address" className="sr-only">

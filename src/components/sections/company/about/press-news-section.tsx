@@ -10,7 +10,7 @@ const newsItems = [
     source: "TechCrunch",
     date: "April 10, 2025",
     link: "https://techcrunch.com/rubicore-funding", // Replace with actual link
-    imageUrl: "/images/news/techcrunch-logo.png" // Replace with actual image
+    imageUrl: "/images/news/techcrunch-logo.svg" // Replace with actual image
   },
   {
     id: "news-2",
@@ -40,7 +40,7 @@ export default function PressNewsSection() {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <Newspaper className="w-12 h-12 text-ruby-600 dark:text-ruby-500 mx-auto mb-4" />
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            RubiCore in the News
+            RubiCore in the News & On the Road
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +66,7 @@ export default function PressNewsSection() {
         {newsItems.length > 3 && (
           <div className="mt-12 text-center">
             <Button variant="outline" asChild>
-              <Link href="/news">View All News</Link>
+              <Link href="/news">View All News & Events</Link>
             </Button>
           </div>
         )}

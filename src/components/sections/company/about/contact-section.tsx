@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Mail, Phone, MapPin, MessageSquare } from "lucide-react"; // Example icons
+import { Mail, Phone, MapPin, MessageSquare, Users } from "lucide-react"; // Added Users icon
 
 const contactDetails = [
   {
@@ -10,10 +10,16 @@ const contactDetails = [
     href: "mailto:info@rubicore.ai",
   },
   {
-    icon: <Phone className="w-6 h-6 text-ruby-600 dark:text-ruby-500" />,
+    icon: <Phone className="w-6 h-6 text-ruby-600 dark:text-ruby-500" />, // Assuming Phone icon is suitable for Sales
     title: "Sales Inquiries",
-    value: "sales@rubicore.ai", // Or a phone number e.g., "+1-800-555-0100"
+    value: "sales@rubicore.ai",
     href: "mailto:sales@rubicore.ai",
+  },
+  {
+    icon: <Users className="w-6 h-6 text-ruby-600 dark:text-ruby-500" />,
+    title: "Partner Inquiries",
+    value: "partners@rubicore.ai",
+    href: "mailto:partners@rubicore.ai",
   },
   {
     icon: <MessageSquare className="w-6 h-6 text-ruby-600 dark:text-ruby-500" />,
@@ -36,18 +42,17 @@ export default function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Get in Touch
+            Get in Touch – Let&apos;s Discuss Your Agentic AI Journey.
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            Have questions about RubiCore, partnerships, or press inquiries?
-            Reach out to our team. We&apos;re here to help.
+            Have questions about RubiCore, our platform, partnerships, responsible AI initiatives, or press inquiries? Reach out to our team.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"> {/* Adjusted grid for 5 items */}
           {contactDetails.map((detail) => (
             <div
               key={detail.title}
-              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg text-center"
+              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg text-center flex flex-col items-center" // Added flex for centering
             >
               <div className="flex justify-center mb-4">{detail.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
@@ -64,22 +69,12 @@ export default function ContactSection() {
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center"> {/* Increased margin top for button */}
             <Button size="xl" asChild>
                 <Link href="/contact">Send Us a Message</Link>
             </Button>
         </div>
-        <div className="mt-12 text-center">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">General Inquiries</h3>
-          <p className="text-gray-600 dark:text-gray-400">
-            For all general questions, partnership opportunities, or media requests, please reach out to our primary contact point. We&apos;re always happy to hear from you.
-          </p>
-          <Button variant="outline" asChild className="mt-2">
-            <a href="mailto:info@rubicore.ai">
-              info@rubicore.ai
-            </a>
-          </Button>
-        </div>
+        {/* Removed redundant General Inquiries block */}
       </div>
     </section>
   );

@@ -1,48 +1,54 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge"; 
-import { Code2, Database, Layers, Brain, Container, GitBranch, Search } from "lucide-react"; 
+import { Code2, Database, Layers, Brain, Container, GitBranch, Server, BarChartHorizontalBig } from "lucide-react"; // Added Server, BarChartHorizontalBig
 
 const techStackItems = [
   {
     name: "Python & FastAPI",
-    description: "Robust backend with high-performance asynchronous I/O for snappy and reliable APIs.",
+    description: "High-performance, asynchronous APIs. Internal communication leverages gRPC and message queues (e.g., Kafka/RabbitMQ) for resilient, scalable event-driven interactions.",
     icon: Code2,
     category: "Backend"
   },
   {
-    name: "LangChain Concepts",
-    description: "Orchestrating LLM calls, tool usage, and multi-step reasoning for intelligent agent workflows.",
+    name: "Agent Cognitive Architecture (LangChain, LlamaIndex, etc.)",
+    description: "Incorporates agentic AI frameworks and research for orchestrating LLM calls, dynamic tool use, multi-step reasoning (planning, reflection, self-critique), and managing complex agent behaviors.",
     icon: Brain,
     category: "AI/ML"
   },
   {
-    name: "PostgreSQL & Redis",
-    description: "Transactional integrity for config/logs (PostgreSQL) and caching/ephemeral memory (Redis).",
-    icon: Database,
-    category: "Data"
+    name: "Advanced Agent Memory Systems",
+    description: "Multi-layered memory: Short-Term/Working (Redis), Long-Term Episodic & Semantic (Vector DBs like Weaviate, Pinecone, Milvus), Structured Knowledge (Knowledge Graphs like Neo4j), Procedural Memory, Buffer/Scratchpad.",
+    icon: Database, // Representing diverse data stores
+    category: "Data & AI"
   },
   {
-    name: "Weaviate (Vector DB)",
-    description: "Lightning-fast semantic searches for Knowledge Agent capabilities.",
-    icon: Search, 
+    name: "Data Persistence (PostgreSQL)",
+    description: "For structured configuration data, audit logs, and relational metadata.",
+    icon: Server, // Using Server as a more generic DB icon here
     category: "Data"
   },
   {
     name: "Next.js & TypeScript",
-    description: "Smooth, responsive user experience for the Agent Studio and Admin UI.",
-    icon: Layers, 
+    description: "Responsive, intuitive web applications for the Agent Studio & User Interfaces.",
+    icon: Layers,
     category: "Frontend"
   },
   {
-    name: "Docker & Kubernetes",
-    description: "Consistency across environments and simple scaling for on-prem or cloud deployments.",
+    name: "Docker & Kubernetes (K8s)",
+    description: "Containerized applications orchestrated with Kubernetes, enabling consistent deployments across environments and robust scaling. Helm charts provided.",
     icon: Container,
     category: "DevOps"
   },
   {
-    name: "REST APIs & Python SDK",
-    description: "Comprehensive APIs and SDKs for easy extension and integration.",
-    icon: GitBranch, 
+    name: "Monitoring & Observability (Prometheus, Grafana, ELK)",
+    description: "Comprehensive logging, monitoring, and alerting.",
+    icon: BarChartHorizontalBig, // Representing monitoring
+    category: "DevOps"
+  },
+  {
+    name: "APIs (REST/GraphQL) & SDKs (Python)",
+    description: "Comprehensive APIs (REST and GraphQL) and a primary Python SDK (others planned) enable deep integration and extensibility.",
+    icon: GitBranch,
     category: "Extensibility"
   }
 ];
@@ -53,15 +59,15 @@ export function CoreTechStackSection() {
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Built on Proven, Cutting-Edge Technologies
+            Built on Proven, Cutting-Edge Technologies for Advanced Agentic Functionality
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            We chose a tech stack that balances innovation with stability.
+            Our tech stack balances innovation with enterprise-grade stability and performance:
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {techStackItems.map((item) => (
-            <Card key={item.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card key={item.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">
                   <item.icon className="h-10 w-10 text-primary" />

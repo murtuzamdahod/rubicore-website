@@ -38,17 +38,32 @@ const platformLinks: { title: string; href: string; description: string }[] = [
   {
     title: 'Technology',
     href: '/platform/technology',
-    description: 'Architecture and tech stack.',
+    description: 'Architecture and tech stack, including LLM agnosticism and advanced memory systems.',
   },
   {
     title: 'Integrations',
     href: '/platform/integrations',
-    description: 'Connectivity options.',
+    description: 'Connectivity options, including dynamic tool discovery and API ecosystem.',
   },
   {
     title: 'Security & Compliance',
     href: '/platform/security',
-    description: 'Focus on trust and governance.',
+    description: 'Focus on trust, governance, XAI, and ethical AI.',
+  },
+  {
+    title: 'MCP Integration',
+    href: '/platform/mcp-integration', // Assuming path
+    description: 'Model Context Protocol capabilities.',
+  },
+  {
+    title: 'Human-AI Collaboration (Coming Soon)',
+    href: '/platform/human-ai-collaboration', // Assuming path
+    description: 'Features for seamless human-agent teaming and oversight.',
+  },
+  {
+    title: 'Developer Hub (Coming Soon)',
+    href: '/developer-hub', // Assuming path
+    description: 'SDKs, API Docs, Simulation Environments (Coming Soon), Community (Coming Soon).',
   },
 ];
 
@@ -56,27 +71,37 @@ const resourcesLinks: { title: string; href: string; description: string }[] = [
   {
     title: 'Blog',
     href: '/resources#blog',
-    description: 'Latest articles and insights.',
+    description: 'Latest articles and insights.', // Kept existing, draft is just "Blog"
   },
   {
     title: 'Case Studies',
     href: '/resources#casestudies',
-    description: 'Real-world success stories.',
+    description: 'Real-world success stories.', // Kept existing, draft is just "Case Studies"
   },
   {
     title: 'Whitepapers & Guides',
     href: '/resources#whitepapers',
-    description: 'In-depth analysis and practical guides.',
+    description: 'In-depth analysis, practical guides, including guides on Ethical AI, XAI, and Agentic ROI.',
   },
   {
     title: 'Documentation',
-    href: '/docs', // Assuming a separate docs portal
-    description: 'Comprehensive technical guides.',
+    href: '/docs',
+    description: 'Comprehensive technical guides.', // Kept existing, draft is "Comprehensive guides."
   },
   {
     title: 'API Reference',
-    href: '/api-docs', // Assuming separate API docs
-    description: 'Developer API documentation.',
+    href: '/api-docs',
+    description: 'Detailed developer API documentation.', // Kept existing, draft is "Detailed developer documentation."
+  },
+  {
+    title: 'Webinars & Demos',
+    href: '/resources#webinars', // Assuming path
+    description: 'Product showcases and expert talks.',
+  },
+  {
+    title: 'Glossary (Coming Soon)',
+    href: '/resources#glossary', // Assuming path
+    description: 'Key Agentic AI terms explained.',
   },
 ];
 
@@ -84,14 +109,22 @@ const companyLinks: { title: string; href: string; description?: string }[] = [
   {
     title: 'About Us',
     href: '/company/about',
+    description: 'Mission, vision, and commitment to Responsible AI.',
   },
   {
     title: 'Careers',
     href: '/company/careers',
+    description: 'Explore opportunities at RubiCore.', // Added a generic description
   },
   {
     title: 'Contact Us',
     href: '/contact',
+    description: 'Get in touch with our team.', // Added a generic description
+  },
+  {
+    title: 'Partners (Coming Soon)',
+    href: '/company/partners', // Assuming path
+    description: 'Technology and solution partners.',
   },
 ];
 

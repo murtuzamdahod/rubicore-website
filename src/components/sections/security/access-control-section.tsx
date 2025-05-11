@@ -2,57 +2,63 @@ import { Users, KeyRound, ShieldCheck, ListChecks } from "lucide-react"; // Exam
 
 const accessControlFeatures = [
   {
-    icon: <Users className="w-10 h-10 text-ruby-600 dark:text-ruby-500" />,
+    icon: Users,
     title: "Role-Based Access Control (RBAC)",
     description:
-      "Define custom roles with specific permissions for platform features, agent management, data access, and integration configuration. Enforce least-privilege principles.",
+      "Define custom roles with specific permissions for platform features, agent development, deployment, data access, tool usage, and integration configuration. Enforce least-privilege principles rigorously for both human users and AI agents.",
   },
   {
-    icon: <KeyRound className="w-10 h-10 text-ruby-600 dark:text-ruby-500" />,
-    title: "SAML 2.0 SSO Integration",
+    icon: KeyRound,
+    title: "SAML 2.0 / OpenID Connect SSO Integration",
     description:
-      "Seamlessly integrate with your enterprise identity provider (e.g., Okta, Azure AD) for single sign-on and centralized identity management.",
+      "Seamlessly integrate with your enterprise identity provider (e.g., Okta, Azure AD, Ping Identity) for federated single sign-on and multi-factor authentication (MFA) enforcement.",
   },
   {
-    icon: <ShieldCheck className="w-10 h-10 text-ruby-600 dark:text-ruby-500" />,
-    title: "API & Agent Credentials",
+    icon: ShieldCheck, // Using ShieldCheck as a generic icon for Agent Identity
+    title: "Agent Identity & Secure Credentials Management",
     description:
-      "Manage API keys with detailed scopes. Treat agents as service accounts with defined data access, blocking out-of-scope attempts.",
+      "Each AI agent possesses a unique, manageable identity. Securely manage API keys, tokens, and other credentials used by agents to interact with internal and external systems, with support for secrets management vaults (e.g., HashiCorp Vault, Azure Key Vault).",
   },
   {
-    icon: <ListChecks className="w-10 h-10 text-ruby-600 dark:text-ruby-500" />,
-    title: "Audit Trails & Alerts",
+    icon: Users, // Re-using Users icon for Fine-Grained Permissions
+    title: "Fine-Grained Permissions for Agents",
     description:
-      "Log every user login, agent execution, integration call, or data access. Configure alerts for unusual activity for security team response.",
+      "Control exactly what data sources, tools, APIs, and other agents an individual agent or agent group can access and what actions they can perform.",
+  },
+  {
+    icon: ListChecks,
+    title: "Comprehensive Audit Trails & Real-Time Alerts",
+    description:
+      "Every user action, agent execution, API call, data access, permission change, and system event is logged immutably. Configure real-time alerts for suspicious activity, policy violations, or critical system events, integrated with your SIEM.",
   },
 ];
 
 export default function AccessControlSection() {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-800 sm:py-24">
+    <section className="py-16 bg-muted/20 dark:bg-gray-800/20 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Granular Control: Ensuring the Right Access, Always.
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+            Granular, Unified Control: Ensuring the Right Access for Humans and Agents, Always.
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            RubiCore provides fine-grained control over who (or what) can do
-            what, ensuring robust security and compliance across your AI
-            workforce.
+          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            RubiCore provides fine-grained, centralized control over all access:
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"> {/* Adjusted for potentially 5 items */}
           {accessControlFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex"
+              className="bg-background dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex"
             >
-              <div className="flex-shrink-0 mr-6">{feature.icon}</div>
+              <div className="flex-shrink-0 mr-6">
+                <feature.icon className="w-10 h-10 text-primary" />
+              </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-base text-gray-600 dark:text-gray-400">
+                <p className="text-base text-muted-foreground">
                   {feature.description}
                 </p>
               </div>

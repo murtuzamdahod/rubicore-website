@@ -11,11 +11,18 @@ const footerNavSections = [
       { name: 'Technology', href: '/platform/technology' },
       { name: 'Integrations', href: '/platform/integrations' },
       { name: 'Security & Compliance', href: '/platform/security' },
+      { name: 'MCP Integration', href: '/platform/mcp-integration' },
+      { name: 'Human-AI Collaboration', href: '/platform/human-ai-collaboration' }, // Add (Coming Soon) if desired in text
+      { name: 'Developer Hub', href: '/developer-hub' }, // Add (Coming Soon) if desired in text
     ],
   },
   {
     title: 'Solutions',
-    links: [{ name: 'Use Cases', href: '/solutions' }],
+    links: [{ name: 'Use Cases', href: '/solutions' }], // This effectively links to the main Solutions page
+  },
+  {
+    title: 'Pricing', // Added Pricing section
+    links: [{ name: 'View Pricing', href: '/pricing' }],
   },
   {
     title: 'Resources',
@@ -25,6 +32,8 @@ const footerNavSections = [
       { name: 'Whitepapers & Guides', href: '/resources#whitepapers' },
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api-docs' },
+      { name: 'Webinars & Demos', href: '/resources#webinars' },
+      { name: 'Glossary', href: '/resources#glossary' }, // Add (Coming Soon) if desired in text
     ],
   },
   {
@@ -33,6 +42,7 @@ const footerNavSections = [
       { name: 'About Us', href: '/company/about' },
       { name: 'Careers', href: '/company/careers' },
       { name: 'Contact Us', href: '/contact' },
+      { name: 'Partners', href: '/company/partners' }, // Add (Coming Soon) if desired in text
     ],
   },
 ];
@@ -40,6 +50,7 @@ const footerNavSections = [
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy-policy' },
   { name: 'Terms of Service', href: '/terms-of-service' },
+  { name: 'Responsible AI Policy', href: '/responsible-ai-policy' }, // Add (Coming Soon) if desired in text
 ];
 
 const socialLinks = [

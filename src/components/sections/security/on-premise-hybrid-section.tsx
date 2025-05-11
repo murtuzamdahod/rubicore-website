@@ -1,60 +1,62 @@
-import { Server, Combine, CheckSquare, ShieldCheck, DatabaseZap } from "lucide-react"; // Example icons
+import { Server, Combine, CheckSquare, ShieldCheck, DatabaseZap, Cloud } from "lucide-react"; // Example icons
 
 const benefits = [
   {
-    icon: <Server className="w-8 h-8 text-ruby-600 dark:text-ruby-500" />,
-    title: "Maximum Data Sovereignty",
-    description: "All data and computations can remain in-house.",
+    icon: Server,
+    title: "Maximum Data & Model Sovereignty & Control",
+    description: "All data, computations, and AI models can remain in-house or within your designated secure zones.",
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 text-ruby-600 dark:text-ruby-500" />,
-    title: "Reduced Attack Surface",
-    description: "No external dependencies means fewer vulnerabilities.",
+    icon: ShieldCheck,
+    title: "Reduced Attack Surface & Enhanced Security Posture",
+    description: "Minimized external dependencies for core operations.",
   },
   {
-    icon: <CheckSquare className="w-8 h-8 text-ruby-600 dark:text-ruby-500" />,
-    title: "Simplified Compliance",
-    description: "Aligns with strict data regulations and internal audit requirements.",
+    icon: CheckSquare,
+    title: "Simplified & Verifiable Compliance",
+    description: "Aligns with strict data regulations, audit requirements, and supports industry-specific certifications (e.g., working towards FedRAMP, HITRUST).",
   },
   {
-    icon: <Combine className="w-8 h-8 text-ruby-600 dark:text-ruby-500" />,
-    title: "Flexible Hybrid Options",
-    description: "Use on-prem for critical pieces and connect to cloud services securely.",
+    icon: Combine,
+    title: "Flexible Hybrid & Edge Architectures",
+    description: "Optimize for performance, cost, and compliance by strategically placing components.",
   },
   {
-    icon: <DatabaseZap className="w-8 h-8 text-ruby-600 dark:text-ruby-500" />,
-    title: "Control Over AI Models",
-    description: "Run open-source models on-prem or restrict cloud model access.",
+    icon: DatabaseZap, // Consider a more specific icon for "Model Control" if available
+    title: "Control Over AI Models & Intellectual Property",
+    description: "Run open-source or proprietary models on-prem, restrict cloud model access, and protect your sensitive IP developed through AI.",
+  },
+  {
+    icon: Cloud, // Placeholder for Resilience
+    title: "Resilience & Business Continuity",
+    description: "Architectures designed for high availability and disaster recovery.",
   },
 ];
 
 export default function OnPremiseHybridSection() {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-16 bg-muted/20 dark:bg-gray-800/20 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Your Data, Your Infrastructure, Your Rules.
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+            Your Data, Your Infrastructure, Your AI Models, Your Rules – Deployed Anywhere.
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            For organizations demanding maximum control over data residency,
-            privacy, and security, RubiCore offers{" "}
-            <strong>full on-premise deployment</strong>. Install and run the
-            entire platform within your own data centers or private cloud.
-            Alternatively, leverage our <strong>secure hybrid model</strong> to
-            balance control with cloud-based scale. No matter the model,{" "}
-            <strong>you decide where your data lives and how it’s used</strong>.
+          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            For organizations demanding maximum control over data residency, privacy, AI model management, and security, RubiCore offers <strong>full on-premise deployment</strong> and <strong>private cloud options</strong>. Install and run the entire platform within your own data centers or trusted private cloud – ensuring data and models never leave your governed environment. This provides unparalleled control, simplifying compliance with regulations like GDPR, HIPAA, CCPA, and supporting data localization mandates.
+            Alternatively, leverage our <strong>secure, certified public cloud offerings</strong> or a <strong>flexible hybrid model</strong> to balance control with cloud-based scale and innovation (e.g., keep sensitive data and custom models on-prem while allowing agents to securely leverage vetted cloud AI services via encrypted channels). Support for <strong>edge deployments</strong> allows specific agents to run closer to data sources or where low-latency decisions are critical. No matter the model, <strong>you decide where your data lives, which models are used (including private/local LLMs), and how everything is processed and secured.</strong>
           </p>
         </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="flex items-start">
-              <div className="flex-shrink-0">{benefit.icon}</div>
+              <div className="flex-shrink-0">
+                <benefit.icon className="w-8 h-8 text-primary" />
+              </div>
               <div className="ml-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold text-foreground">
                   {benefit.title}
                 </h3>
-                <p className="mt-1 text-base text-gray-600 dark:text-gray-400">
+                <p className="mt-1 text-base text-muted-foreground">
                   {benefit.description}
                 </p>
               </div>
@@ -62,9 +64,8 @@ export default function OnPremiseHybridSection() {
           ))}
         </div>
         <div className="mt-12 flex justify-center">
-            {/* Placeholder for a visual element: Data center graphic alongside cloud/hybrid icons */}
-            <div className="w-full max-w-2xl h-64 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                <p className="text-gray-500 dark:text-gray-400">Visual: On-Premise, Cloud, Hybrid Icons</p>
+            <div className="w-full max-w-2xl h-64 bg-muted/30 rounded-lg flex items-center justify-center p-4 border border-dashed">
+                <p className="text-muted-foreground text-center">[Visual: Data center graphic, private cloud icon, public cloud icon (with security attestations), hybrid connections, and an edge device icon, all interconnected securely.]</p>
             </div>
         </div>
       </div>

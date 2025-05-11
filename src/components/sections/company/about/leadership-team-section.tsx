@@ -40,7 +40,7 @@ export default function LeadershipTeamSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
-            Meet Our Leadership
+            Meet the Team Driving Secure, Ethical, and Enterprise-Ready AI Innovation
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Our team combines decades of experience in AI, enterprise software, and business strategy. We&apos;re dedicated to building a company that not only innovates but also fosters a culture of collaboration and excellence.

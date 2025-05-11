@@ -13,15 +13,13 @@ export default function SolutionsIntroSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Targeted AI Solutions for Your Most Critical Business Challenges.
+            Targeted, Collaborative AI Solutions for Your Most Critical Business Challenges.
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            RubiCore is engineered to solve real-world business problems, going
-            beyond simple task automation. Our secure platform and specialized
-            agents provide tangible solutions to orchestrate complex workflows,
-            enhance strategic decision-making, and boost productivity across
-            key enterprise functions – all within a governed framework. Explore
-            how RubiCore can be applied to your specific operational needs.
+            RubiCore is engineered to solve real-world, complex business problems by leveraging the collective intelligence of specialized AI agents working in concert with your human teams. We go beyond simple task automation to provide tangible solutions that orchestrate intricate workflows,
+            enhance strategic decision-making with explainable insights, and boost productivity across
+            all key enterprise functions – all within a secure, governed, and continuously learning framework. Explore
+            how RubiCore&apos;s multi-agent solutions can be applied to your specific operational and strategic needs.
           </p>
         </div>
         <PlaceholderVisual />
