@@ -7,9 +7,9 @@ interface FinalCtaSectionProps {
 }
 
 export function FinalCtaSection({ className }: FinalCtaSectionProps) {
-  const headline = "Ready to Build, Orchestrate, Govern, and Collaborate with Your Future-Ready AI Workforce?";
+  const headline = "Build Your Future-Ready AI Workforce";
   const subText =
-    "Transform your enterprise with intelligent automation that is secure, explainable, and continuously learning. Our experts will help you identify high-impact use cases, navigate ethical considerations, and design a solution tailored to your business for sustainable ROI.";
+    "Transform your enterprise with secure, explainable, and continuously learning intelligent automation. Our experts help design solutions for sustainable ROI.";
   const primaryCta = {
     text: "Request a Demo",
     href: "/request-demo", // Placeholder

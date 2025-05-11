@@ -10,15 +10,7 @@ interface McpToolingSectionProps {
 export function McpToolingSection({ className }: McpToolingSectionProps) {
   const headline = "Revolutionize AI Integration with Model Context Protocol & Dynamic Tooling";
   const bodyText = 
-      "RubiCore fully embraces the Model Context Protocol (MCP) and other dynamic integration standards, transforming how AI systems interact with enterprise data, tools, and even other AI agents. Instead of brittle, point-to-point integrations, MCP and dynamic discovery enable a fluid, adaptive ecosystem where: " +
-      "AI agents can discover and utilize tools, APIs, and data sources at runtime – eliminating hardcoded dependencies and enabling seamless adaptation to new capabilities or changing environments. " +
-      "Rich context flows intelligently between systems and agents – creating personalized, informed experiences based on real-time enterprise data and agent interactions. " +
-      "Security and governance are intrinsic – with unified authentication, granular access controls, and comprehensive audit capabilities for all dynamic interactions. " +
-      "Inter-agent communication and collaboration are enhanced – allowing RubiCore agents to potentially interact with agents from other MCP-compliant platforms, fostering a broader AI ecosystem. " +
-      "RubiCore functions as both an MCP client and server: " +
-      "As an MCP client, RubiCore agents can dynamically discover and utilize tools and data from any MCP-compatible server or other discoverable enterprise endpoints. " +
-      "As an MCP server, RubiCore can expose its agent capabilities, data, and custom tools to other authorized systems and agents within your organization. " +
-      "This dual-mode implementation, combined with automated tool discovery from sources like OpenAPI specifications, creates a flexible, future-proof architecture that grows with your needs, prevents AI silos, and significantly reduces integration overhead.";
+      "RubiCore leverages Model Context Protocol (MCP) for dynamic tool discovery and real-time context sharing. This enables AI agents to adaptively use tools, APIs, and data sources, fostering a composable AI ecosystem and reducing integration overhead. RubiCore acts as both an MCP client and server, allowing seamless interaction with other MCP-compliant systems and exposing its capabilities securely.";
   const cta = {
     text: "Learn More About MCP & Dynamic Integration",
     href: "/platform/mcp-integration", // Assuming this page will be created

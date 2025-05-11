@@ -1,13 +1,42 @@
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { DotPattern } from "@/components/ui/dot-pattern"; // Restoring DotPattern
 
-// Placeholder for the split visual
-const SplitVisualPlaceholder = () => (
-  <div className="w-full h-64 md:h-80 bg-primary/10 rounded-lg flex items-center justify-center p-4">
-    <p className="text-primary/50 text-center">
-      [Visual: Tangled Processes vs. Streamlined RubiCore Workflow]
-    </p>
-  </div>
+// Updated placeholder for the split visual
+const ChallengeVisualPlaceholder = () => (
+  <Card className="w-full h-64 md:h-80 bg-destructive/5 border-destructive/20 flex flex-col items-center justify-center p-4">
+    <CardHeader>
+      <CardTitle className="text-destructive/80 text-center">Tangled Processes</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-destructive/50 text-center text-sm">
+        [Visual representing complexity, silos, inefficiency]
+      </p>
+    </CardContent>
+  </Card>
 );
+
+const SolutionVisualPlaceholder = () => (
+  <Card className="w-full h-64 md:h-80 bg-primary/5 border-primary/20 flex flex-col items-center justify-center p-4">
+    <CardHeader>
+      <CardTitle className="text-primary/80 text-center">Streamlined RubiCore Workflow</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-primary/50 text-center text-sm">
+        [Visual representing clarity, orchestration, efficiency with RubiCore]
+      </p>
+    </CardContent>
+  </Card>
+);
+
 
 interface ChallengeSolutionSectionProps {
   className?: string;
@@ -18,32 +47,60 @@ export function ChallengeSolutionSection({
 }: ChallengeSolutionSectionProps) {
   const headline =
     "Stop Patching Processes. Start Orchestrating Governed, Collaborative Intelligence.";
-  const challengeText = 
-      "Today's enterprises demand more than basic chatbots or siloed automation. You need secure, controllable, and explainable AI that understands your complex end-to-end workflows, integrates deeply with your entire tech stack, and operates with built-in governance and ethical guardrails. Generic solutions lack the depth, security, orchestration capabilities, human-AI collaboration frameworks, and customization required for mission-critical tasks – often creating new silos, compliance risks, and trust deficits. As AI capabilities evolve, you need a platform that can orchestrate heterogeneous multi-agent teams that collaborate on complex problems, learn from outcomes, and maintain policy-based governance with full transparency.";
-  const solutionText =
-      "RubiCore provides the complete, enterprise-ready platform to build, deploy, orchestrate, manage, and govern specialized AI agents tailored to your unique enterprise needs. Move beyond simple task automation to intelligent, multi-step process execution with advanced reasoning, robust memory systems, deep research, multi-modal data understanding, and secure data interaction – all deployable on-premise for maximum control or with hybrid/cloud flexibility. Our unique Context-Aware Orchestration Engine enables dynamic agent-to-agent and human-agent collaboration, allowing specialized AI agents to work together—sharing context, distributing tasks, and coordinating actions—just like high-performing human teams. Every agent operates within robust security, ethical AI frameworks, and compliance guardrails (supporting XAI principles), with continuous performance monitoring, automated learning loops, and human oversight as needed, delivering automation that is powerful, trustworthy, and continuously improving.";
+  // Shortened for brevity in card
+  const challengeSummary = "Enterprises face complex, siloed workflows, lacking secure, controllable, and deeply integrated AI for mission-critical tasks.";
+  const solutionSummary = "RubiCore offers a unified platform for building, deploying, and governing specialized AI agents with robust security and dynamic collaboration.";
 
   return (
     <section
-      className={cn("bg-background text-foreground py-16 md:py-24", className)}
+      className={cn("relative bg-background text-foreground py-16 md:py-24 overflow-hidden", className)}
     >
-      <div className="container mx-auto px-4">
+      <DotPattern
+        width={20}
+        height={20}
+        cx={1}
+        cy={1}
+        cr={1}
+        className={cn(
+          "absolute inset-0 z-0 h-full w-full [mask-image:linear-gradient(to_bottom_right,white,transparent_50%,transparent)]",
+        )}
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16">
           {headline}
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
-          <div>
-            <h3 className="text-2xl font-semibold text-primary mb-4">The Challenge</h3>
-            <p className="text-muted-foreground leading-relaxed">{challengeText}</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-primary mb-4">The RubiCore Solution</h3>
-            <p className="text-muted-foreground leading-relaxed">{solutionText}</p>
-          </div>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16"> {/* Changed items-center to items-start */}
+          <Card className="bg-background/80 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle className="text-2xl font-semibold text-primary">The Challenge</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed mb-4">{challengeSummary}</p>
+              <p className="text-muted-foreground leading-relaxed text-sm">Generic solutions often create new silos, compliance risks, and trust deficits, failing to orchestrate heterogeneous multi-agent teams effectively.</p>
+              <Button asChild variant="link" className="text-primary px-0 mt-4">
+                <Link href="/solutions">Learn More about Challenges</Link>
+              </Button>
+            </CardContent>
+          </Card>
+          <Card className="bg-background/80 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle className="text-2xl font-semibold text-primary">The RubiCore Solution</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed mb-4">{solutionSummary}</p>
+              <p className="text-muted-foreground leading-relaxed text-sm">Our Context-Aware Orchestration Engine enables dynamic agent collaboration within robust security and ethical AI frameworks, delivering powerful, trustworthy automation.</p>
+              <Button asChild variant="link" className="text-primary px-0 mt-4">
+                <Link href="/platform/overview">Discover the Platform</Link>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
-        <SplitVisualPlaceholder />
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <ChallengeVisualPlaceholder />
+          <SolutionVisualPlaceholder />
+        </div>
       </div>
     </section>
   );

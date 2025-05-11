@@ -12,27 +12,27 @@ const steps: Step[] = [
   {
     id: 1,
     title: "Design & Build",
-    description: "Define agent roles, goals, reasoning processes, and tasks in the Low-Code Agent Studio or using our Python SDK. Securely connect knowledge sources, configure specialized skills, and define ethical boundaries.",
+    description: "Define agent roles, goals, and tasks in the Low-Code Studio or Python SDK. Connect knowledge sources and set ethical boundaries.",
   },
   {
     id: 2,
     title: "Integrate & Equip",
-    description: "Connect RubiCore to your systems (OneDrive, databases, CRM, ITSM, Slack, ERP, etc.), and equip agents with necessary tools, APIs, and permissions via RBAC. Enable MCP and dynamic tool discovery for adaptive capabilities.",
+    description: "Connect RubiCore to your systems and equip agents with tools, APIs, and permissions via RBAC. Enable MCP for adaptive capabilities.",
   },
   {
     id: 3,
     title: "Orchestrate & Collaborate",
-    description: "Design multi-agent and human-AI collaborative workflows. Set triggers, configure HITL approval steps, apply compliance rules, and define communication protocols between agents.",
+    description: "Design multi-agent and human-AI workflows. Set triggers, configure HITL approvals, and apply compliance rules.",
   },
   {
     id: 4,
     title: "Deploy & Govern",
-    description: "Deploy agents securely (On-Premise, Cloud, Hybrid, or Edge). Enforce security policies, monitor for compliance, and leverage XAI features for transparency and auditability.",
+    description: "Deploy agents securely (On-Premise, Cloud, Hybrid, Edge). Enforce policies, monitor compliance, and leverage XAI.",
   },
   {
     id: 5,
     title: "Monitor, Learn & Optimize",
-    description: "Track performance, ROI, and ethical alignment via dashboards. Review audit logs, analyze results, and utilize automated learning loops (RLHF, outcome-based learning) and human feedback to continuously refine and improve agent capabilities and efficiency.",
+    description: "Track performance and ROI via dashboards. Use learning loops and feedback to refine agent capabilities.",
   },
 ];
 

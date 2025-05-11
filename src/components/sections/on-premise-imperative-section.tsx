@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
-import { ShieldCheck, Server, Cloud, Combine } from "lucide-react"; // Icons for visual representation
+import { ShieldCheck, Server, Cloud, Combine, ArrowRight } from "lucide-react"; // Icons for visual representation
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 // Placeholder for compliance badges visual
 const ComplianceBadgesPlaceholder = () => (
@@ -22,7 +24,7 @@ export function OnPremiseImperativeSection({
 }: OnPremiseImperativeSectionProps) {
   const headline = "Your AI, On Your Terms – Maximum Control, Anywhere You Operate.";
   const bodyText =
-    "Unlike many AI platforms, RubiCore can be deployed fully on-premise or in a private cloud, ensuring complete data sovereignty and model control for regulated industries like finance, government, or healthcare. Keep sensitive data, model interactions, and intellectual property within your firewalls to meet strict compliance (SOC2, GDPR, HIPAA, and support for industry-specific standards) and performance requirements. For those who prefer cloud convenience, our secure public cloud and flexible hybrid options provide agility without compromising governance or security. Our containerized, microservices architecture and model agnosticism (including support for local/private LLMs) give you unprecedented control over where your AI runs, which models it uses, and how data is processed.";
+    "RubiCore offers on-premise or private cloud deployment for complete data sovereignty and model control, ideal for regulated industries. Secure public cloud and hybrid options are also available. Our architecture provides unprecedented control over your AI deployment and data processing.";
 
   return (
     <section
@@ -38,6 +40,13 @@ export function OnPremiseImperativeSection({
               {bodyText}
             </p>
             <ComplianceBadgesPlaceholder />
+            <div className="mt-8">
+              <Button asChild variant="link" className="text-primary p-0 h-auto">
+                <Link href="/platform/security">
+                  Learn More About Security & Deployment <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
           <div className="flex flex-col items-center justify-center space-y-8 p-8 bg-muted/30 rounded-lg">
             <div className="flex items-center space-x-4 text-primary">
