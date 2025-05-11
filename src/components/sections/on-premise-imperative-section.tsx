@@ -2,17 +2,18 @@ import { cn } from "@/lib/utils";
 import { ShieldCheck, Server, Cloud, Combine, ArrowRight } from "lucide-react"; // Icons for visual representation
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { StyledComplianceBadge } from "@/components/ui/StyledComplianceBadge"; // Import the new badge
 
-// Placeholder for compliance badges visual
-const ComplianceBadgesPlaceholder = () => (
-  <div className="flex flex-wrap justify-center gap-4 mt-6">
-    {["SOC 2", "GDPR", "ISO", "HIPAA", "FedRAMP (aspiring)"].map((badge) => (
-      <div key={badge} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
-        {badge}
-      </div>
-    ))}
-  </div>
-);
+// Placeholder for compliance badges visual - will be removed
+// const ComplianceBadgesPlaceholder = () => (
+//   <div className="flex flex-wrap justify-center gap-4 mt-6">
+//     {["SOC 2", "GDPR", "ISO", "HIPAA", "FedRAMP (aspiring)"].map((badge) => (
+//       <div key={badge} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
+//         {badge}
+//       </div>
+//     ))}
+//   </div>
+// );
 
 
 interface OnPremiseImperativeSectionProps {
@@ -39,7 +40,11 @@ export function OnPremiseImperativeSection({
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               {bodyText}
             </p>
-            <ComplianceBadgesPlaceholder />
+            <div className="flex flex-wrap justify-start gap-3 mt-6"> {/* Changed justify-center to justify-start and gap */}
+              {["SOC 2 Type II", "GDPR Compliant", "ISO 27001", "HIPAA Ready", "FedRAMP (Targeted)"].map((badgeName) => (
+                <StyledComplianceBadge key={badgeName} name={badgeName} />
+              ))}
+            </div>
             <div className="mt-8">
               <Button asChild variant="link" className="text-primary p-0 h-auto">
                 <Link href="/platform/security">

@@ -4,38 +4,38 @@ import Link from "next/link";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { DotPattern } from "@/components/ui/dot-pattern"; // Restoring DotPattern
+import { BusinessChallengesVisual } from "@/components/visuals/BusinessChallengesVisual"; // Import the new visual
+import { RubiCoreSolutionVisual } from "@/components/visuals/RubiCoreSolutionVisual"; // Import the new solution visual
 
-// Updated placeholder for the split visual
-const ChallengeVisualPlaceholder = () => (
-  <Card className="w-full h-64 md:h-80 bg-destructive/5 border-destructive/20 flex flex-col items-center justify-center p-4">
-    <CardHeader>
-      <CardTitle className="text-destructive/80 text-center">Tangled Processes</CardTitle>
-    </CardHeader>
-    <CardContent>
-      <p className="text-destructive/50 text-center text-sm">
-        [Visual representing complexity, silos, inefficiency]
-      </p>
-    </CardContent>
-  </Card>
-);
+// const ChallengeVisualPlaceholder = () => (
+//   <Card className="w-full h-64 md:h-80 bg-destructive/5 border-destructive/20 flex flex-col items-center justify-center p-4">
+//     <CardHeader>
+//       <CardTitle className="text-destructive/80 text-center">Tangled Processes</CardTitle>
+//     </CardHeader>
+//     <CardContent>
+//       <p className="text-destructive/50 text-center text-sm">
+//         [Visual representing complexity, silos, inefficiency]
+//       </p>
+//     </CardContent>
+//   </Card>
+// );
 
-const SolutionVisualPlaceholder = () => (
-  <Card className="w-full h-64 md:h-80 bg-primary/5 border-primary/20 flex flex-col items-center justify-center p-4">
-    <CardHeader>
-      <CardTitle className="text-primary/80 text-center">Streamlined RubiCore Workflow</CardTitle>
-    </CardHeader>
-    <CardContent>
-      <p className="text-primary/50 text-center text-sm">
-        [Visual representing clarity, orchestration, efficiency with RubiCore]
-      </p>
-    </CardContent>
-  </Card>
-);
+// const SolutionVisualPlaceholder = () => (
+//   <Card className="w-full h-64 md:h-80 bg-primary/5 border-primary/20 flex flex-col items-center justify-center p-4">
+//     <CardHeader>
+//       <CardTitle className="text-primary/80 text-center">Streamlined RubiCore Workflow</CardTitle>
+//     </CardHeader>
+//     <CardContent>
+//       <p className="text-primary/50 text-center text-sm">
+//         [Visual representing clarity, orchestration, efficiency with RubiCore]
+//       </p>
+//     </CardContent>
+//   </Card>
+// );
 
 
 interface ChallengeSolutionSectionProps {
@@ -97,9 +97,9 @@ export function ChallengeSolutionSection({
           </Card>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <ChallengeVisualPlaceholder />
-          <SolutionVisualPlaceholder />
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch"> {/* Changed items-center to items-stretch */}
+          <BusinessChallengesVisual className="h-full" />
+          <RubiCoreSolutionVisual className="h-full" />
         </div>
       </div>
     </section>
