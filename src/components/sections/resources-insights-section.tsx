@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -9,7 +10,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, BookOpen, FileText, Users, Presentation } from "lucide-react"; // Added Presentation
+import { ArrowRight, BookOpen, FileText, Users } from "lucide-react"; // Removed Presentation
+import { featuredResources } from "@/lib/resource-data";
+
+interface SourceResourceItem {
+  id: string;
+  type: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+  date: string;
+}
 
 interface ResourceItem {
   icon: React.ElementType;
@@ -18,38 +30,20 @@ interface ResourceItem {
   link: string;
 }
 
-const featuredContent: ResourceItem[] = [
-  {
-    icon: BookOpen,
-    type: "Blog",
-    title: "Orchestrating Success: Collaborative Agentic AI",
-    link: "/resources/blog/orchestrating-success-collaborative", 
-  },
-  {
-    icon: FileText,
-    type: "Whitepaper",
-    title: "The ROI of Trust: Secure, Explainable AI Agents",
-    link: "/resources/whitepapers/roi-of-trust-xai", 
-  },
-  {
-    icon: Users,
-    type: "Case Study",
-    title: "Financial Institution Enhances Fraud Detection with RubiCore",
-    link: "/resources/case-studies/financial-institution-fraud-detection", 
-  },
-  {
-    icon: Presentation,
-    type: "Webinar",
-    title: "Human-Agent Teaming: Collaborative Intelligence",
-    link: "/resources/webinars/human-agent-teaming",
-  },
-  {
-    icon: BookOpen, // Using BookOpen again for another blog post
-    type: "Blog",
-    title: "Multi-Agent Collaboration: Future of Enterprise AI",
-    link: "/resources/blog/multi-agent-collaboration-swarm",
-  },
-];
+const iconMap: { [key: string]: React.ElementType } = {
+  "Blog Post": BookOpen,
+  "Whitepaper": FileText,
+  "Case Study": Users,
+};
+
+const featuredContent: ResourceItem[] = featuredResources.map(
+  (resource: SourceResourceItem) => ({
+    icon: iconMap[resource.type] || BookOpen, // Default to BookOpen if type not found
+    type: resource.type,
+    title: resource.title,
+    link: resource.link,
+  })
+);
 
 interface ResourcesInsightsSectionProps {
   className?: string;

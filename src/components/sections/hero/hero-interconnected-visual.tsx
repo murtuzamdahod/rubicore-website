@@ -11,7 +11,7 @@ interface AgentNode {
   id: string;
   name: string;
   icon: React.ReactNode;
-  ref: React.RefObject<HTMLDivElement | null>;
+  ref: React.RefObject<HTMLDivElement>;
   className?: string;
   size?: "small" | "medium" | "large";
   position: {
@@ -81,7 +81,7 @@ export function HeroInterconnectedVisual() {
       id: "hub",
       name: "RubiCore Orchestrator",
       icon: <Zap className="size-6 text-ruby-500" />,
-      ref: useRef(null),
+      ref: useRef<HTMLDivElement>(null),
       size: "large",
       className: "border-ruby-500 bg-ruby-50/90 shadow-[0_0_15px_rgba(229,62,62,0.3)]",
       position: { top: "50%", left: "50%" }
@@ -90,7 +90,7 @@ export function HeroInterconnectedVisual() {
       id: "research",
       name: "Deep Research Agent",
       icon: <Search className="size-5 text-blue-500" />,
-      ref: useRef(null),
+      ref: useRef<HTMLDivElement>(null),
       size: "medium",
       className: "border-blue-400 bg-blue-50/80",
       position: { top: "38%", left: "80%" }
@@ -99,7 +99,7 @@ export function HeroInterconnectedVisual() {
       id: "knowledge",
       name: "Knowledge Agent (RAG)",
       icon: <Database className="size-5 text-green-500" />,
-      ref: useRef(null),
+      ref: useRef<HTMLDivElement>(null),
       size: "medium",
       className: "border-green-400 bg-green-50/80",
       position: { top: "81%", left: "69%" }
@@ -108,7 +108,7 @@ export function HeroInterconnectedVisual() {
       id: "code",
       name: "Code Intelligence Agent",
       icon: <Brain className="size-5 text-purple-500" />,
-      ref: useRef(null),
+      ref: useRef<HTMLDivElement>(null),
       size: "medium",
       className: "border-purple-400 bg-purple-50/80",
       position: { top: "38%", left: "20%" }
@@ -117,7 +117,7 @@ export function HeroInterconnectedVisual() {
       id: "process",
       name: "Process Automation Agent",
       icon: <Settings className="size-5 text-orange-500" />,
-      ref: useRef(null),
+      ref: useRef<HTMLDivElement>(null),
       size: "medium",
       className: "border-orange-400 bg-orange-50/80",
       position: { top: "81%", left: "33%" }
@@ -126,7 +126,7 @@ export function HeroInterconnectedVisual() {
       id: "users",
       name: "User Collaboration",
       icon: <Users className="size-5 text-indigo-500" />,
-      ref: useRef(null),
+      ref: useRef<HTMLDivElement>(null),
       size: "medium",
       className: "border-indigo-400 bg-indigo-50/80",
       position: { top: "15%", left: "50%" }

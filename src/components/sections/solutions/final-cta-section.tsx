@@ -16,10 +16,10 @@ export default function FinalCtaSection() {
         </p>
         <div className="mt-10 flex justify-center space-x-4">
           <Button size="xl" variant="outlineWhite" asChild>
-            <Link href="/contact?demo=true">Request a Personalized Demo</Link>
+            <Link href="/contact?subject=Demo%20Request">Request a Personalized Demo</Link>
           </Button>
           <Button size="xl" variant="solidWhite" asChild>
-            <Link href="/contact?expert=true">Talk to an Expert</Link>
+            <Link href="/contact?subject=Expert%20Consultation%20Request">Talk to an Expert</Link>
           </Button>
         </div>
       </div>

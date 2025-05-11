@@ -27,7 +27,12 @@ export default function ContactFormSection() {
     email: "",
     company: "",
     phone: "",
-    inquiryType: demoParam ? "Request a Demo" : expertParam ? "Talk to an Expert" : planParam ? `Pricing Inquiry: ${planParam}` : "General Inquiry",
+    inquiryType: subjectParam === "Demo Request" 
+                   ? "Request a Demo" 
+                   : (demoParam ? "Request a Demo" 
+                      : expertParam ? "Talk to an Expert" 
+                      : planParam ? `Pricing Inquiry: ${planParam}` 
+                      : "General Inquiry"),
     message: subjectParam ? `${subjectParam}\n\n` : "",
   });
   const [isSubmitted, setIsSubmitted] = React.useState(false);

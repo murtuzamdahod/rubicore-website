@@ -207,8 +207,12 @@ export function Header() {
         </NavigationMenu>
 
         <div className="flex items-center space-x-2">
-          <Button variant="outline" className="hidden md:inline-flex">Contact Sales</Button>
-          <Button className="hidden md:inline-flex">Request a Demo</Button>
+          <Link href="/contact?subject=Sales%20Inquiry" passHref legacyBehavior>
+            <Button variant="outline" className="hidden md:inline-flex" asChild={false}>Contact Sales</Button>
+          </Link>
+          <Link href="/contact?subject=Demo%20Request" passHref legacyBehavior>
+            <Button className="hidden md:inline-flex" asChild={false}>Request a Demo</Button>
+          </Link>
           
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -244,10 +248,14 @@ export function Header() {
                 ))}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Button variant="outline" className="w-full justify-start">Contact Sales</Button>
+                  <Link href="/contact?subject=Sales%20Inquiry" className="w-full">
+                    <Button variant="outline" className="w-full justify-start">Contact Sales</Button>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Button className="w-full justify-start mt-1">Request a Demo</Button>
+                  <Link href="/contact?subject=Demo%20Request" className="w-full">
+                    <Button className="w-full justify-start mt-1">Request a Demo</Button>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

@@ -70,36 +70,40 @@ export function ChallengeSolutionSection({
           {headline}
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16"> {/* Changed items-center to items-start */}
-          <Card className="bg-background/80 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-primary">The Challenge</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground leading-relaxed mb-4">{challengeSummary}</p>
-              <p className="text-muted-foreground leading-relaxed text-sm">Generic solutions often create new silos, compliance risks, and trust deficits, failing to orchestrate heterogeneous multi-agent teams effectively.</p>
-              <Button asChild variant="link" className="text-primary px-0 mt-4">
-                <Link href="/solutions">Learn More about Challenges</Link>
-              </Button>
-            </CardContent>
-          </Card>
-          <Card className="bg-background/80 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-primary">The RubiCore Solution</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground leading-relaxed mb-4">{solutionSummary}</p>
-              <p className="text-muted-foreground leading-relaxed text-sm">Our Context-Aware Orchestration Engine enables dynamic agent collaboration within robust security and ethical AI frameworks, delivering powerful, trustworthy automation.</p>
-              <Button asChild variant="link" className="text-primary px-0 mt-4">
-                <Link href="/platform/overview">Discover the Platform</Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16"> {/* Main grid for columns, items-start for top alignment */}
+          {/* Column 1: Challenge Text + Challenge Visual */}
+          <div className="flex flex-col gap-8 md:gap-12">
+            <Card className="bg-background/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-primary">The Challenge</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed mb-4">{challengeSummary}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm">Generic solutions often create new silos, compliance risks, and trust deficits, failing to orchestrate heterogeneous multi-agent teams effectively.</p>
+                <Button asChild variant="link" className="text-primary px-0 mt-4">
+                  <Link href="/solutions">Learn More about Challenges</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <BusinessChallengesVisual className="h-full" />
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch"> {/* Changed items-center to items-stretch */}
-          <BusinessChallengesVisual className="h-full" />
-          <RubiCoreSolutionVisual className="h-full" />
+          {/* Column 2: Solution Text + Solution Visual */}
+          <div className="flex flex-col gap-8 md:gap-12">
+            <Card className="bg-background/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-primary">The RubiCore Solution</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed mb-4">{solutionSummary}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm">Our Context-Aware Orchestration Engine enables dynamic agent collaboration within robust security and ethical AI frameworks, delivering powerful, trustworthy automation.</p>
+                <Button asChild variant="link" className="text-primary px-0 mt-4">
+                  <Link href="/platform/overview">Discover the Platform</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <RubiCoreSolutionVisual className="h-[550px]" />
+          </div>
         </div>
       </div>
     </section>
