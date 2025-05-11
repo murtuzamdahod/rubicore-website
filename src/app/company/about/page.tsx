@@ -1,7 +1,7 @@
 import MissionVisionSection from "@/components/sections/company/about/mission-vision-section";
 import StorySection from "@/components/sections/company/about/story-section";
 import WhyRubiCoreSection from "@/components/sections/company/about/why-rubicore-section";
-import LeadershipTeamSection from "@/components/sections/company/about/leadership-team-section";
+// import LeadershipTeamSection from "@/components/sections/company/about/leadership-team-section"; // Hidden
 import CareersSection from "@/components/sections/company/about/careers-section";
 import PressNewsSection from "@/components/sections/company/about/press-news-section";
 import ContactSection from "@/components/sections/company/about/contact-section";
@@ -40,7 +40,7 @@ export default function AboutPage() {
       <MissionVisionSection />
       <StorySection />
       <WhyRubiCoreSection />
-      <LeadershipTeamSection />
+      {/* <LeadershipTeamSection /> */} {/* Hidden */}
       <CareersSection />
       <PressNewsSection />
       <ContactSection />

@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Cpu, Zap, Brain, Code } from "lucide-react"; // Example icons
+import { Cpu, Zap, Brain, Code, Layers, DatabaseZap, ShieldAlert, PackageOpen, ServerCog } from "lucide-react"; // Added more specific icons
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { RubiCoreSolutionVisual } from "@/components/visuals/RubiCoreSolutionVisual";
 
 const techHighlights = [
   {
@@ -15,7 +18,7 @@ const techHighlights = [
   {
     title: "Enterprise AI Safety & Ethics",
     description: "Robust sandboxing, rate limiting, and permissioning for agent actions. Fallback flows and configurable confidence thresholds for AI outputs. Integrated evaluation frameworks (e.g., for bias, robustness, accuracy) and XAI tools for testing and validating agent behavior before and during production. New Confidence Calibration System ensures agents accurately assess their knowledge limitations and appropriately escalate or seek human input. Proactive monitoring for anomalous agent behavior.",
-    icon: CheckCircle,
+    icon: ShieldAlert, // More specific
   },
   {
     title: "Advanced Agent Memory & Agentic RAG Systems",
@@ -33,46 +36,58 @@ export function ArchitectureTechnologySection() {
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-background">
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
-        <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Modern, Modular, and Extensible Architecture Built for Enterprise Scale & Trust
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            RubiCore&apos;s backend is built in <strong>Python (FastAPI)</strong> for high-performance, asynchronous APIs, with a modular, <strong>event-driven microservices design</strong>. We leverage <strong>LangChain and other cutting-edge agentic frameworks</strong> to manage complex agent reasoning, tool usage, and memory. Our <strong>multi-layered memory system</strong> includes <strong>vector databases (e.g., Weaviate, Pinecone options) for semantic search, knowledge graphs for structured relational knowledge, and traditional databases (PostgreSQL) for transactional data, all contributing to robust short-term, long-term, episodic, semantic, and procedural memory for agents.</strong> Data is cached in <strong>Redis</strong> for efficiency. The frontend is built with <strong>Next.js/TypeScript</strong> for a responsive Agent Studio and collaboration interfaces. Everything runs in <strong>Docker containers, orchestrable via Kubernetes</strong>, for portability and scalability – enabling deployment on your infrastructure, our secure cloud, or hybrid environments. Our architecture introduces <strong>Hierarchical Agent Memory Systems</strong>, <strong>Resource-Aware Execution</strong>, <strong>self-correction mechanisms in tool use</strong>, and <strong>advanced inter-agent communication protocols.</strong> This modern stack ensures the platform is powerful, extensible, maintainable, and aligns with industry-leading best practices for enterprise AI.
-          </p>
+        <div className="text-center mb-10 md:mb-16">
+          <AnimatedShinyText className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4 block">
+            Modern, Modular, and Extensible Architecture
+          </AnimatedShinyText>
+          <BlurFade delay={0.25} inView>
+            <p className="mt-2 text-xl text-muted-foreground">
+              Built for Enterprise Scale & Trust
+            </p>
+          </BlurFade>
         </div>
 
+        <BlurFade delay={0.50} inView>
+          <div className="bg-muted/30 p-6 sm:p-8 rounded-lg shadow mb-12">
+            <h3 className="text-2xl font-semibold text-foreground mb-4 text-center sm:text-left">Core Architectural Principles</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-muted-foreground">
+              <li className="flex items-start"><Layers className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>Backend:</strong> Python (FastAPI) for high-performance, async APIs.</span></li>
+              <li className="flex items-start"><ServerCog className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>Design:</strong> Modular, event-driven microservices.</span></li>
+              <li className="flex items-start"><Brain className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>AI Core:</strong> Leverages LangChain & cutting-edge agentic frameworks.</span></li>
+              <li className="flex items-start"><DatabaseZap className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>Memory:</strong> Multi-layered (Vector DBs, Knowledge Graphs, PostgreSQL, Redis).</span></li>
+              <li className="flex items-start"><PackageOpen className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>Frontend:</strong> Next.js/TypeScript for responsive UIs.</span></li>
+              <li className="flex items-start"><Cpu className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>Deployment:</strong> Docker & Kubernetes for portability (On-prem, Cloud, Hybrid).</span></li>
+            </ul>
+            <p className="mt-6 text-center text-sm text-muted-foreground/80">
+              Key innovations include Hierarchical Agent Memory Systems, Resource-Aware Execution, self-correction in tool use, and advanced inter-agent communication protocols, ensuring a powerful, extensible, and maintainable platform.
+            </p>
+          </div>
+        </BlurFade>
+
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div>
-            {/* <p className="text-muted-foreground leading-relaxed mb-6">
-              RubiCore’s backend is built in <strong>Python (FastAPI)</strong> for high-performance APIs, with a modular microservices-inspired design. We leverage <strong>LangChain</strong> concepts to manage complex agent reasoning and tool usage, and use a <strong>vector database (Weaviate)</strong> for semantic search to power our Knowledge agents. Data is stored securely in <strong>PostgreSQL</strong> and cached in <strong>Redis</strong> for efficiency. The frontend is built with <strong>Next.js/TypeScript</strong> for a smooth, responsive user experience in the Agent Studio. Everything runs in <strong>Docker containers</strong> for portability – enabling one-click deployment on your infrastructure or ours.
-            </p> */}
-            <div className="space-y-4">
-              {techHighlights.map((highlight) => (
-                <Card key={highlight.title} className="bg-muted/20 shadow-md">
-                  <CardHeader className="flex flex-row items-center space-x-3 pb-3">
-                    <highlight.icon className="h-6 w-6 text-primary" />
-                    <CardTitle className="text-xl">{highlight.title}</CardTitle>
+          <div className="space-y-6">
+            {techHighlights.map((highlight, index) => (
+              <BlurFade delay={0.25 * (index + 3)} inView key={highlight.title}>
+                <Card className="bg-muted/20 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader className="flex flex-row items-start space-x-4 pb-3 pt-5">
+                    <highlight.icon className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <CardTitle className="text-xl font-semibold">{highlight.title}</CardTitle>
+                    </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-sm">{highlight.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{highlight.description}</p>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
+              </BlurFade>
+            ))}
           </div>
 
-          <div className="flex justify-center items-center mt-8 md:mt-0">
-            {/* Placeholder for Simplified technical architecture diagram */}
-            <Card className="w-full max-w-lg bg-muted/40 border-dashed">
-              <CardHeader>
-                <CardTitle className="text-center text-muted-foreground">Visual Placeholder</CardTitle>
-              </CardHeader>
-              <CardContent className="flex items-center justify-center h-80">
-                <p className="text-muted-foreground">Simplified technical architecture diagram</p>
-              </CardContent>
-            </Card>
-          </div>
+          <BlurFade delay={0.25 * (techHighlights.length + 3)} inView className="flex flex-col justify-center items-center mt-8 md:mt-0 sticky top-24">
+             <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">Platform Workflow Visualized</h3>
+            <RubiCoreSolutionVisual className="w-full max-w-lg shadow-xl rounded-lg border border-border/50" />
+            <p className="text-sm text-muted-foreground mt-3 text-center italic">Illustrative diagram of RubiCore&apos;s interconnected components and data flow.</p>
+          </BlurFade>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 export function PlatformIntroductionSection() {
   return (
@@ -6,24 +8,56 @@ export function PlatformIntroductionSection() {
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6">
+            <AnimatedShinyText className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-8 block">
               Meet RubiCore: Your Unified Platform for Secure, Adaptive, and Explainable Agentic AI
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              RubiCore is a <strong>unified, enterprise-grade Agentic AI platform</strong> that allows organizations to <strong>build, deploy, manage, and govern an &quot;AI workforce&quot; of specialized, autonomous, and collaborative agents</strong>. Each agent can perceive multi-modal information, reason, plan, act, learn, and adapt to automate complex tasks and augment human capabilities – <strong>all under your strict governance and with full explainability</strong>. Unlike single-purpose chatbots or black-box AI, RubiCore agents can carry out sophisticated multi-step processes, coordinate dynamically with each other and human team members, and securely interact with your enterprise applications and data. The platform provides a comprehensive suite of tools: a <strong>Low-Code Studio and Pro-Code SDKs</strong> to create and configure agents, an <strong>Intelligent Orchestration Engine</strong> to manage complex workflows and collaboration, a <strong>Secure & Dynamic Integration Hub</strong> to link to your tech stack, an <strong>Advanced Analytics & Continuous Learning suite</strong> to monitor outcomes and drive improvement, and robust <strong>Human-AI Collaboration interfaces</strong>. Our <strong>Adaptive Multi-Agent Collaboration Framework</strong> enables sophisticated agent teams that can distribute work based on specializations, share context dynamically, learn from collective experience, and deliver outcomes that exceed what any single agent or uncoordinated group could accomplish alone.
-            </p>
+            </AnimatedShinyText>
+            
+            <BlurFade delay={0.25 * 1} inView>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                RubiCore is a <strong>unified, enterprise-grade Agentic AI platform</strong> designed to empower organizations to build, deploy, manage, and govern an intelligent &quot;AI workforce.&quot;
+              </p>
+            </BlurFade>
+
+            <BlurFade delay={0.25 * 2} inView>
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Specialized & Autonomous Agents</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Create specialized, autonomous, and collaborative agents capable of perceiving multi-modal information, reasoning, planning, acting, and continuously learning. These agents automate complex tasks and augment human capabilities, all under your strict governance and with full explainability.
+              </p>
+            </BlurFade>
+
+            <BlurFade delay={0.25 * 3} inView>
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Comprehensive Platform Pillars</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Unlike single-purpose chatbots, RubiCore agents execute sophisticated multi-step processes and securely interact with your enterprise systems. The platform includes:
+              </p>
+              <ul className="list-disc list-inside text-lg text-muted-foreground leading-relaxed space-y-1 mb-4">
+                <li><strong>Low-Code Studio & Pro-Code SDKs:</strong> For intuitive agent creation and customization.</li>
+                <li><strong>Intelligent Orchestration Engine:</strong> To manage complex multi-agent and human-AI workflows.</li>
+                <li><strong>Secure & Dynamic Integration Hub:</strong> To seamlessly connect with your existing tech stack.</li>
+                <li><strong>Advanced Analytics & Continuous Learning:</strong> For monitoring outcomes and driving improvements.</li>
+                <li><strong>Robust Human-AI Collaboration Interfaces:</strong> Fostering seamless teamwork.</li>
+              </ul>
+            </BlurFade>
+            
+            <BlurFade delay={0.25 * 4} inView>
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Adaptive Multi-Agent Collaboration</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our innovative <strong>Adaptive Multi-Agent Collaboration Framework</strong> enables sophisticated agent teams that distribute work by specialization, share context dynamically, learn collectively, and achieve outcomes beyond the reach of individual agents.
+              </p>
+            </BlurFade>
           </div>
-          <div className="flex justify-center items-center">
-            {/* Placeholder for High-level architecture diagram */}
+          <BlurFade delay={0.25 * 5} inView className="flex justify-center items-center">
+            {/* Placeholder for High-level architecture diagram - using RubiCoreSolutionVisual for now */}
+            {/* <RubiCoreSolutionVisual className="w-full max-w-lg" /> */}
             <Card className="w-full max-w-md bg-muted/40 border-dashed">
               <CardHeader>
-                <CardTitle className="text-center text-muted-foreground">Visual Placeholder</CardTitle>
+                <CardTitle className="text-center text-muted-foreground">Conceptual Platform Visual</CardTitle>
               </CardHeader>
-              <CardContent className="flex items-center justify-center h-64">
-                <p className="text-muted-foreground">High-level architecture diagram</p>
+              <CardContent className="flex items-center justify-center h-64 md:h-80 lg:h-96">
+                <p className="text-muted-foreground text-center">High-level conceptual diagram of the RubiCore platform and its interconnected components.</p>
               </CardContent>
             </Card>
-          </div>
+          </BlurFade>
         </div>
       </div>
     </section>

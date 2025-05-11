@@ -7,18 +7,21 @@ import { Database, Code, Zap, Workflow, Cpu, Server } from "lucide-react";
 
 const Circle = forwardRef<
   HTMLDivElement,
-  { className?: string; children?: React.ReactNode; size?: string }
->(({ className, children, size = "size-12" }, ref) => {
+  { className?: string; children?: React.ReactNode; size?: string; label?: string } // Added label prop
+>(({ className, children, size = "size-12", label }, ref) => { // Added label to destructuring
   return (
-    <div
-      ref={ref}
-      className={cn(
-        "z-10 flex items-center justify-center rounded-full border-2 bg-background/80 p-3 shadow-lg backdrop-blur-sm",
-        size,
-        className,
-      )}
-    >
-      {children}
+    <div className="flex flex-col items-center text-center"> {/* Added for label positioning */}
+      <div
+        ref={ref}
+        className={cn(
+          "z-10 flex items-center justify-center rounded-full border-2 bg-background/80 p-3 shadow-lg backdrop-blur-sm",
+          size,
+          className,
+        )}
+      >
+        {children}
+      </div>
+      {label && <span className="mt-1.5 text-xs text-muted-foreground max-w-[90px]">{label}</span>} {/* Added label rendering */}
     </div>
   );
 });
@@ -46,33 +49,33 @@ const WorkflowVisualComponent: React.FC<RubiCoreSolutionVisualProps> = ({ classN
       ref={containerRef}
     >
       {/* Central Orchestration Node */}
-      <Circle ref={div4Ref} className="size-16 border-primary !bg-primary/10" size="size-14 md:size-16">
+      <Circle ref={div4Ref} className="size-16 border-primary !bg-primary/10" size="size-14 md:size-16" label="Orchestration">
         <Workflow className="h-7 w-7 md:h-8 md:w-8 text-primary" />
       </Circle>
 
       {/* Surrounding Nodes - positioned absolutely for better control in smaller space */}
       <div className="absolute" style={{ top: '15%', left: '25%', transform: 'translate(-50%, -50%)' }}>
-        <Circle ref={div1Ref} className="border-blue-500/50 bg-blue-500/10" size="size-10 md:size-12">
+        <Circle ref={div1Ref} className="border-blue-500/50 bg-blue-500/10" size="size-10 md:size-12" label="Data Ingestion">
           <Database className="h-5 w-5 md:h-6 md:w-6 text-blue-600" />
         </Circle>
       </div>
       <div className="absolute" style={{ top: '35%', left: '10%', transform: 'translate(-50%, -50%)' }}>
-        <Circle ref={div2Ref} className="border-green-500/50 bg-green-500/10" size="size-10 md:size-12">
+        <Circle ref={div2Ref} className="border-green-500/50 bg-green-500/10" size="size-10 md:size-12" label="Processing">
           <Code className="h-5 w-5 md:h-6 md:w-6 text-green-600" />
         </Circle>
       </div>
       <div className="absolute" style={{ bottom: '15%', left: '25%', transform: 'translate(-50%, -50%)' }}>
-        <Circle ref={div3Ref} className="border-yellow-500/50 bg-yellow-500/10" size="size-10 md:size-12">
+        <Circle ref={div3Ref} className="border-yellow-500/50 bg-yellow-500/10" size="size-10 md:size-12" label="Integration">
           <Zap className="h-5 w-5 md:h-6 md:w-6 text-yellow-600" />
         </Circle>
       </div>
       <div className="absolute" style={{ top: '35%', right: '10%', transform: 'translate(50%, -50%)' }}>
-        <Circle ref={div5Ref} className="border-purple-500/50 bg-purple-500/10" size="size-10 md:size-12">
+        <Circle ref={div5Ref} className="border-purple-500/50 bg-purple-500/10" size="size-10 md:size-12" label="AI Core">
           <Cpu className="h-5 w-5 md:h-6 md:w-6 text-purple-600" />
         </Circle>
       </div>
       <div className="absolute" style={{ bottom: '15%', right: '25%', transform: 'translate(50%, -50%)' }}>
-        <Circle ref={div6Ref} className="border-orange-500/50 bg-orange-500/10" size="size-10 md:size-12">
+        <Circle ref={div6Ref} className="border-orange-500/50 bg-orange-500/10" size="size-10 md:size-12" label="Deployment">
           <Server className="h-5 w-5 md:h-6 md:w-6 text-orange-600" />
         </Circle>
       </div>

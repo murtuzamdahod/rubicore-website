@@ -1,8 +1,11 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react"; // Example icons
-import { McpInteractionVisual } from "@/components/visuals/McpInteractionVisual"; // Import the new visual
+import { ArrowRight } from "lucide-react";
+import { McpInteractionVisual } from "@/components/visuals/McpInteractionVisual";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { ShinyButton } from "@/components/ui/shiny-button";
+
 
 interface McpToolingSectionProps {
   className?: string;
@@ -14,7 +17,7 @@ export function McpToolingSection({ className }: McpToolingSectionProps) {
       "RubiCore leverages Model Context Protocol (MCP) for dynamic tool discovery and real-time context sharing. This enables AI agents to adaptively use tools, APIs, and data sources, fostering a composable AI ecosystem and reducing integration overhead. RubiCore acts as both an MCP client and server, allowing seamless interaction with other MCP-compliant systems and exposing its capabilities securely.";
   const cta = {
     text: "Learn More About MCP & Dynamic Integration",
-    href: "/platform/mcp-integration", // Assuming this page will be created
+    href: "/platform/integrations", // Updated href to existing integrations page
   };
 
   return (
@@ -22,30 +25,37 @@ export function McpToolingSection({ className }: McpToolingSectionProps) {
       className={cn("bg-background text-foreground py-16 md:py-24", className)}
     >
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            {headline}
-          </h2>
-        </div>
-        
-        {/* Visual Placeholder - Could be a diagram */}
-        <div className="mb-12 md:mb-16 flex justify-center">
-          <McpInteractionVisual />
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="prose dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
-            {bodyText}
+        <BlurFade delay={0.25 * 1} inView>
+          <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+            <AnimatedShinyText className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 block">
+              {headline}
+            </AnimatedShinyText>
           </div>
-        </div>
+        </BlurFade>
+        
+        <BlurFade delay={0.25 * 2} inView>
+          <div className="mb-12 md:mb-16 flex justify-center">
+            <McpInteractionVisual className="w-full max-w-2xl lg:max-w-3xl shadow-xl rounded-lg border border-border/50" />
+          </div>
+        </BlurFade>
 
-        <div className="text-center mt-12 md:mt-16">
-          <Button asChild variant="link" size="lg" className="text-primary text-lg">
-            <Link href={cta.href}>
-              {cta.text} <ArrowRight className="ml-2 h-5 w-5" />
+        <BlurFade delay={0.25 * 3} inView>
+          <div className="max-w-3xl mx-auto"> {/* Centered the text more */}
+            <p className="text-lg text-muted-foreground leading-relaxed text-center">
+              {bodyText}
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={0.25 * 4} inView>
+          <div className="text-center mt-12 md:mt-16">
+            <Link href={cta.href} passHref>
+              <ShinyButton className="text-lg px-8 py-6">
+                {cta.text} <ArrowRight className="ml-2 h-5 w-5" />
+              </ShinyButton>
             </Link>
-          </Button>
-        </div>
+          </div>
+        </BlurFade>
       </div>
     </section>
   );

@@ -1,13 +1,14 @@
 "use client"; // Added to make this a Client Component
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { Glow } from "@/components/ui/glow";
 import Link from "next/link";
 import Image from 'next/image';
 import { HeroInterconnectedVisual } from "./hero/hero-interconnected-visual";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import { AuroraText } from "@/components/ui/aurora-text"; // Import AuroraText
 import { ShimmerButton } from "@/components/ui/shimmer-button"; // Re-adding ShimmerButton
+import { ShinyButton } from "@/components/ui/shiny-button"; // Import ShinyButton
 import { Badge } from "@/components/ui/badge"; // Will re-add Badge related props and JSX later if this is stable
 import { ArrowRightIcon } from "lucide-react"; // For Badge
 
@@ -89,11 +90,13 @@ export function HeroSection({
           <h1
             className={cn(
               "text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl",
-              "leading-tight",
-              "text-transparent bg-clip-text bg-gradient-to-b from-primary via-primary/90 to-foreground"
+              "leading-tight"
+              // Removed gradient classes, AuroraText will handle this
             )}
           >
-            {title}
+            <AuroraText colors={['#E0115F', '#9B111E', '#FFFFFF']}> {/* Ruby Light, Ruby Default, White */}
+              {title}
+            </AuroraText>
           </h1>
 
           {/* Description */}
@@ -109,15 +112,23 @@ export function HeroSection({
 
           {/* CTAs */}
           <div className="relative z-10 flex flex-wrap justify-center gap-4 mt-4">
-            <ShimmerButton className="shadow-lg">
-              <Link href={primaryCta.href} className="flex h-full w-full items-center justify-center px-8 py-3 text-sm font-medium">
+            <ShimmerButton
+              className="shadow-lg"
+              background="#9B111E" // Ruby DEFAULT
+              shimmerColor="#FADADD" // Light Pink for shimmer
+            >
+              <Link href={primaryCta.href} className="flex h-full w-full items-center justify-center px-8 py-3 text-sm font-medium text-white"> {/* Ensure text is white */}
                 {primaryCta.text}
               </Link>
             </ShimmerButton>
 
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10" onClick={() => window.location.href=secondaryCta.href}>
-              {secondaryCta.text} {/* Use secondaryCta prop */}
-            </Button>
+            <ShinyButton
+              className="px-8 py-3 text-sm border border-ruby text-ruby hover:shadow-ruby/40 bg-transparent" // Outline style with ruby
+              onClick={() => window.location.href=secondaryCta.href}
+              style={{ '--primary': '#E0115F' } as React.CSSProperties} // Ruby Light for shiny effect
+            >
+              {secondaryCta.text}
+            </ShinyButton>
           </div>
         </div>
         

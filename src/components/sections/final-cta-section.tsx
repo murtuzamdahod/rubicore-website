@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 interface FinalCtaSectionProps {
   className?: string;
@@ -31,21 +32,26 @@ export function FinalCtaSection({ className }: FinalCtaSectionProps) {
           {subText}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-lg"
+          {/* "Request a Demo" - Secondary on this dark background, using ShinyButton for subtle effect */}
+          <ShinyButton
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-lg px-8 py-3 text-lg" // Adjusted padding and text size to match Button size="lg"
+            style={{ '--primary': 'var(--colors-ruby-light)' } as React.CSSProperties} // Use a ruby color for the shine
           >
-            <Link href={primaryCta.href}>{primaryCta.text}</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+            <Link href={primaryCta.href} className="flex h-full w-full items-center justify-center">
+              {primaryCta.text}
+            </Link>
+          </ShinyButton>
+          
+          {/* "Talk to an AI Strategist" - Primary on this dark background, using ShimmerButton */}
+          <ShimmerButton
+            background="var(--primary-foreground)" // Button bg is primary-foreground (Off-white)
+            shimmerColor="var(--colors-ruby-light)" // Shimmer with light ruby
+            className="text-primary shadow-lg px-8 py-3 text-lg" // Text color is primary (Ruby), adjusted padding
           >
-            <Link href={secondaryCta.href}>{secondaryCta.text}</Link>
-          </Button>
+            <Link href={secondaryCta.href} className="flex h-full w-full items-center justify-center">
+              {secondaryCta.text}
+            </Link>
+          </ShimmerButton>
         </div>
       </div>
     </section>

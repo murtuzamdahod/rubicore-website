@@ -84,7 +84,7 @@ export function HeroInterconnectedVisual() {
       icon: <Zap className="size-6 text-ruby-500" />, 
       ref: useRef(null), 
       size: "large", 
-      className: "border-ruby-500 dark:border-ruby-400 bg-ruby-50/90 dark:bg-ruby-900/50 shadow-[0_0_15px_rgba(229,62,62,0.3)]",
+      className: "border-ruby-500 bg-ruby-50/90 shadow-[0_0_15px_rgba(229,62,62,0.3)]", // Removed dark: variants
       position: { top: "50%", left: "50%" }
     },
     { 
@@ -93,7 +93,7 @@ export function HeroInterconnectedVisual() {
       icon: <Search className="size-5 text-blue-500" />, 
       ref: useRef(null), 
       size: "medium",
-      className: "border-blue-400 bg-blue-50/80 dark:bg-blue-900/30",
+      className: "border-blue-400 bg-blue-50/80", // Removed dark: variants
       position: { top: "25%", left: "30%" }
     },
     { 
@@ -102,7 +102,7 @@ export function HeroInterconnectedVisual() {
       icon: <Database className="size-5 text-green-500" />, 
       ref: useRef(null), 
       size: "medium",
-      className: "border-green-400 bg-green-50/80 dark:bg-green-900/30",
+      className: "border-green-400 bg-green-50/80", // Removed dark: variants
       position: { top: "25%", right: "30%" }
     },
     { 
@@ -111,7 +111,7 @@ export function HeroInterconnectedVisual() {
       icon: <Brain className="size-5 text-purple-500" />, 
       ref: useRef(null), 
       size: "medium",
-      className: "border-purple-400 bg-purple-50/80 dark:bg-purple-900/30",
+      className: "border-purple-400 bg-purple-50/80", // Removed dark: variants
       position: { bottom: "25%", left: "30%" }
     },
     { 
@@ -120,8 +120,8 @@ export function HeroInterconnectedVisual() {
       icon: <Settings className="size-5 text-orange-500" />, 
       ref: useRef(null), 
       size: "medium",
-      className: "border-orange-400 bg-orange-50/80 dark:bg-orange-900/30",
-      position: { bottom: "25%", right: "30%" }
+      className: "border-orange-400 bg-orange-50/80", // Removed dark: variants
+      position: { bottom: "25%", right: "25%" } // Adjusted right position
     },
     { 
       id: "users", 
@@ -129,8 +129,8 @@ export function HeroInterconnectedVisual() {
       icon: <Users className="size-5 text-indigo-500" />, 
       ref: useRef(null), 
       size: "medium",
-      className: "border-indigo-400 bg-indigo-50/80 dark:bg-indigo-900/30",
-      position: { top: "50%", left: "15%" }
+      className: "border-indigo-400 bg-indigo-50/80", // Removed dark: variants
+      position: { top: "50%", left: "20%" } // Adjusted left position
     },
   ];
 
@@ -148,30 +148,30 @@ export function HeroInterconnectedVisual() {
 
   return (
     <div
-      className="relative flex h-[500px] w-full max-w-3xl items-center justify-center overflow-hidden rounded-xl border bg-background/80 dark:bg-gray-900/80 p-6 md:shadow-xl mx-auto"
+      className="relative flex h-[500px] w-full max-w-3xl items-center justify-center overflow-hidden rounded-xl border bg-background/80 p-6 md:shadow-xl mx-auto" // Removed dark: variant
       ref={containerRef}
     >
       {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-radial from-background/0 via-background/0 to-background/80 dark:from-gray-900/0 dark:via-gray-900/0 dark:to-gray-900/80 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-background/0 via-background/0 to-background/80 z-0"></div> 
       
       {/* Security Shield - conceptual, with subtle animation */}
       <motion.div 
         ref={securityLayerRef} 
-        className="absolute inset-8 border-2 border-dashed border-green-500/30 dark:border-green-500/20 rounded-full pointer-events-none z-0"
+        className="absolute inset-8 border-2 border-dashed border-green-500/30 rounded-full pointer-events-none z-0" // Removed dark: variant
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.5 }}
       >
         <motion.div 
-          className="absolute inset-0 rounded-full bg-green-500/5 dark:bg-green-500/10"
+          className="absolute inset-0 rounded-full bg-green-500/5" // Removed dark: variant
           animate={{ 
             boxShadow: ['0 0 0px rgba(34, 197, 94, 0.2)', '0 0 15px rgba(34, 197, 94, 0.3)', '0 0 0px rgba(34, 197, 94, 0.2)']
           }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background dark:bg-gray-900 px-3 py-1 rounded-full border border-green-500/30 flex items-center gap-1">
-          <ShieldCheck className="size-4 text-green-600 dark:text-green-500" />
-          <span className="text-xs text-green-600 dark:text-green-500 font-medium">Enterprise Security</span>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 py-1 rounded-full border border-green-500/30 flex items-center gap-1"> {/* Removed dark: variant */}
+          <ShieldCheck className="size-4 text-green-600" /> {/* Removed dark: variant */}
+          <span className="text-xs text-green-600 font-medium">Enterprise Security</span> {/* Removed dark: variant */}
         </div>
       </motion.div>
 
@@ -213,7 +213,7 @@ export function HeroInterconnectedVisual() {
 
       {/* Subtle pulse animation around the central hub */}
       <motion.div
-        className="absolute rounded-full bg-ruby-500/5 dark:bg-ruby-500/10 z-0"
+        className="absolute rounded-full bg-ruby-500/5 z-0" // Removed dark: variant
         style={{ 
           top: "50%", 
           left: "50%", 
@@ -234,7 +234,7 @@ export function HeroInterconnectedVisual() {
 
       {/* Footer text */}
       <motion.p 
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs text-muted-foreground z-10 bg-background/80 dark:bg-gray-900/80 px-3 py-1 rounded-full backdrop-blur-sm"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs text-muted-foreground z-10 bg-background/80 px-3 py-1 rounded-full backdrop-blur-sm" // Removed dark: variant
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5 }}

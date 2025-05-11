@@ -21,7 +21,7 @@ const Circle = forwardRef<
       >
         {children}
       </div>
-      {label && <span className="mt-1.5 text-xs text-muted-foreground max-w-[70px]">{label}</span>}
+      {label && <span className="mt-1.5 text-xs text-muted-foreground max-w-[90px]">{label}</span>} {/* Increased max-width for labels */}
     </div>
   );
 });
