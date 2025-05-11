@@ -23,7 +23,7 @@ export function PlatformGetStartedSection() {
         <BlurFade delay={0.25 * 3} inView>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
             <Link href="/contact?subject=Demo Request" passHref>
-              <ShinyButton className="w-full sm:w-auto text-base sm:text-lg px-8 py-3">
+              <ShinyButton className="w-full sm:w-auto">
                 Request a Demo
               </ShinyButton>
             </Link>

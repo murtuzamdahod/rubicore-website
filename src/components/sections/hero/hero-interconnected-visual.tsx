@@ -25,8 +25,8 @@ interface AgentNode {
 // Circle node component for agent visualization
 const CircleNode = forwardRef<
   HTMLDivElement,
-  { 
-    className?: string; 
+  {
+    className?: string;
     children?: React.ReactNode;
     size?: "small" | "medium" | "large";
     label?: string;
@@ -44,11 +44,11 @@ const CircleNode = forwardRef<
         ref={ref}
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ 
-          type: "spring", 
-          stiffness: 260, 
+        transition={{
+          type: "spring",
+          stiffness: 260,
           damping: 20,
-          delay: Math.random() * 0.5 
+          delay: Math.random() * 0.5
         }}
         className={cn(
           "z-10 flex items-center justify-center rounded-full border-2 bg-background/80 backdrop-blur-sm shadow-lg",
@@ -59,7 +59,7 @@ const CircleNode = forwardRef<
         {children}
       </motion.div>
       {label && (
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 0.8, y: 0 }}
           transition={{ delay: 0.5 + Math.random() * 0.5 }}
@@ -76,115 +76,108 @@ CircleNode.displayName = "CircleNode";
 export function HeroInterconnectedVisual() {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
-  // Define nodes for the visual with improved positioning
   const nodes: AgentNode[] = [
-    { 
-      id: "hub", 
-      name: "RubiCore Orchestrator", 
-      icon: <Zap className="size-6 text-ruby-500" />, 
-      ref: useRef(null), 
-      size: "large", 
-      className: "border-ruby-500 bg-ruby-50/90 shadow-[0_0_15px_rgba(229,62,62,0.3)]", // Removed dark: variants
+    { // Node 0: Central Hub
+      id: "hub",
+      name: "RubiCore Orchestrator",
+      icon: <Zap className="size-6 text-ruby-500" />,
+      ref: useRef(null),
+      size: "large",
+      className: "border-ruby-500 bg-ruby-50/90 shadow-[0_0_15px_rgba(229,62,62,0.3)]",
       position: { top: "50%", left: "50%" }
     },
-    { 
-      id: "research", 
-      name: "Deep Research Agent", 
-      icon: <Search className="size-5 text-blue-500" />, 
-      ref: useRef(null), 
+    { // Node 1: Research (Top-Right Pentagon Point)
+      id: "research",
+      name: "Deep Research Agent",
+      icon: <Search className="size-5 text-blue-500" />,
+      ref: useRef(null),
       size: "medium",
-      className: "border-blue-400 bg-blue-50/80", // Removed dark: variants
-      position: { top: "25%", left: "30%" }
+      className: "border-blue-400 bg-blue-50/80",
+      position: { top: "38%", left: "80%" }
     },
-    { 
-      id: "knowledge", 
-      name: "Knowledge Agent (RAG)", 
-      icon: <Database className="size-5 text-green-500" />, 
-      ref: useRef(null), 
+    { // Node 2: Knowledge (Bottom-Right Pentagon Point)
+      id: "knowledge",
+      name: "Knowledge Agent (RAG)",
+      icon: <Database className="size-5 text-green-500" />,
+      ref: useRef(null),
       size: "medium",
-      className: "border-green-400 bg-green-50/80", // Removed dark: variants
-      position: { top: "25%", right: "30%" }
+      className: "border-green-400 bg-green-50/80",
+      position: { top: "81%", left: "69%" }
     },
-    { 
-      id: "code", 
-      name: "Code Intelligence Agent", 
-      icon: <Brain className="size-5 text-purple-500" />, 
-      ref: useRef(null), 
+    { // Node 3: Code (Top-Left Pentagon Point)
+      id: "code",
+      name: "Code Intelligence Agent",
+      icon: <Brain className="size-5 text-purple-500" />,
+      ref: useRef(null),
       size: "medium",
-      className: "border-purple-400 bg-purple-50/80", // Removed dark: variants
-      position: { bottom: "25%", left: "30%" }
+      className: "border-purple-400 bg-purple-50/80",
+      position: { top: "38%", left: "20%" }
     },
-    { 
-      id: "process", 
-      name: "Process Automation Agent", 
-      icon: <Settings className="size-5 text-orange-500" />, 
-      ref: useRef(null), 
+    { // Node 4: Process (Bottom-Left Pentagon Point)
+      id: "process",
+      name: "Process Automation Agent",
+      icon: <Settings className="size-5 text-orange-500" />,
+      ref: useRef(null),
       size: "medium",
-      className: "border-orange-400 bg-orange-50/80", // Removed dark: variants
-      position: { bottom: "25%", right: "25%" } // Adjusted right position
+      className: "border-orange-400 bg-orange-50/80",
+      position: { top: "81%", left: "33%" }
     },
-    { 
-      id: "users", 
-      name: "User Collaboration", 
-      icon: <Users className="size-5 text-indigo-500" />, 
-      ref: useRef(null), 
+    { // Node 5: Users (Top Pentagon Point)
+      id: "users",
+      name: "User Collaboration",
+      icon: <Users className="size-5 text-indigo-500" />,
+      ref: useRef(null),
       size: "medium",
-      className: "border-indigo-400 bg-indigo-50/80", // Removed dark: variants
-      position: { top: "50%", left: "20%" } // Adjusted left position
+      className: "border-indigo-400 bg-indigo-50/80",
+      position: { top: "15%", left: "50%" }
     },
   ];
 
-  // Security shield is handled separately
   const securityLayerRef = useRef<HTMLDivElement>(null);
 
-  // Define beams between nodes with improved animation parameters
   const beams = [
-    { from: nodes[1].ref, to: nodes[0].ref, curvature: 30, delay: 0.1, duration: 3.5 },
-    { from: nodes[2].ref, to: nodes[0].ref, curvature: -30, delay: 0.3, duration: 3.2 },
-    { from: nodes[3].ref, to: nodes[0].ref, curvature: 30, delay: 0.5, duration: 3.8 },
-    { from: nodes[4].ref, to: nodes[0].ref, curvature: -30, delay: 0.7, duration: 3.4 },
+    { from: nodes[1].ref, to: nodes[0].ref, curvature: -20, delay: 0.1, duration: 3.5 },
+    { from: nodes[2].ref, to: nodes[0].ref, curvature: -20, delay: 0.3, duration: 3.2 },
+    { from: nodes[3].ref, to: nodes[0].ref, curvature: 20, delay: 0.5, duration: 3.8 },
+    { from: nodes[4].ref, to: nodes[0].ref, curvature: 20, delay: 0.7, duration: 3.4 },
     { from: nodes[5].ref, to: nodes[0].ref, curvature: 0, delay: 0.9, duration: 3.0 },
   ];
 
   return (
     <div
-      className="relative flex h-[500px] w-full max-w-3xl items-center justify-center overflow-hidden rounded-xl border bg-background/80 p-6 md:shadow-xl mx-auto" // Removed dark: variant
+      className="relative flex h-[500px] w-full max-w-3xl items-center justify-center overflow-hidden rounded-xl border bg-background/80 p-6 md:shadow-xl mx-auto"
       ref={containerRef}
     >
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-radial from-background/0 via-background/0 to-background/80 z-0"></div> 
-      
-      {/* Security Shield - conceptual, with subtle animation */}
-      <motion.div 
-        ref={securityLayerRef} 
-        className="absolute inset-8 border-2 border-dashed border-green-500/30 rounded-full pointer-events-none z-0" // Removed dark: variant
+      <div className="absolute inset-0 bg-gradient-radial from-background/0 via-background/0 to-background/80 z-0"></div>
+      <motion.div
+        ref={securityLayerRef}
+        className="absolute inset-2 border-2 border-dashed border-green-500/30 rounded-full pointer-events-none z-0" // Adjusted inset from inset-8 to inset-6
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.5 }}
       >
-        <motion.div 
-          className="absolute inset-0 rounded-full bg-green-500/5" // Removed dark: variant
-          animate={{ 
+        <motion.div
+          className="absolute inset-0 rounded-full bg-green-500/5"
+          animate={{
             boxShadow: ['0 0 0px rgba(34, 197, 94, 0.2)', '0 0 15px rgba(34, 197, 94, 0.3)', '0 0 0px rgba(34, 197, 94, 0.2)']
           }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 py-1 rounded-full border border-green-500/30 flex items-center gap-1"> {/* Removed dark: variant */}
-          <ShieldCheck className="size-4 text-green-600" /> {/* Removed dark: variant */}
-          <span className="text-xs text-green-600 font-medium">Enterprise Security</span> {/* Removed dark: variant */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 py-1 rounded-full border border-green-500/30 flex items-center gap-1">
+          <ShieldCheck className="size-4 text-green-600" />
+          <span className="text-xs text-green-600 font-medium">Enterprise Security</span>
         </div>
       </motion.div>
 
-      {/* Position nodes with absolute positioning for better control */}
       {nodes.map((node) => (
-        <div 
+        <div
           key={node.id}
-          className="absolute transform -translate-x-1/2 -translate-y-1/2" 
+          className="absolute transform -translate-x-1/2 -translate-y-1/2"
           style={node.position}
         >
-          <CircleNode 
-            ref={node.ref} 
-            className={node.className} 
+          <CircleNode
+            ref={node.ref}
+            className={node.className}
             size={node.size}
             label={node.name}
           >
@@ -193,7 +186,6 @@ export function HeroInterconnectedVisual() {
         </div>
       ))}
 
-      {/* Animated beams connecting nodes */}
       {beams.map((beam, index) => (
         <AnimatedBeam
           key={index}
@@ -211,30 +203,27 @@ export function HeroInterconnectedVisual() {
         />
       ))}
 
-      {/* Subtle pulse animation around the central hub */}
       <motion.div
-        className="absolute rounded-full bg-ruby-500/5 z-0" // Removed dark: variant
-        style={{ 
-          top: "50%", 
-          left: "50%", 
-          width: 120, 
-          height: 120, 
-          transform: "translate(-50%, -50%)" 
+        className="absolute rounded-full bg-ruby-500/5 z-0"
+        style={{
+          top: "50%",
+          left: "50%",
+          width: 120,
+          height: 120,
+          transform: "translate(-50%, -50%)"
         }}
-        animate={{ 
+        animate={{
           scale: [1, 1.2, 1],
           opacity: [0.5, 0.8, 0.5]
         }}
-        transition={{ 
-          duration: 4, 
-          repeat: Infinity, 
-          ease: "easeInOut" 
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
         }}
       />
-
-      {/* Footer text */}
-      <motion.p 
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs text-muted-foreground z-10 bg-background/80 px-3 py-1 rounded-full backdrop-blur-sm" // Removed dark: variant
+      <motion.p
+        className="absolute bottom-[-1rem] left-1/2 -translate-x-1/2 text-xs text-muted-foreground z-10 bg-background/80 px-3 py-1 rounded-full backdrop-blur-sm"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5 }}

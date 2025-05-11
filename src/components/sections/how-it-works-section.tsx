@@ -52,7 +52,7 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
   const headline = "Design, Deploy, Govern & Continuously Evolve Your AI Workforce with Confidence";
   const cta = {
     text: "See it in Action (Request a Demo)",
-    href: "/request-demo", 
+    href: "/contact", 
   };
 
   const infographicSteps = stepsData.map(s => ({ number: s.id, title: s.title }));

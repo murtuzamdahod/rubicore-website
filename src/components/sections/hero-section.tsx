@@ -47,11 +47,11 @@ export function HeroSection({
       "Deploy RubiCore, the enterprise-grade Agentic AI platform, on-premise, cloud, or hybrid. Automate complex workflows and empower teams with specialized AI agents.";
   const primaryCta = {
     text: propPrimaryCtaText || "Request a Demo",
-    href: propPrimaryCtaHref || "/request-demo",
+    href: propPrimaryCtaHref || "/contact",
   };
   const secondaryCta = {
     text: propSecondaryCtaText || "Explore the Platform",
-    href: propSecondaryCtaHref || "/platform",
+    href: propSecondaryCtaHref || "/platform/overview",
   };
 
   return (
@@ -117,13 +117,13 @@ export function HeroSection({
               background="#9B111E" // Ruby DEFAULT
               shimmerColor="#FADADD" // Light Pink for shimmer
             >
-              <Link href={primaryCta.href} className="flex h-full w-full items-center justify-center px-8 py-3 text-sm font-medium text-white"> {/* Ensure text is white */}
+              <Link href={primaryCta.href} className="flex h-full w-full items-center justify-center px-4 py-2 text-sm font-medium text-white"> {/* Ensure text is white */}
                 {primaryCta.text}
               </Link>
             </ShimmerButton>
 
             <ShinyButton
-              className="px-8 py-3 text-sm border border-ruby text-ruby hover:shadow-ruby/40 bg-transparent" // Outline style with ruby
+              className="text-sm border border-ruby text-ruby hover:shadow-ruby/40 bg-transparent px-4 py-2" // Outline style with ruby
               onClick={() => window.location.href=secondaryCta.href}
               style={{ '--primary': '#E0115F' } as React.CSSProperties} // Ruby Light for shiny effect
             >
