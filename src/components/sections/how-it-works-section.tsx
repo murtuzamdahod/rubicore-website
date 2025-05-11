@@ -1,14 +1,15 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { HowItWorksInfographic } from "@/components/visuals/HowItWorksInfographic"; // Import the new visual
 
 interface Step {
-  id: number;
+  id: number; // Will be used as 'number' for the visual
   title: string;
-  description: React.ReactNode; // Changed to React.ReactNode
+  description: React.ReactNode; 
 }
 
-const steps: Step[] = [
+const stepsData: Step[] = [ // Renamed to stepsData to avoid conflict if visual prop is named 'steps'
   {
     id: 1,
     title: "Design & Build",
@@ -36,12 +37,12 @@ const steps: Step[] = [
   },
 ];
 
-// Placeholder for the 5-step infographic
-const InfographicPlaceholder = () => (
-  <div className="w-full h-48 bg-primary/10 rounded-lg flex items-center justify-center p-4 my-8 md:my-12">
-    <p className="text-primary/50 text-center">[5-Step Infographic Placeholder]</p>
-  </div>
-);
+// Placeholder for the 5-step infographic - will be removed
+// const InfographicPlaceholder = () => (
+//   <div className="w-full h-48 bg-primary/10 rounded-lg flex items-center justify-center p-4 my-8 md:my-12">
+//     <p className="text-primary/50 text-center">[5-Step Infographic Placeholder]</p>
+//   </div>
+// );
 
 interface HowItWorksSectionProps {
   className?: string;
@@ -51,8 +52,10 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
   const headline = "Design, Deploy, Govern & Continuously Evolve Your AI Workforce with Confidence";
   const cta = {
     text: "See it in Action (Request a Demo)",
-    href: "/request-demo", // Placeholder link
+    href: "/request-demo", 
   };
+
+  const infographicSteps = stepsData.map(s => ({ number: s.id, title: s.title }));
 
   return (
     <section
@@ -65,10 +68,12 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
           </h2>
         </div>
 
-        <InfographicPlaceholder />
+        <div className="my-8 md:my-12">
+          <HowItWorksInfographic steps={infographicSteps} />
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8"> {/* Adjusted grid for 5 items */}
+          {stepsData.map((step) => (
             <div key={step.id} className="flex flex-col items-center text-center p-4">
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground text-2xl font-bold mb-6 shadow-lg">
                 {step.id}

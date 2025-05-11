@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react"; // Example icons
+import { McpInteractionVisual } from "@/components/visuals/McpInteractionVisual"; // Import the new visual
 
 interface McpToolingSectionProps {
   className?: string;
@@ -29,11 +30,7 @@ export function McpToolingSection({ className }: McpToolingSectionProps) {
         
         {/* Visual Placeholder - Could be a diagram */}
         <div className="mb-12 md:mb-16 flex justify-center">
-          <div className="w-full max-w-2xl h-64 bg-muted/30 rounded-lg flex items-center justify-center p-4">
-            <p className="text-muted-foreground text-center">
-              [Visual: RubiCore as both MCP client and server, dynamically discovering and interacting with various enterprise systems, APIs, and even other agentic platforms.]
-            </p>
-          </div>
+          <McpInteractionVisual />
         </div>
 
         <div className="max-w-4xl mx-auto">

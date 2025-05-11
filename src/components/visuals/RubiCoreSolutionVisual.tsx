@@ -1,7 +1,6 @@
 "use client";
 
 import React, { forwardRef, useRef } from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam"; // Use existing
 import { Database, Code, Zap, Workflow, Cpu, Server } from "lucide-react";

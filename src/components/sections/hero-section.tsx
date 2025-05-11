@@ -64,9 +64,8 @@ export function HeroSection({
     >
       <AnimatedGridPattern
         numSquares={30}
-        maxOpacity={0.3} // Adjusted for subtlety
+        maxOpacity={0.3} // Adjusted for subtlety     
         duration={3}
-        repeatDelay={1}
         className={cn(
           "[mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]",
           "inset-0 z-0"
