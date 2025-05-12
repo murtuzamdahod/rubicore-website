@@ -128,10 +128,7 @@ export default function TieredPricingSection() {
                     {tier.name}
                   </h3>
                 </div>
-                <div className="flex items-baseline mt-4 text-5xl font-extrabold text-gray-900 dark:text-white">
-                  {tier.price.monthly}
-                  {tier.price.monthly !== "Custom Quote" && !tier.price.monthly.startsWith("Starting at") && tier.price.monthly !== "$0" && <span className="ml-1 text-xl font-medium text-gray-500 dark:text-gray-400">/mo</span>}
-                </div>
+                {/* Price display removed */}
                 <p className="mt-5 text-base text-gray-600 dark:text-gray-400">{tier.description}</p>
               </div>
               <div className="flex flex-col justify-between flex-1 px-6 pt-6 pb-8 space-y-6 bg-gray-50 dark:bg-gray-700/50 sm:p-10 sm:pt-6">
@@ -151,7 +148,7 @@ export default function TieredPricingSection() {
                   variant={tier.mostPopular ? "default" : "outline"}
                   className="w-full"
                 >
-                  <Link href={tier.href}>{tier.cta}</Link>
+                  <Link href={tier.href}>Contact Sales</Link>
                 </Button>
               </div>
             </div>

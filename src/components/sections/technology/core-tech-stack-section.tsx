@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge"; 
-import { Code2, Database, Layers, Brain, Container, GitBranch, Server, BarChartHorizontalBig } from "lucide-react"; // Added Server, BarChartHorizontalBig
+import { Badge } from "@/components/ui/badge";
+import { Code2, Database, Brain, Container, GitBranch, Server } from "lucide-react";
+// Import specific icons
+import { NextjsIcon, GrafanaIcon } from "@/components/icons"; // Assuming GrafanaIcon represents Monitoring stack
 
 const techStackItems = [
   {
@@ -11,26 +13,26 @@ const techStackItems = [
   },
   {
     name: "Agent Cognitive Architecture (LangChain, LlamaIndex, etc.)",
-    description: "Incorporates agentic AI frameworks and research for orchestrating LLM calls, dynamic tool use, multi-step reasoning (planning, reflection, self-critique), and managing complex agent behaviors.",
+    description: "Incorporates LangChain, LlamaIndex, and other agentic AI frameworks and research for orchestrating LLM calls, dynamic tool use, multi-step reasoning (planning, reflection, self-critique (all capabilities Coming Soon)), and managing complex agent behaviors.", // Enhanced description
     icon: Brain,
     category: "AI/ML"
   },
   {
-    name: "Advanced Agent Memory Systems",
-    description: "Multi-layered memory: Short-Term/Working (Redis), Long-Term Episodic & Semantic (Vector DBs like Weaviate, Pinecone, Milvus), Structured Knowledge (Knowledge Graphs like Neo4j), Procedural Memory, Buffer/Scratchpad.",
-    icon: Database, // Representing diverse data stores
+    name: "Advanced Agent Memory & Agentic RAG Systems",
+    description: "Our state-of-the-art contextual understanding and retrieval systems provide agents with unmatched precision and intelligence. This multi-layered memory architecture includes: Short-Term/Working Memory (Redis), Long-Term Episodic & Semantic Memory (Vector DBs like Weaviate, Pinecone, Milvus), Structured Knowledge Memory (Knowledge Graphs like Neo4j), Procedural Memory (Planned for 2025), Consensus Memory (Planned for 2025), Buffer/Scratchpad Memory. Agentic Retrieval Augmented Generation (RAG) dynamically retrieves context-rich content. Universal File Type Processing feeds into memory systems. Agent Context Awareness enables accurate decision-making and aims to reduce hallucinations.", // Detailed description from markdown
+    icon: Database, // Keep generic Database icon for now
     category: "Data & AI"
   },
   {
     name: "Data Persistence (PostgreSQL)",
-    description: "For structured configuration data, audit logs, and relational metadata.",
-    icon: Server, // Using Server as a more generic DB icon here
+    description: "For structured configuration data, audit logs, and relational metadata supporting the overall memory and operational framework.", // Updated description
+    icon: Server,
     category: "Data"
   },
   {
     name: "Next.js & TypeScript",
     description: "Responsive, intuitive web applications for the Agent Studio & User Interfaces.",
-    icon: Layers,
+    icon: NextjsIcon, // Use specific icon
     category: "Frontend"
   },
   {
@@ -41,13 +43,13 @@ const techStackItems = [
   },
   {
     name: "Monitoring & Observability (Prometheus, Grafana, ELK)",
-    description: "Comprehensive logging, monitoring, and alerting.",
-    icon: BarChartHorizontalBig, // Representing monitoring
+    description: "Comprehensive logging, monitoring, and alerting via integration with tools like Prometheus, Grafana, and the ELK Stack.", // Slightly updated description
+    icon: GrafanaIcon, // Use specific icon as representative
     category: "DevOps"
   },
   {
     name: "APIs (REST/GraphQL) & SDKs (Python)",
-    description: "Comprehensive APIs (REST and GraphQL) and a primary Python SDK (others planned) enable deep integration and extensibility.",
+    description: "Comprehensive REST and GraphQL APIs, along with a primary Python SDK (others planned) enable deep integration and extensibility.", // Slightly updated description
     icon: GitBranch,
     category: "Extensibility"
   }

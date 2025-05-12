@@ -11,22 +11,22 @@ const extensibilityFeatures = [
   },
   {
     title: "Rich Python SDK (Primary)",
-    description: "An intuitive, well-documented SDK for Python developers to build custom agents, complex reasoning logic, new tools/skills, and automation scripts. (SDKs for other languages like Java, C#, Node.js are on the roadmap).",
+    description: "An intuitive, well-documented SDK for Python developers to build custom agents, complex reasoning logic, new tools/skills, and automation scripts. (SDKs for other languages like Java, C#, Node.js are on the roadmap - capabilities Coming Soon).", // Added annotation
     icon: TerminalSquare,
   },
   {
     title: "Agentic Skill Builder & Custom Tool Framework",
-    description: "Define reusable skills and easily integrate custom tools (e.g., proprietary algorithms, internal APIs, legacy system interfaces) that agents can discover and utilize.",
+    description: "Define reusable skills (Agentic Skill Builder capabilities Coming Soon) and easily integrate custom tools (e.g., proprietary algorithms, internal APIs, legacy system interfaces) that agents can discover and utilize.", // Added annotation
     icon: Puzzle,
   },
   {
     title: "CLI Tool",
-    description: "A command-line interface for managing agents, workflows, and platform configurations, facilitating automation and scripting for DevOps.",
+    description: "A command-line interface for managing agents, workflows, and platform configurations, facilitating automation and scripting for DevOps. [NEW - capabilities Coming Soon]", // Added annotation
     icon: Settings, // Using Settings as a placeholder for CLI
   },
   {
     title: "Simulation & Testing Environment",
-    description: "A sandboxed environment to simulate agent behaviors, test multi-agent interactions, validate workflows, and assess the impact of changes before production deployment. Supports synthetic data generation for testing.",
+    description: "A sandboxed environment to simulate agent behaviors, test multi-agent interactions, validate workflows, and assess the impact of changes before production deployment. Supports synthetic data generation for testing. [NEW - capabilities Coming Soon]", // Added annotation
     icon: TestTubeDiagonal,
   },
   {
@@ -36,12 +36,12 @@ const extensibilityFeatures = [
   },
   {
     title: "Community Hub & Support",
-    description: "A dedicated forum for developers to ask questions, share solutions, contribute to an evolving library of community-created tools and agent templates, and interact with the RubiCore engineering team.",
+    description: "A dedicated forum for developers to ask questions, share solutions, contribute to an evolving library of community-created tools and agent templates, and interact with the RubiCore engineering team. [NEW - capabilities Coming Soon]", // Added annotation
     icon: Users,
   },
   {
     title: "Version Control Integration",
-    description: "Best practices and tools for managing agent configurations, prompts, and custom code in conjunction with standard version control systems like Git.",
+    description: "Best practices and tools for managing agent configurations, prompts, and custom code in conjunction with standard version control systems like Git. [New - capabilities Coming Soon]", // Added annotation
     icon: GitFork,
   },
 ];

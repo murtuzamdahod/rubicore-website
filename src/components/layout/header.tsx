@@ -62,8 +62,21 @@ const platformLinks: { title: string; href: string; description: string }[] = [
   },
   {
     title: 'Developer Hub (Coming Soon)',
-    href: '/developer-hub', // Assuming path
+    href: '/platform/developer-hub', // Corrected path
     description: 'SDKs, API Docs, Simulation Environments (Coming Soon), Community (Coming Soon).',
+  },
+];
+
+const solutionsLinks: { title: string; href: string; description: string }[] = [
+  {
+    title: 'Overview',
+    href: '/solutions',
+    description: 'Explore how RubiCore addresses various business challenges.',
+  },
+  {
+    title: 'Use Case: Shipping Industry',
+    href: '/blog/shipping-industry-knowledge-agent',
+    description: 'How AI transforms maritime operations.',
   },
 ];
 
@@ -158,11 +171,20 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/solutions" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Solutions
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] ">
+                  {solutionsLinks.map((component) => (
+                    <ListItem
+                      key={component.title}
+                      title={component.title}
+                      href={component.href}
+                    >
+                      {component.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/pricing" legacyBehavior passHref>
@@ -232,7 +254,13 @@ export function Header() {
                   </DropdownMenuItem>
                 ))}
                 <DropdownMenuSeparator />
-                <DropdownMenuItem asChild><Link href="/solutions">Solutions</Link></DropdownMenuItem>
+                {/* Solutions Links for Mobile */}
+                {solutionsLinks.map((link) => (
+                  <DropdownMenuItem key={`mobile-solutions-${link.title}`} asChild>
+                    <Link href={link.href}>{link.title}</Link>
+                  </DropdownMenuItem>
+                ))}
+                <DropdownMenuSeparator />
                 <DropdownMenuItem asChild><Link href="/pricing">Pricing</Link></DropdownMenuItem>
                 <DropdownMenuSeparator />
                 {resourcesLinks.map((link) => (
