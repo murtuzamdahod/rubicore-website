@@ -83,37 +83,37 @@ const solutionsLinks: { title: string; href: string; description: string }[] = [
 const resourcesLinks: { title: string; href: string; description: string }[] = [
   {
     title: 'Blog',
-    href: '/resources#blog',
+    href: '/resources#blog', // Reverted to anchor
     description: 'Latest articles and insights.', // Kept existing, draft is just "Blog"
   },
   {
     title: 'Case Studies',
-    href: '/resources#casestudies',
+    href: '/resources#casestudies', // Reverted to anchor
     description: 'Real-world success stories.', // Kept existing, draft is just "Case Studies"
   },
   {
     title: 'Whitepapers & Guides',
-    href: '/resources#whitepapers',
+    href: '/resources#whitepapers', // Reverted to anchor
     description: 'In-depth analysis, practical guides, including guides on Ethical AI, XAI, and Agentic ROI.',
   },
   {
     title: 'Documentation',
-    href: '/docs',
+    href: '/docs', // Keep existing path
     description: 'Comprehensive technical guides.', // Kept existing, draft is "Comprehensive guides."
   },
   {
     title: 'API Reference',
-    href: '/api-docs',
+    href: '/api-docs', // Keep existing path
     description: 'Detailed developer API documentation.', // Kept existing, draft is "Detailed developer documentation."
   },
   {
     title: 'Webinars & Demos',
-    href: '/resources#webinars', // Assuming path
+    href: '/resources#webinars', // Reverted to anchor
     description: 'Product showcases and expert talks.',
   },
   {
     title: 'Glossary (Coming Soon)',
-    href: '/resources#glossary', // Assuming path
+    href: '/resources#glossary', // Reverted to anchor
     description: 'Key Agentic AI terms explained.',
   },
 ];

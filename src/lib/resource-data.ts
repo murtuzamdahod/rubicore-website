@@ -9,6 +9,15 @@ export const featuredResources = [
     date: "May 5, 2025",
   },
   {
+    id: "whitepaper-2",
+    type: "Whitepaper",
+    title: "Achieving ROI with AI Agents",
+    description: "A comprehensive guide on maximizing ROI through AI agent deployments.",
+    imageUrl: "/images/placeholder-whitepaper-2.jpg", // Replace with actual image path
+    link: "/resources/whitepapers/achieving-roi-with-ai-agents-whitepaper",
+    date: "May 12, 2025",
+  },
+  {
     id: "whitepaper-1",
     type: "Whitepaper",
     title: "Achieving ROI with Secure, On-Premise AI Agents",

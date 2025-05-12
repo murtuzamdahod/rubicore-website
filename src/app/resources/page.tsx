@@ -1,8 +1,8 @@
-import ResourceFilteringSection from "@/components/sections/resources/resource-filtering-section";
-import FeaturedResourcesSection from "@/components/sections/resources/featured-resources-section";
-import ResourceCategoriesSection from "@/components/sections/resources/resource-categories-section";
-import NewsletterSignupSection from "@/components/sections/resources/newsletter-signup-section";
-import FinalCtaResourcesSection from "@/components/sections/resources/final-cta-resources-section";
+import BlogPreviewSection from '@/components/sections/resources/BlogPreviewSection';
+import CaseStudiesPreviewSection from '@/components/sections/resources/CaseStudiesPreviewSection';
+import WhitepapersPreviewSection from '@/components/sections/resources/WhitepapersPreviewSection';
+import WebinarsPreviewSection from '@/components/sections/resources/WebinarsPreviewSection';
+// TODO: Add NewsletterSignupSection and FinalCtaResourcesSection back if needed, or create new versions.
 
 export const metadata = {
   title: "Enterprise Agentic AI Resources | Blog, Case Studies, Guides | RubiCore",
@@ -26,11 +26,12 @@ export default function ResourcesPage() {
           </p>
         </div>
       </div>
-      <ResourceFilteringSection />
-      <FeaturedResourcesSection />
-      <ResourceCategoriesSection />
-      <NewsletterSignupSection />
-      <FinalCtaResourcesSection />
+      {/* Render the new preview sections */}
+      <BlogPreviewSection />
+      <CaseStudiesPreviewSection />
+      <WhitepapersPreviewSection />
+      <WebinarsPreviewSection />
+      {/* TODO: Add other sections like Newsletter/CTA if required */}
     </main>
   );
 }
