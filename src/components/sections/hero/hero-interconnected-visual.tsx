@@ -11,7 +11,7 @@ interface AgentNode {
   id: string;
   name: string;
   icon: React.ReactNode;
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLDivElement | null>;
   className?: string;
   size?: "small" | "medium" | "large";
   position: {

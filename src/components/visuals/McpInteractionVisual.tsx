@@ -1,17 +1,13 @@
 "use client";
 
 import React, { forwardRef, useRef } from "react";
+import Image from "next/image"; // Added import
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
 import {
   Database as LucideDatabase, // Renamed to avoid conflict if you had a Database icon image
   Globe as LucideGlobe,
-  Users as LucideUsers,
   FolderOpen as LucideFolderOpen,
-  Briefcase as LucideBriefcase,
-  Mail as LucideMail,
-  CalendarDays as LucideCalendarDays,
-  Folders as LucideFolders,
   Cpu,
 } from "lucide-react";
 import { OutlookIcon } from "@/components/icons";
@@ -43,20 +39,24 @@ const Circle = forwardRef<
     size?: string;
     label?: string;
     style?: React.CSSProperties;
+    imageWrapperClassName?: string; // New prop for sizing the image container
   }
->(({ className, children, iconSrc, iconAlt, size = "size-12", label, style }, ref) => {
+>(({ className, children, iconSrc, iconAlt, size = "size-12", label, style, imageWrapperClassName }, ref) => { // Added imageWrapperClassName
   return (
     <div className="flex flex-col items-center text-center" style={style}>
       <div
         ref={ref}
         className={cn(
-          "z-10 flex items-center justify-center rounded-full border-2 bg-background p-3 shadow-lg backdrop-blur-sm",
+          "z-10 flex items-center justify-center rounded-full border-2 bg-background p-3 shadow-lg backdrop-blur-sm relative",
           size,
           className,
         )}
       >
         {iconSrc ? (
-          <img src={iconSrc} alt={iconAlt || label || "icon"} className="h-full w-full object-contain" />
+          // Wrap image in a div that can be sized by imageWrapperClassName, defaults to full available space
+          <div className={cn("relative", imageWrapperClassName || "w-full h-full")}>
+            <Image src={iconSrc} alt={iconAlt || label || "icon"} layout="fill" objectFit="contain" />
+          </div>
         ) : (
           children
         )}
@@ -76,7 +76,7 @@ interface McpInteractionVisualProps {
 // or use a library like react-icons if preferred and licensed correctly.
 const peripheralNodeData = [
   { id: "database", refCreator: useRef, label: "Database", IconComponent: LucideDatabase, colorKey: "database", beamCurvature: 0 },
-  { id: "calendar", refCreator: useRef, label: "Calendar", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Google_Calendar_%282015-2020%29.png", colorKey: "calendar", beamCurvature: 0 },
+  { id: "calendar", refCreator: useRef, label: "Calendar", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Google_Calendar_icon_%282015-2020%29.svg", colorKey: "calendar", beamCurvature: 0 },
   { id: "webApi", refCreator: useRef, label: "Web APIs", IconComponent: LucideGlobe, colorKey: "webApi", beamCurvature: 0 },
   { id: "teams", refCreator: useRef, label: "Communication Channels", iconSrc: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg", colorKey: "teams", beamCurvature: 0 },
   { id: "localFs", refCreator: useRef, label: "Local Filesystem", IconComponent: LucideFolderOpen, colorKey: "localFs", beamCurvature: 0, beamDirection: "from-center" },
@@ -176,7 +176,7 @@ const McpVisualComponent: React.FC<McpInteractionVisualProps> = ({ className }) 
           
           // Use slightly larger circles for image-based icons if needed, or ensure images have padding
           const circleSize = iconSrc ? "size-14 md:size-16" : "size-12 md:size-14";
-
+          let customImageWrapperClass; // To specifically size the image inside the circle
 
           return (
             <Circle
@@ -188,6 +188,7 @@ const McpVisualComponent: React.FC<McpInteractionVisualProps> = ({ className }) 
               iconSrc={iconSrc}
               iconAlt={label}
               size={circleSize}
+              imageWrapperClassName={customImageWrapperClass} // Pass the wrapper class
             >
               {IconComponent && ( // Render Lucide icon if no iconSrc
                 <IconComponent className={cn("h-6 w-6 md:h-7 md:w-7", iconColorStyles[colorKey])} />
