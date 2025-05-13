@@ -42,7 +42,7 @@ export default function ShippingKnowledgeAgentBlogPost() {
 
           {/* Blog Header */}
           <div className="mb-8 border-b pb-8 border-gray-200 dark:border-gray-700">
-            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl mb-4">
+            <h1 className="text-3xl font-extrabold tracking-tight text-primary sm:text-4xl md:text-5xl mb-4">
               {metadata.title}
             </h1>
             <div className="flex items-center space-x-3">
@@ -111,7 +111,7 @@ export default function ShippingKnowledgeAgentBlogPost() {
               <div className="space-y-2">
                 <div className="relative aspect-video">
                   <Image
-                    src="https://images.unsplash.com/photo-1669462277329-f32f928a4a79"
+                    src="https://www.idom.com/wp-content/uploads/2024/05/PCS-IA.jpg"
                     alt="Modern shipping port with automated systems"
                     fill
                     className="rounded-lg shadow-lg object-cover"
@@ -131,10 +131,10 @@ export default function ShippingKnowledgeAgentBlogPost() {
           <div className="grid gap-6 my-12">
             <Card className="p-6 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-white/50 dark:bg-gray-800/50">
               <div className="flex items-start gap-4">
-                <Navigation2 className="w-6 h-6 text-ruby-600 dark:text-ruby-400 mt-1" />
+                <Navigation2 className="w-6 h-6 text-primary mt-1" />
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Optimizing routes dynamically:</strong>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">
+                  <strong className="text-primary">Optimizing routes dynamically:</strong>
+                  <p className="text-muted-foreground mt-1">
                     Analyzing weather patterns, port congestion (as highlighted by MITAGS regarding efficient docking), fuel costs, and historical traffic data to recommend the most efficient paths. This can lead to reduced transit times and fuel consumption.
                   </p>
                 </div>
@@ -142,9 +142,9 @@ export default function ShippingKnowledgeAgentBlogPost() {
             </Card>
             <Card className="p-6 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-white/50 dark:bg-gray-800/50">
               <div className="flex items-start gap-4">
-                <FileSearch className="w-6 h-6 text-ruby-600 dark:text-ruby-400 mt-1" />
+                <FileSearch className="w-6 h-6 text-primary mt-1" />
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Automating documentation:</strong>
+                  <strong className="text-primary">Automating documentation:</strong>
                   <p className="text-gray-600 dark:text-gray-400 mt-1">
                     Instantly generating or verifying bills of lading, customs forms, and compliance reports, cutting administrative workloads. This addresses the documentation handling role of shipping agents.
                   </p>
@@ -153,10 +153,10 @@ export default function ShippingKnowledgeAgentBlogPost() {
             </Card>
             <Card className="p-6 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-white/50 dark:bg-gray-800/50">
               <div className="flex items-start gap-4">
-                <BarChart3 className="w-6 h-6 text-ruby-600 dark:text-ruby-400 mt-1" />
+                <BarChart3 className="w-6 h-6 text-primary mt-1" />
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Enhancing supply chain visibility:</strong>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">
+                  <strong className="text-primary">Enhancing supply chain visibility:</strong>
+                  <p className="text-muted-foreground mt-1">
                     Aggregating data from IoT sensors, ERP systems, and port call data (destination, arrival times) to provide real-time updates on cargo status, warehouse capacity, and delivery timelines, helping to predict delays and manage inventory more accurately (similar to points from CMR Berkeley and Nexocode).
                   </p>
                 </div>
@@ -179,7 +179,7 @@ export default function ShippingKnowledgeAgentBlogPost() {
               <div className="space-y-2">
                 <div className="relative aspect-video">
                   <Image
-                    src="https://images.unsplash.com/photo-1616832880334-b1004d9f6d35"
+                    src="https://knowhow.distrelec.com/wp-content/uploads/2023/07/iStock-1277731095.jpg"
                     alt="Digital interface showing shipping analytics"
                     fill
                     className="rounded-lg shadow-lg object-cover"

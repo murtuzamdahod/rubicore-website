@@ -157,7 +157,7 @@ export default function OpenPositionsSection() {
         )}
          <div className="mt-16 text-center">
             <p className="text-lg text-foreground">
-                Don't see a role that fits? We're always looking for talented individuals.
+                Don&apos;t see a role that fits? We&apos;re always looking for talented individuals.
             </p>
             <Button variant="link" asChild className="mt-2 text-xl text-primary">
                 <Link href="/contact?subject=General+Career+Inquiry">

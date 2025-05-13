@@ -42,7 +42,7 @@ export default function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
-            Get in Touch – Let's Discuss Your Agentic AI Journey.
+            Get in Touch – Let&apos;s Discuss Your Agentic AI Journey.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Have questions about RubiCore, our platform, partnerships, responsible AI initiatives, or press inquiries? Reach out to our team.
