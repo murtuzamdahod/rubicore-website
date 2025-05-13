@@ -16,7 +16,7 @@ export default function SecurityPage() {
     <main className="flex flex-col items-center justify-center">
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-primary dark:text-white sm:text-5xl md:text-6xl">
             <span className="block">Secure, Compliant, and Governed AI</span>
             <span className="block text-ruby-600 dark:text-ruby-500">
               for the Enterprise

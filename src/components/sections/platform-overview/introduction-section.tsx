@@ -24,14 +24,14 @@ export function PlatformIntroductionSection() {
             </BlurFade>
 
             <BlurFade delay={0.25 * 2} inView>
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Specialized & Autonomous Agents</h3>
+              <h3 className="text-xl font-semibold text-primary mt-6 mb-3">Specialized & Autonomous Agents</h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 Create specialized, autonomous, and collaborative agents capable of perceiving multi-modal information, reasoning, planning, acting, and continuously learning. These agents automate complex tasks and augment human capabilities, all under your strict governance and with full explainability.
               </p>
             </BlurFade>
 
             <BlurFade delay={0.25 * 3} inView>
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Comprehensive Platform Pillars</h3>
+              <h3 className="text-xl font-semibold text-primary mt-6 mb-3">Comprehensive Platform Pillars</h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 Unlike single-purpose chatbots, RubiCore agents execute sophisticated multi-step processes and securely interact with your enterprise systems. The platform includes:
               </p>
@@ -45,7 +45,7 @@ export function PlatformIntroductionSection() {
             </BlurFade>
             
             <BlurFade delay={0.25 * 4} inView>
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Adaptive Multi-Agent Collaboration</h3>
+              <h3 className="text-xl font-semibold text-primary mt-6 mb-3">Adaptive Multi-Agent Collaboration</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Our innovative <strong>Adaptive Multi-Agent Collaboration Framework</strong> enables sophisticated agent teams that distribute work by specialization, share context dynamically, learn collectively, and achieve outcomes beyond the reach of individual agents.
               </p>

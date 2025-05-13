@@ -130,14 +130,14 @@ export default function SolutionsByDepartmentSection() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary dark:text-white sm:text-4xl">
             AI-Powered Solutions Across Your Organization
           </h2>
         </div>
         <Tabs defaultValue={departments[0].id} className="w-full">
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-8">
             {departments.map((dept) => (
-              <TabsTrigger key={dept.id} value={dept.id} className="flex items-center justify-center text-xs sm:text-sm">
+              <TabsTrigger key={dept.id} value={dept.id} className="flex items-center justify-center text-xs sm:text-sm text-primary">
                 {dept.icon}
                 {dept.name}
               </TabsTrigger>
@@ -151,8 +151,8 @@ export default function SolutionsByDepartmentSection() {
                 </h3>
                 <div className="space-y-8">
                   {dept.useCases.map((useCase) => (
-                    <div key={useCase.title} className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
-                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    <div key={useCase.title} className="p-6 border border-border rounded-lg">
+                      <h4 className="text-xl font-semibold text-primary mb-2">
                         {useCase.title}
                       </h4>
                       <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">

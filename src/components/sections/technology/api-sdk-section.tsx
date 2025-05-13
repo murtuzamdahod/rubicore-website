@@ -61,10 +61,10 @@ export function ApiSdkSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-12">
           {extensibilityFeatures.map((feature) => (
-            <Card key={feature.title} className="flex flex-col text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background">
+            <Card key={feature.title} className="flex flex-col text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background text-primary">
               <CardHeader className="pb-4">
                 <feature.icon className="h-10 w-10 text-primary mx-auto mb-3" />
-                <CardTitle className="text-lg font-semibold">
+                <CardTitle className="text-lg font-semibold text-primary">
                   {feature.title}
                 </CardTitle>
               </CardHeader>

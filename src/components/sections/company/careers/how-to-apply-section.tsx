@@ -22,13 +22,13 @@ const steps = [
 
 export default function HowToApplySection() {
   return (
-    <section className="py-16 bg-gray-100 dark:bg-gray-900 sm:py-24">
+    <section className="py-16 bg-muted/20 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Ready to Join Us?
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-lg text-muted-foreground">
             Our application process is designed to be straightforward and
             transparent. Here’s how to get started on your journey with
             RubiCore.
@@ -38,17 +38,17 @@ export default function HowToApplySection() {
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg text-center"
+              className="p-6 bg-background rounded-lg shadow-lg text-center"
             >
               <div className="flex justify-center mb-6">
-                <div className="bg-ruby-100 dark:bg-ruby-700/50 p-3 rounded-full">
+                <div className="bg-primary/10 p-3 rounded-full">
                     {step.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-semibold text-primary mb-2">
                 Step {index + 1}: {step.title}
               </h3>
-              <p className="text-base text-gray-600 dark:text-gray-400">
+              <p className="text-base text-muted-foreground">
                 {step.description}
               </p>
             </div>

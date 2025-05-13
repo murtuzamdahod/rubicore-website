@@ -38,13 +38,13 @@ const contactDetails = [
 
 export default function ContactSection() {
   return (
-    <section className="py-16 bg-gray-100 dark:bg-gray-900 sm:py-24">
+    <section className="py-16 bg-muted/20 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Get in Touch – Let&apos;s Discuss Your Agentic AI Journey.
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
+            Get in Touch – Let's Discuss Your Agentic AI Journey.
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-lg text-muted-foreground">
             Have questions about RubiCore, our platform, partnerships, responsible AI initiatives, or press inquiries? Reach out to our team.
           </p>
         </div>
@@ -52,17 +52,17 @@ export default function ContactSection() {
           {contactDetails.map((detail) => (
             <div
               key={detail.title}
-              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg text-center flex flex-col items-center" // Added flex for centering
+              className="p-6 bg-background rounded-lg shadow-lg text-center flex flex-col items-center" // Added flex for centering
             >
               <div className="flex justify-center mb-4">{detail.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+              <h3 className="text-xl font-semibold text-primary mb-1">
                 {detail.title}
               </h3>
               <Link
                 href={detail.href}
                 target={detail.isMapLink ? "_blank" : undefined}
                 rel={detail.isMapLink ? "noopener noreferrer" : undefined}
-                className="text-ruby-600 dark:text-ruby-500 hover:underline break-all"
+                className="text-primary hover:underline break-all"
               >
                 {detail.value}
               </Link>

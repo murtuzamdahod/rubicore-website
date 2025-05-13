@@ -74,19 +74,19 @@ export default function OpenPositionsSection() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Current Openings
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-lg text-muted-foreground">
             Find your next challenge and grow with us.
           </p>
         </div>
 
         {/* Filtering UI */}
-        <div className="mb-12 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+        <div className="mb-12 p-6 bg-muted/40 rounded-lg shadow">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 items-end">
             <div>
-              <label htmlFor="job-search" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Search by Keyword</label>
+              <label htmlFor="job-search" className="block text-sm font-medium text-foreground mb-1">Search by Keyword</label>
               <div className="relative">
                 <Input
                   id="job-search"
@@ -96,11 +96,11 @@ export default function OpenPositionsSection() {
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
                   className="pr-10"
                 />
-                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               </div>
             </div>
             <div>
-              <label htmlFor="department-filter" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Department</label>
+              <label htmlFor="department-filter" className="block text-sm font-medium text-foreground mb-1">Department</label>
               <Select value={selectedDepartment} onValueChange={setSelectedDepartment}>
                 <SelectTrigger id="department-filter"><SelectValue /></SelectTrigger>
                 <SelectContent>
@@ -109,7 +109,7 @@ export default function OpenPositionsSection() {
               </Select>
             </div>
             <div>
-              <label htmlFor="location-filter" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Location</label>
+              <label htmlFor="location-filter" className="block text-sm font-medium text-foreground mb-1">Location</label>
               <Select value={selectedLocation} onValueChange={setSelectedLocation}>
                 <SelectTrigger id="location-filter"><SelectValue /></SelectTrigger>
                 <SelectContent>
@@ -128,18 +128,18 @@ export default function OpenPositionsSection() {
             {filteredOpenings.map((job) => (
               <div
                 key={job.id}
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+                className="bg-background p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
               >
-                <h3 className="text-xl font-semibold text-ruby-600 dark:text-ruby-500 mb-2">
+                <h3 className="text-xl font-semibold text-primary mb-2">
                   {job.title}
                 </h3>
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-1">
+                <div className="flex items-center text-sm text-muted-foreground mb-1">
                   <Briefcase className="w-4 h-4 mr-2 flex-shrink-0" /> {job.department}
                 </div>
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                <div className="flex items-center text-sm text-muted-foreground mb-3">
                   <MapPin className="w-4 h-4 mr-2 flex-shrink-0" /> {job.location} ({job.type})
                 </div>
-                <p className="text-base text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                <p className="text-base text-foreground mb-4 flex-grow">
                   {job.description}
                 </p>
                 <Button asChild className="mt-auto">
@@ -150,16 +150,16 @@ export default function OpenPositionsSection() {
           </div>
         ) : (
           <div className="text-center py-12">
-            <Search className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">No openings match your criteria.</h3>
-            <p className="text-gray-500 dark:text-gray-400 mt-2">Try adjusting your filters or check back later!</p>
+            <Search className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-foreground">No openings match your criteria.</h3>
+            <p className="text-muted-foreground mt-2">Try adjusting your filters or check back later!</p>
           </div>
         )}
          <div className="mt-16 text-center">
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-                Don&apos;t see a role that fits? We&apos;re always looking for talented individuals.
+            <p className="text-lg text-foreground">
+                Don't see a role that fits? We're always looking for talented individuals.
             </p>
-            <Button variant="link" asChild className="mt-2 text-xl">
+            <Button variant="link" asChild className="mt-2 text-xl text-primary">
                 <Link href="/contact?subject=General+Career+Inquiry">
                     Get in Touch
                 </Link>

@@ -40,13 +40,13 @@ const differentiators = [
 
 export default function WhyRubiCoreSection() {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-800 sm:py-24">
+    <section className="py-16 bg-muted/40 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             The Enterprise Advantage: Uncompromising Security, Deep Control, Advanced Intelligence, and Responsible Innovation.
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-lg text-muted-foreground">
             RubiCore stands apart by focusing exclusively on the multifaceted demands of the modern enterprise, delivering a platform that is powerful, flexible, trustworthy, and built for responsible innovation.
           </p>
         </div>
@@ -54,13 +54,13 @@ export default function WhyRubiCoreSection() {
           {differentiators.map((item) => (
             <div
               key={item.title}
-              className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 h-full" // Added h-full for consistent card height
+              className="p-6 bg-background rounded-lg shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 h-full" // Added h-full for consistent card height
             >
               <div className="mb-4">{item.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-semibold text-primary mb-2">
                 {item.title}
               </h3>
-              <p className="text-base text-gray-600 dark:text-gray-400">
+              <p className="text-base text-muted-foreground">
                 {item.description}
               </p>
             </div>

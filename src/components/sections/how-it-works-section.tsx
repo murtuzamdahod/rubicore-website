@@ -78,7 +78,7 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground text-2xl font-bold mb-6 shadow-lg">
                 {step.id}
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-primary mb-3">
                 {step.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">

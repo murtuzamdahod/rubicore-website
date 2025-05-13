@@ -38,25 +38,25 @@ export default function PressNewsSection() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <Newspaper className="w-12 h-12 text-ruby-600 dark:text-ruby-500 mx-auto mb-4" />
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <Newspaper className="w-12 h-12 text-primary mx-auto mb-4" />
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             RubiCore in the News & On the Road
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {displayedNews.map((item) => (
             <Link key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className="block group">
-              <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+              <div className="p-6 bg-background rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                 {/* Placeholder for source logo if available */}
                 {/* <img src={item.imageUrl} alt={item.source} className="h-8 mb-4"/> */}
                 <div className="h-10 w-auto flex items-center mb-4">
-                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">{item.source}</p>
+                    <p className="text-sm font-semibold text-muted-foreground">{item.source}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-ruby-600 dark:group-hover:text-ruby-500 mb-2 flex-grow">
+                <h3 className="text-lg font-semibold text-primary group-hover:text-primary/80 mb-2 flex-grow">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{item.date}</p>
-                <div className="mt-auto text-sm text-ruby-600 dark:text-ruby-500 group-hover:underline flex items-center">
+                <p className="text-xs text-muted-foreground mb-3">{item.date}</p>
+                <div className="mt-auto text-sm text-primary group-hover:underline flex items-center">
                   Read Article <ExternalLink className="w-4 h-4 ml-1" />
                 </div>
               </div>

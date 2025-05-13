@@ -127,7 +127,7 @@ const AnimatedAgentCard = ({ agent }: { agent: AgentInfo }) => {
         <div className="mb-4">
           <AgentIcon icon={agent.icon} />
         </div>
-        <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors duration-300">
+        <CardTitle className="text-2xl text-primary group-hover:text-primary transition-colors duration-300">
           {agent.title}
         </CardTitle>
       </CardHeader>

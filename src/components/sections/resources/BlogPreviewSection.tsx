@@ -13,7 +13,7 @@ export default function BlogPreviewSection() {
     <section id="blog" className="w-full py-16 md:py-24 lg:py-32 bg-muted/40"> {/* Added id="blog" */}
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Latest Blog Posts
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -28,7 +28,7 @@ export default function BlogPreviewSection() {
                 <CardHeader>
                   {/* Placeholder for image if needed */}
                   {/* <img src={post.imageUrl} alt={post.title} className="mb-4 rounded-md" /> */}
-                  <CardTitle>{post.title}</CardTitle>
+                  <CardTitle className="text-primary">{post.title}</CardTitle>
                   <CardDescription>{post.date}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">

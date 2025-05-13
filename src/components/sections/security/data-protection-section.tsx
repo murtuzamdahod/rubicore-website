@@ -88,7 +88,7 @@ export default function DataProtectionSection() {
     <section className="py-16 bg-background sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-ruby sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Protecting Your Data, Ensuring Privacy, and Promoting Ethical AI at Every Step.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
@@ -99,13 +99,13 @@ export default function DataProtectionSection() {
           {dataProtectionFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="bg-muted/20 dark:bg-gray-800/30 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex"
+              className="bg-muted/20 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex"
             >
               <div className="flex-shrink-0 mr-6">
                 <feature.icon className="w-10 h-10 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-semibold text-primary mb-2">
                   {feature.title}
                 </h3>
                 <p className="text-base text-muted-foreground">

@@ -89,7 +89,7 @@ export function ModelIntegrationSection() {
                 <div key={feature.title} className="flex items-start space-x-3">
                   <feature.icon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-foreground">{feature.title}</h3>
+                    <h3 className="font-semibold text-primary">{feature.title}</h3>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>
                 </div>

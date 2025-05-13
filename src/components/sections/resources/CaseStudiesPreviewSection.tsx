@@ -13,7 +13,7 @@ export default function CaseStudiesPreviewSection() {
     <section id="casestudies" className="w-full py-16 md:py-24 lg:py-32 bg-background"> {/* Added id="casestudies", Alternating background */}
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Featured Case Studies
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -28,7 +28,7 @@ export default function CaseStudiesPreviewSection() {
                 <CardHeader>
                   {/* Placeholder for image if needed */}
                   {/* <img src={study.imageUrl} alt={study.title} className="mb-4 rounded-md" /> */}
-                  <CardTitle>{study.title}</CardTitle>
+                  <CardTitle className="text-primary">{study.title}</CardTitle>
                   <CardDescription>{study.date}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">

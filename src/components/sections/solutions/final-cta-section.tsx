@@ -5,7 +5,7 @@ export default function FinalCtaSection() {
   return (
     <section className="py-16 sm:py-24 w-full bg-gradient-to-r from-ruby-600 via-red-600 to-pink-600">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-extrabold text-primary sm:text-4xl md:text-5xl">
+        <h2 className="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
           Ready to Transform Your Operations with Secure Agentic AI?
         </h2>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-ruby-100 sm:text-xl">

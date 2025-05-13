@@ -44,7 +44,7 @@ export default function ContactDetailsSection() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
                 Other Ways to Reach Us
             </h2>
         </div>
@@ -52,37 +52,37 @@ export default function ContactDetailsSection() {
           {contactPoints.map((point) => (
             <div
               key={point.title}
-              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-start space-x-4"
+              className="p-6 bg-background rounded-lg shadow-lg flex items-start space-x-4"
             >
               <div className="flex-shrink-0 pt-1">{point.icon}</div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+                <h3 className="text-xl font-semibold text-primary mb-1">
                   {point.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{point.text}</p>
+                <p className="text-sm text-muted-foreground mb-2">{point.text}</p>
                 <Link
                   href={point.href}
-                  className="text-ruby-600 dark:text-ruby-500 hover:underline font-medium break-all"
+                  className="text-primary hover:underline font-medium break-all"
                 >
                   {point.value}
                 </Link>
               </div>
             </div>
           ))}
-           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-start space-x-4 md:col-span-2 lg:col-span-1">
+           <div className="p-6 bg-background rounded-lg shadow-lg flex items-start space-x-4 md:col-span-2 lg:col-span-1">
               <div className="flex-shrink-0 pt-1">{officeLocation.icon}</div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+                <h3 className="text-xl font-semibold text-primary mb-1">
                   {officeLocation.title}
                 </h3>
                 {officeLocation.addressLines.map(line => (
-                    <p key={line} className="text-sm text-gray-600 dark:text-gray-400">{line}</p>
+                    <p key={line} className="text-sm text-muted-foreground">{line}</p>
                 ))}
                 <Link
                   href={officeLocation.mapLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-block text-ruby-600 dark:text-ruby-500 hover:underline font-medium"
+                  className="mt-2 inline-block text-primary hover:underline font-medium"
                 >
                   View on Map
                 </Link>

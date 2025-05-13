@@ -69,7 +69,7 @@ export function CoreTechStackSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {techStackItems.map((item) => (
-            <Card key={item.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background">
+            <Card key={item.name} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-background text-primary">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">
                   <item.icon className="h-10 w-10 text-primary" />

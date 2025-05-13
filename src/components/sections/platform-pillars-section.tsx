@@ -99,7 +99,7 @@ export function PlatformPillarsSection({
           {pillars.map((pillar) => (
             <div key={pillar.title} className="bg-card p-6 rounded-lg shadow-sm">
               <pillar.icon className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-xl font-semibold text-primary mb-2">
                 {pillar.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">

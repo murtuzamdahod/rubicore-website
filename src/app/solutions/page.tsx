@@ -6,7 +6,7 @@ import FinalCtaSection from "@/components/sections/solutions/final-cta-section";
 export const metadata = {
   title: "Enterprise AI Solutions & Use Cases | RubiCore Agentic AI Platform",
   description:
-    "Automate complex workflows and solve critical business challenges across Sales, R&D, IT, HR, and Operations with RubiCore's secure, specialized AI agents.",
+    "Automate complex workflows and solve critical business challenges across Sales, R&D, IT, HR, and Operations with RubiCore&apos;s secure, specialized AI agents.",
 };
 
 export default function SolutionsPage() {
@@ -14,9 +14,9 @@ export default function SolutionsPage() {
     <main className="flex flex-col items-center justify-center">
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
             <span className="block">Tailored AI Solutions</span>
-            <span className="block text-ruby-600 dark:text-ruby-500">
+            <span className="block text-primary">
               For Your Industry&apos;s Unique Challenges
             </span>
           </h1>
