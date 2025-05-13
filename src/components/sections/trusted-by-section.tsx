@@ -36,7 +36,7 @@ export function TrustedBySection({ className }: TrustedBySectionProps) {
       )}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-12 text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-12 text-center">
           {headline}
         </h2>
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">

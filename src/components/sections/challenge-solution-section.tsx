@@ -7,36 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { DotPattern } from "@/components/ui/dot-pattern"; // Restoring DotPattern
-import { BusinessChallengesVisual } from "@/components/visuals/BusinessChallengesVisual"; // Import the new visual
-import { RubiCoreSolutionVisual } from "@/components/visuals/RubiCoreSolutionVisual"; // Import the new solution visual
-
-// const ChallengeVisualPlaceholder = () => (
-//   <Card className="w-full h-64 md:h-80 bg-destructive/5 border-destructive/20 flex flex-col items-center justify-center p-4">
-//     <CardHeader>
-//       <CardTitle className="text-destructive/80 text-center">Tangled Processes</CardTitle>
-//     </CardHeader>
-//     <CardContent>
-//       <p className="text-destructive/50 text-center text-sm">
-//         [Visual representing complexity, silos, inefficiency]
-//       </p>
-//     </CardContent>
-//   </Card>
-// );
-
-// const SolutionVisualPlaceholder = () => (
-//   <Card className="w-full h-64 md:h-80 bg-primary/5 border-primary/20 flex flex-col items-center justify-center p-4">
-//     <CardHeader>
-//       <CardTitle className="text-primary/80 text-center">Streamlined RubiCore Workflow</CardTitle>
-//     </CardHeader>
-//     <CardContent>
-//       <p className="text-primary/50 text-center text-sm">
-//         [Visual representing clarity, orchestration, efficiency with RubiCore]
-//       </p>
-//     </CardContent>
-//   </Card>
-// );
-
+import { DotPattern } from "@/components/ui/dot-pattern";
+import { BusinessChallengesVisual } from "@/components/visuals/BusinessChallengesVisual";
+import { RubiCoreSolutionVisual } from "@/components/visuals/RubiCoreSolutionVisual";
 
 interface ChallengeSolutionSectionProps {
   className?: string;
@@ -66,7 +39,7 @@ export function ChallengeSolutionSection({
         )}
       />
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center mb-12 md:mb-16">
           {headline}
         </h2>
         

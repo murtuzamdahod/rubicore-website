@@ -5,7 +5,7 @@ export default function IntegrationPhilosophySection() {
     <section className="py-16 bg-background sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Seamless, Secure & Adaptive Integration: Breaking Down Silos, Not Security, with Intelligent Connectivity.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">

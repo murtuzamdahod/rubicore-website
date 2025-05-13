@@ -37,7 +37,7 @@ export function ArchitectureTechnologySection() {
     <section className="py-12 md:py-16 lg:py-20 bg-background">
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="text-center mb-10 md:mb-16">
-          <AnimatedShinyText className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4 block">
+          <AnimatedShinyText className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl mb-4 block">
             Modern, Modular, and Extensible Architecture
           </AnimatedShinyText>
           <BlurFade delay={0.25} inView>
@@ -49,7 +49,7 @@ export function ArchitectureTechnologySection() {
 
         <BlurFade delay={0.50} inView>
           <div className="bg-muted/30 p-6 sm:p-8 rounded-lg shadow mb-12">
-            <h3 className="text-2xl font-semibold text-foreground mb-4 text-center sm:text-left">Core Architectural Principles</h3>
+            <h3 className="text-2xl font-semibold text-primary mb-4 text-center sm:text-left">Core Architectural Principles</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-muted-foreground">
               <li className="flex items-start"><Layers className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>Backend:</strong> Python (FastAPI) for high-performance, async APIs.</span></li>
               <li className="flex items-start"><ServerCog className="h-5 w-5 text-primary mr-2.5 mt-1 flex-shrink-0" /><span><strong>Design:</strong> Modular, event-driven microservices.</span></li>
@@ -72,7 +72,7 @@ export function ArchitectureTechnologySection() {
                   <CardHeader className="flex flex-row items-start space-x-4 pb-3 pt-5">
                     <highlight.icon className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <CardTitle className="text-xl font-semibold">{highlight.title}</CardTitle>
+                      <CardTitle className="text-xl font-semibold text-primary leading-tight">{highlight.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -84,7 +84,7 @@ export function ArchitectureTechnologySection() {
           </div>
 
           <BlurFade delay={0.25 * (techHighlights.length + 3)} inView className="flex flex-col justify-center items-center mt-8 md:mt-0 sticky top-24">
-             <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">Platform Workflow Visualized</h3>
+             <h3 className="text-2xl font-semibold text-primary mb-4 text-center">Platform Workflow Visualized</h3>
             <RubiCoreSolutionVisual className="w-full max-w-lg shadow-xl rounded-lg border border-border/50" />
             <p className="text-sm text-muted-foreground mt-3 text-center italic">Illustrative diagram of RubiCore&apos;s interconnected components and data flow.</p>
           </BlurFade>

@@ -11,7 +11,7 @@ export function PlatformGetStartedSection() {
       <InteractiveGridPattern className="absolute inset-0 z-0 opacity-30 [mask-image:linear-gradient(to_bottom,transparent_20%,white,transparent_80%)]" />
       <div className="container relative z-10 mx-auto max-w-screen-md text-center px-4 md:px-8">
         <BlurFade delay={0.25 * 1} inView>
-          <AnimatedShinyText className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6 block">
+          <AnimatedShinyText className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl mb-6 block">
             Ready to Build Your Governed, Adaptive, High-ROI AI Workforce?
           </AnimatedShinyText>
         </BlurFade>

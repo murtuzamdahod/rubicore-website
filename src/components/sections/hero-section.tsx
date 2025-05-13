@@ -91,7 +91,6 @@ export function HeroSection({
             className={cn(
               "text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl",
               "leading-tight"
-              // Removed gradient classes, AuroraText will handle this
             )}
           >
             <AuroraText colors={['#E0115F', '#9B111E', '#FFFFFF']}> {/* Ruby Light, Ruby Default, White */}

@@ -16,7 +16,7 @@ export function TechArchitectureOverviewSection() {
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl mb-4">
+            <h2 className="text-2xl font-semibold tracking-tight text-primary sm:text-3xl mb-4">
               Modular, Scalable, Resilient, and Explainable by Design.
             </h2>
             <p className="text-muted-foreground leading-relaxed">

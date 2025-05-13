@@ -103,7 +103,7 @@ export default function TieredPricingSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           {/* Removed the "Flexible Plans" paragraph as it's not in the draft's intro */}
-          <h2 className="mt-2 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
             Transparent & Flexible Pricing for Your Intelligent, Governed AI Workforce
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">

@@ -13,7 +13,7 @@ export default function WhitepapersPreviewSection() {
     <section id="whitepapers" className="w-full py-16 md:py-24 lg:py-32 bg-muted/40"> {/* Added id="whitepapers", Alternating background */}
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Whitepapers & Guides
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

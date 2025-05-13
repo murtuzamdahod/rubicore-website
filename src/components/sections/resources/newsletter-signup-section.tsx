@@ -46,7 +46,7 @@ export default function NewsletterSignupSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center">
           <Mail className="w-12 h-12 text-white mx-auto mb-4" />
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Get the Latest Agentic AI Insights & Platform News Delivered
           </h2>
           <p className="mt-4 text-lg text-ruby-100">

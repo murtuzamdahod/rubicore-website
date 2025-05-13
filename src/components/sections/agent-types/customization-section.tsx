@@ -8,7 +8,7 @@ export function AgentCustomizationSection() {
       <div className="container mx-auto max-w-screen-lg px-4 md:px-8">
         <div className="text-center mb-10 md:mb-12">
           <Puzzle className="h-12 w-12 text-primary mx-auto mb-4" />
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Build, Extend, and Evolve Your AI Workforce – Tailored Precisely to Your Needs
           </h2>
         </div>

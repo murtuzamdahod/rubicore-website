@@ -5,7 +5,7 @@ export function TechFinalCtaSection() {
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-muted/20">
       <div className="container mx-auto max-w-screen-md text-center px-4 md:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
+        <h2 className="text-3xl font-bold tracking-tight text-ruby sm:text-4xl mb-6">
           Engineered for Enterprise Demands: Scalability, Security, Extensibility, and Trustworthy AI
         </h2>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">

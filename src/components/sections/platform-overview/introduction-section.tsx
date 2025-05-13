@@ -8,9 +8,14 @@ export function PlatformIntroductionSection() {
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <AnimatedShinyText className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-8 block">
-              Meet RubiCore: Your Unified Platform for Secure, Adaptive, and Explainable Agentic AI
-            </AnimatedShinyText>
+            {/* left aligned AnimatedShinyText */}
+            <BlurFade delay={0.25 * 0} inView>
+              <div className="mb-6">
+                <AnimatedShinyText className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+                  Meet RubiCore: Your Unified Platform for Secure, Adaptive, and Explainable Agentic AI
+                </AnimatedShinyText>
+              </div>
+            </BlurFade>
             
             <BlurFade delay={0.25 * 1} inView>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">

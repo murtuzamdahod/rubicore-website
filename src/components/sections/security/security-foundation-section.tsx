@@ -6,7 +6,7 @@ export default function SecurityFoundationSection() {
     <section className="py-16 bg-background sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Security, Governance & Ethics: Embedded, Not Bolted On, for Trustworthy AI.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">

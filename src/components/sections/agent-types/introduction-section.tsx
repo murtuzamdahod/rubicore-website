@@ -7,7 +7,7 @@ export function AgentTypesIntroductionSection() {
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6">
+            <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl mb-6">
               Purpose-Built Expertise & Collaborative Intelligence for Reliable, Adaptive Automation
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">

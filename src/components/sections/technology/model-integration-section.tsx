@@ -70,7 +70,7 @@ export function ModelIntegrationSection() {
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl mb-4">
+            <h2 className="text-2xl font-semibold tracking-tight text-primary sm:text-3xl mb-4">
               Leverage Any LLM, Securely, Responsibly, and Efficiently.
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">

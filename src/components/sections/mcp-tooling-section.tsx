@@ -27,7 +27,7 @@ export function McpToolingSection({ className }: McpToolingSectionProps) {
       <div className="container mx-auto px-4">
         <BlurFade delay={0.25 * 1} inView>
           <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-            <AnimatedShinyText className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 block">
+            <AnimatedShinyText className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary block">
               {headline}
             </AnimatedShinyText>
           </div>

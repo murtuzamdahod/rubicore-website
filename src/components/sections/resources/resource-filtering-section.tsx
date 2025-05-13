@@ -85,7 +85,7 @@ export default function ResourceFilteringSection() {
     <section className="py-12 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold text-primary dark:text-primary sm:text-3xl">
                 Find What You Need, Faster: Explore Our Curated Resources.
             </h2>
         </div>

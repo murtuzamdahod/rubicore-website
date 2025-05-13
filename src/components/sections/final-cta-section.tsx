@@ -25,7 +25,7 @@ export function FinalCtaSection({ className }: FinalCtaSectionProps) {
       className={cn("bg-primary text-primary-foreground py-16 md:py-24", className)}
     >
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
           {headline}
         </h2>
         <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">

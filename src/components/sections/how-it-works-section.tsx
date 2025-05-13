@@ -63,7 +63,7 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
     >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
             {headline}
           </h2>
         </div>

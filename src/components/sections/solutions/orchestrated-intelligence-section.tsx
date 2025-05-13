@@ -40,7 +40,7 @@ export default function OrchestratedIntelligenceSection() {
     <section className="py-16 bg-gray-50 dark:bg-gray-800 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Beyond Silos: Achieve Transformative End-to-End Automation and Insight with Orchestrated Multi-Agent Systems.
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">

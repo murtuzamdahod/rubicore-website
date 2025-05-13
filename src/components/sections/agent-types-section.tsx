@@ -183,7 +183,7 @@ export function AgentTypesSection({ className }: AgentTypesSectionProps) {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <AnimatedShinyText className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <AnimatedShinyText className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
             {headline}
           </AnimatedShinyText>
           <p className="text-muted-foreground text-lg md:text-xl">{introText}</p>

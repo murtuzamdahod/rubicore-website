@@ -146,7 +146,7 @@ export default function SolutionsByDepartmentSection() {
           {departments.map((dept) => (
             <TabsContent key={dept.id} value={dept.id}>
               <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-xl">
-                <h3 className="text-2xl font-semibold text-ruby-600 dark:text-ruby-500 mb-6 text-center">
+                <h3 className="text-2xl font-semibold text-primary dark:text-primary mb-6 text-center">
                   {dept.headline}
                 </h3>
                 <div className="space-y-8">

@@ -162,7 +162,7 @@ export function CoreAgentCapabilitiesSection() {
     <section className="py-12 md:py-16 lg:py-20 bg-muted/20">
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Core Agent Capabilities
           </h2>
         </div>
@@ -172,7 +172,7 @@ export function CoreAgentCapabilitiesSection() {
               <CardHeader className="pb-4">
                 <div className="flex items-center mb-3">
                   <agent.icon className="h-8 w-8 text-primary mr-3 flex-shrink-0" />
-                  <CardTitle className="text-xl font-semibold">{agent.title}</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-primary leading-tight">{agent.title}</CardTitle>
                 </div>
                 <h3 className="text-lg font-medium text-foreground">{agent.headline}</h3>
               </CardHeader>

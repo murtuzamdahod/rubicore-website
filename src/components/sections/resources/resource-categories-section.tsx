@@ -69,7 +69,7 @@ export default function ResourceCategoriesSection() {
     <section className="py-16 bg-gray-50 dark:bg-gray-800 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Explore by Category
           </h2>
         </div>
@@ -80,7 +80,7 @@ export default function ResourceCategoriesSection() {
                 <div className="flex items-center mb-4 md:mb-0">
                   {category.icon}
                   <div className="ml-4">
-                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                    <h3 className="text-2xl font-semibold text-primary">
                       {category.name}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">{category.description}</p>

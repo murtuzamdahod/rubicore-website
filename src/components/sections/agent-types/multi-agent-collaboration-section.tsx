@@ -33,22 +33,22 @@ export function MultiAgentCollaborationSection({ className }: MultiAgentCollabor
     {
       title: "Unified Data Foundation",
       description: "MCP-compatible infrastructure creates a robust agentic MDM solution, enabling agents to operate from a consistent data reality while reducing hallucinations by up to 40%.",
-      icon: DatabaseZap, // Re-using, consider a more specific one if available
+      icon: DatabaseZap,
     },
     {
       title: "Shared Context & Knowledge",
       description: "A common operational picture and consensus memory allow agents to build on each other's work effectively through Model Context Protocol (MCP) infrastructure.",
-      icon: Brain, // Re-using
+      icon: Brain,
     },
     {
       title: "Emergent Behavior Management",
       description: "While fostering innovation, our Policy-Based Governance Engine provides guardrails and monitoring for unexpected behaviors, balancing autonomy with security.",
-      icon: CheckCircle, // Re-using
+      icon: CheckCircle,
     },
     {
       title: "Hierarchical & Heterogeneous Teams",
       description: "Support for configurable team structures including manager-worker hierarchies, peer-to-peer collaborations, and swarm intelligence approaches for different problem types.",
-      icon: Users, // Re-using
+      icon: Users,
     },
   ];
 
@@ -66,7 +66,7 @@ export function MultiAgentCollaborationSection({ className }: MultiAgentCollabor
     <section className={cn("py-12 md:py-16 lg:py-20 bg-background", className)}>
       <div className="container mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             {headline}
           </h2>
         </div>
@@ -74,7 +74,7 @@ export function MultiAgentCollaborationSection({ className }: MultiAgentCollabor
         <div className="max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed mb-8">
           {bodyText}
         </div>
-        
+
         {/* Visual Placeholder */}
         <div className="mb-12 md:mb-16 flex justify-center">
           <div className="w-full max-w-3xl h-72 bg-muted/30 rounded-lg flex items-center justify-center p-4">
@@ -90,7 +90,7 @@ export function MultiAgentCollaborationSection({ className }: MultiAgentCollabor
             return (
               <div key={feature.title} className="p-6 bg-muted/30 rounded-lg">
                 <Icon className="h-8 w-8 text-primary mb-3" />
-                <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-primary leading-tight mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm">{feature.description}</p>
               </div>
             );

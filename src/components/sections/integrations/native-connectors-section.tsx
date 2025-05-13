@@ -194,7 +194,7 @@ export default function NativeConnectorsSection() {
     <section className="py-16 sm:py-24 bg-muted/20 dark:bg-gray-800/20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
             Secure, Out-of-the-Box Connectivity for 200+ Enterprise Systems
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -204,7 +204,7 @@ export default function NativeConnectorsSection() {
 
         {connectorCategories.map((category) => (
           <div key={category.categoryTitle} className="mb-12">
-            <h3 className="text-2xl font-semibold text-foreground mb-6 text-center md:text-left">{category.categoryTitle}</h3>
+            <h3 className="text-2xl font-semibold text-primary mb-6 text-center md:text-left">{category.categoryTitle}</h3>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {category.connectors.map((connector) => (
                 <div
